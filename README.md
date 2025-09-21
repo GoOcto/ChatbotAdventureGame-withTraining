@@ -62,6 +62,34 @@ Original problematic examples showing common training issues:
 - Inventory logic errors
 - Brevity protocol violations
 
+### File Naming Convention
+
+All training files follow a consistent naming pattern:
+
+**Format**: `{character}.{topic}.{sequential_number}.json`
+
+**Examples**:
+
+- `anya.inverter.001.json` - Anya discussing micro-inverter transactions
+- `silas.protocol.003.json` - Silas protocol adherence examples
+- `transport_boss.photograph.001.json` - Transport Boss reacting to photographs
+- `old_reliable.spanner.001.json` - Old Reliable analyzing spanner items
+
+**Topic Categories**:
+
+- `general` - Standard character interactions
+- `photograph` - Reactions to faded photographs
+- `protocol` - Transaction protocol examples
+- `transaction` - Specific item exchange scenarios
+- `correct` - Corrected versions of problematic examples
+- `fix` - Protocol violation fixes
+- Item-specific topics (e.g., `inverter`, `spanner`, `scanner`)
+
+### Character Organization
+
+- **Main Characters** (`/training/canon/`): Characters with extensive dialogue and story importance
+- **NPCs** (`/training/canon.npc/`): Minor characters with limited interactions
+
 ### World Definition Files
 
 - `link_2_world.js`: Character definitions, personalities, inventories
@@ -132,20 +160,30 @@ python make_jsons.py
 
 ```text
 ├── training/
-│   ├── canon/          # High-quality corrected examples
-│   │   ├── silas_*.json
-│   │   ├── anya_*.json
-│   │   ├── transport_boss_*.json
-│   │   └── ...
-│   └── generic/        # Additional training data
-├── examples/           # Original problematic examples
-├── scripts/           # Validation and utility scripts
-├── lora_*/           # Training output directories
-├── link_2_world.js   # Character definitions
-├── link_2_rules.js   # System protocols
-├── train_lora.py     # Main training script
-├── make_jsons.py     # Data generation utility
-└── go.sh            # Quick training script
+│   ├── canon/              # Main characters (245 files)
+│   │   ├── anya.*.json           # Oasis mechanic examples
+│   │   ├── silas.*.json          # Tech-hermit examples  
+│   │   ├── lena.*.json           # Cog defector examples
+│   │   ├── transport_boss.*.json # Information broker examples
+│   │   ├── old_reliable.*.json   # Vending machine AI examples
+│   │   ├── cog_enforcer.*.json   # Cog soldier examples
+│   │   ├── elder_joric.*.json    # Settlement leader examples
+│   │   ├── techno_prophet.*.json # Cult leader examples
+│   │   ├── wasteland_*.json      # Wasteland creature examples
+│   │   └── techno_prophet_guard_*.json # Guard examples
+│   └── canon.npc/          # Minor NPCs (27 files)
+│       ├── brother_felix.*.json
+│       ├── dust_archaeologist_*.json
+│       ├── street_preacher_*.json
+│       └── ...
+├── examples/               # Original problematic examples
+├── scripts/               # Validation and utility scripts
+├── lora_*/               # Training output directories
+├── link_2_world.js       # Character definitions
+├── link_2_rules.js       # System protocols
+├── train_lora.py         # Main training script
+├── make_jsons.py         # Data generation utility
+└── go.sh                # Quick training script
 ```
 
 ## Common Training Issues Fixed
