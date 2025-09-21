@@ -9,4 +9,7 @@ datasets==2.19.1
 #Core Libraries
 torch==2.3.0
 tensorboard==2.16.2
-dotenv
+
+#Utility Libraries
+python-dotenv==1.0.1
+Flask==3.1.2

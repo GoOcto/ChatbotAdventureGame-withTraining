@@ -1,250 +1,138 @@
+# Chatbot Adventure Game Training
 
-# Post-Apocalyptic Adventure Game LoRA Training
-
-A LoRA (Low-Rank Adaptation) fine-tuning project for creating specialized AI character agents in a post-apocalyptic adventure game world. This repository contains training data, scripts, and world definitions for fine-tuning language models to embody specific characters with consistent personalities, transaction protocols, and world knowledge.
+An experimental framework for training and integrating Large Language Models (LLMs) with interactive game mechanics. This project serves as a testbed for exploring how fine-tuned chatbots can be seamlessly integrated with JavaScript-based game engines through structured interactions.
 
 ## Project Overview
 
-This project fine-tunes language models to play specific characters in a text-based post-apocalyptic adventure game. Each character has:
+This is **not a complete game** but rather a proof-of-concept and experimentation platform. The focus is on the intersection of:
 
-- **Unique personality and voice**: From paranoid tech-hermits to transactional information brokers
-- **Specific goals and motivations**: Items they need, information they possess
-- **Strict transaction protocol**: Machine-readable JSON format for item exchanges
-- **World consistency**: Shared knowledge of factions, locations, and threats
+- **LLM Fine-tuning**: Training language models to follow specific interaction patterns
+- **Structured AI Responses**: Enforcing JSON-based action outputs from chatbot responses
+- **Game Engine Integration**: Bridging AI responses with JavaScript game mechanics
+- **System Prompt Engineering**: Crafting prompts that create consistent, game-appropriate AI behavior
 
-## World Setting
+## Key Components
 
-**Environment**: Post-apocalyptic wasteland where resources are scarce and pre-plague technology is valuable.
+### 1. Training Pipeline (`train_lora.py`)
 
-**Key Factions**:
+- Fine-tunes LLMs using LoRA (Low-Rank Adaptation) for efficient training
+- Processes training datasets with specific conversation formats
+- Outputs adapter models that can be loaded into the base LLM
 
-- **Oasis Settlement**: Led by Joric, a haven of stability
-- **The Cog**: Techno-zealots led by the Techno-Prophet from The Cathedral
+### 2. Dataset Validation (`scripts/validate_dataset.py`)
 
-**Major Locations**:
+- Enforces strict formatting rules for training conversations
+- Ensures all assistant messages end with structured JSON actions
+- Validates that AI responses follow the `{"give": [], "take": [], ...}` format
+- Supports arbitrary boolean flags for extensible game mechanics
 
-- Oasis settlement (peaceful refuge)
-- Barter-town (chaotic trading hub)
-- The Cathedral (Cog headquarters)
+### 3. Game Server (`servegame.py`)
 
-**Core Threats**:
+- Flask-based API server that serves the game interface
+- Loads fine-tuned LoRA adapters alongside base models
+- Provides REST endpoints for real-time chatbot interactions
+- Handles model inference with proper tokenization and generation parameters
 
-- Nanite Plague (technological disease affecting minds)
-- Mutated fauna and environmental hazards
-- Factional conflicts and resource scarcity
+### 4. JavaScript Game Engine (`game/`)
 
-## Key Characters
+- Web-based interface for player interactions
+- Parses structured JSON responses from the AI
+- Implements game mechanics based on AI-generated actions
+- Provides a framework for inventory, location, and character systems
 
-- **Silas**: Paranoid tech-hermit suffering from nanite plague, needs stabilizers
-- **Anya**: Stressed mechanic in Oasis, expert at diagnosing sabotage
-- **Transport Boss**: Cynical information broker in Barter-town
-- **Old Reliable**: Sentient vending machine AI that analyzes items
-- **Lena**: Cog defector hiding in the wasteland
-- **Wasteland Scrabbler**: Childlike observer with mechanical sounds
+## Experimentation Focus
 
-## Training Data Structure
+This framework enables experimentation with:
 
-### Canon Training Data (`/training/canon/`)
+### Model Training
 
-High-quality, manually corrected examples demonstrating:
+- **Custom Datasets**: Create training conversations that teach specific behaviors
+- **LoRA Adapters**: Efficient fine-tuning without modifying base model weights
+- **Hyperparameter Tuning**: Experiment with different training configurations
+- **Validation Pipelines**: Ensure data quality and format consistency
 
-- Proper transaction protocol adherence
-- Consistent character personalities
-- Accurate world lore and relationships
-- Correct item interaction patterns
+### System Prompt Engineering
 
-### Example Training Files (`/examples/`)
+- **Character Personas**: Define AI personalities through system prompts
+- **Behavioral Constraints**: Enforce game rules and interaction patterns
+- **Context Management**: Handle game state and world knowledge
+- **Action Generation**: Guide AI to produce valid JSON actions
 
-Original problematic examples showing common training issues:
+### Integration Patterns
 
-- Transaction protocol violations
-- Character voice inconsistencies
-- Inventory logic errors
-- Brevity protocol violations
+- **Structured Outputs**: Force AI responses into parseable formats
+- **Real-time Inference**: Handle live player interactions
+- **State Synchronization**: Keep AI responses aligned with game state
+- **Error Handling**: Manage malformed or unexpected AI outputs
 
-### File Naming Convention
+## Getting Started
 
-All training files follow a consistent naming pattern:
-
-**Format**: `{character}.{topic}.{sequential_number}.json`
-
-**Examples**:
-
-- `anya.inverter.001.json` - Anya discussing micro-inverter transactions
-- `silas.protocol.003.json` - Silas protocol adherence examples
-- `transport_boss.photograph.001.json` - Transport Boss reacting to photographs
-- `old_reliable.spanner.001.json` - Old Reliable analyzing spanner items
-
-**Topic Categories**:
-
-- `general` - Standard character interactions
-- `photograph` - Reactions to faded photographs
-- `protocol` - Transaction protocol examples
-- `transaction` - Specific item exchange scenarios
-- `correct` - Corrected versions of problematic examples
-- `fix` - Protocol violation fixes
-- Item-specific topics (e.g., `inverter`, `spanner`, `scanner`)
-
-### Character Organization
-
-- **Main Characters** (`/training/canon/`): Characters with extensive dialogue and story importance
-- **NPCs** (`/training/canon.npc/`): Minor characters with limited interactions
-
-### World Definition Files
-
-- `link_2_world.js`: Character definitions, personalities, inventories
-- `link_2_rules.js`: System protocols and behavioral constraints
-
-## Transaction Protocol
-
-All character responses must end with a JSON transaction block:
-
-```json
-<|>{"give": ["item_id"], "take": ["item_id"]}
-```
-
-**Key Rules**:
-
-- JSON must ALWAYS be present, even when no transaction occurs
-- `[OFFER: item_id]` means player presents item for consideration
-- Characters can only accept items in their "wants" array
-- Characters can only give items in their inventory
-- Empty arrays are valid: `{"give": [], "take": []}`
-
-## Quick Start
-
-### Run Training (Easy)
+### Prerequisites
 
 ```bash
-./go.sh
+pip install -r requirements.txt
 ```
 
-### Run Training (Manual)
+### Training a Model
+
+1. Prepare your training data in the `training_data/` directory
+2. Validate your dataset:
+
+   ```bash
+   python scripts/validate_dataset.py
+   ```
+
+3. Train a LoRA adapter:
+
+   ```bash
+   python train_lora.py
+   ```
+
+### Running the Game
 
 ```bash
-accelerate launch train_lora.py \
-    --model_name "meta-llama/Meta-Llama-3-8B-Instruct" \
-    --dataset_path "./training/canon" \
-    --output_dir "./lora_canon_r32" \
-    --epochs 10 \
-    --learning_rate 5e-5 \
-    --lr_scheduler_type "cosine" \
-    --lora_rank 32 \
-    --batch_size 1
+python servegame.py path/to/your/lora_adapter
 ```
 
-This uses only the 'canon' training data and not the 'generic'. You can specify the parent directory and the script will pick up *all* json files in all subdirectories.
+The server will start on `http://localhost:5000` with the game interface available.
 
-### Data Validation
+## Dataset Format
 
-```bash
-python scripts/validate_dataset.py
-```
+Training conversations must follow this structure:
 
-### Monitor Training with TensorBoard
+- Assistant messages end with `<|>{"give": [], "take": [], ...}`
+- `give` and `take` arrays are always required (can be empty)
+- Additional boolean properties are allowed (must be `true` when present)
+- This format enables the JavaScript engine to parse and execute AI actions
 
-The training script automatically logs metrics that can be visualized with TensorBoard:
+## Architecture Benefits
 
-```bash
-# Start TensorBoard (run in a separate terminal)
-tensorboard --logdir ./lora_canon_r32/runs --port 6006
+This separation of concerns allows for:
 
-# Or for a specific training run
-tensorboard --logdir ./lora_r32/runs --port 6006
-```
+- **Independent Model Development**: Train and test AI behaviors in isolation
+- **Flexible Game Mechanics**: Modify JavaScript without retraining models
+- **Rapid Iteration**: Test new interaction patterns quickly
+- **Extensible Design**: Add new game features through boolean flags
+- **Reproducible Experiments**: Version control for models, data, and prompts
 
-Then open your browser to `http://localhost:6006` to view:
+## Use Cases
 
-- Training/validation loss curves
-- Learning rate schedule
-- GPU utilization metrics
-- Gradient norms
-- Training step timing
+- Research into AI-driven game mechanics
+- Prototyping conversational AI applications
+- Exploring structured output generation from LLMs
+- Testing fine-tuning approaches for specific domains
+- Developing frameworks for AI-human interaction in games
 
-**TensorBoard Tips**:
+## Future Directions
 
-- Launch TensorBoard before or during training to see real-time updates
-- Compare multiple training runs by pointing to the parent directory containing multiple `lora_*` folders
-- Use different ports (`--port 6007`, etc.) to run multiple TensorBoard instances
-- Logs are saved automatically in the `runs/` subdirectory of your output folder
+This framework provides a foundation for exploring:
 
-### Generate Training Data
+- More complex action schemas
+- Multi-character AI interactions
+- Dynamic system prompt generation
+- Advanced game state management
+- Cross-session AI memory and learning
 
-```bash
-python make_jsons.py
-```
+---
 
-## Training Parameters
-
-- **Model**: Meta-Llama-3-8B-Instruct (base model)
-- **LoRA Rank**: 32 (balance between quality and efficiency)
-- **Learning Rate**: 5e-5 (conservative to avoid overfitting)
-- **Batch Size**: 1 (memory-efficient)
-- **Scheduler**: Cosine (smooth learning rate decay)
-- **Epochs**: 10 (adjust based on convergence)
-
-## File Structure
-
-```text
-├── training/
-│   ├── canon/              # Main characters (245 files)
-│   │   ├── anya.*.json           # Oasis mechanic examples
-│   │   ├── silas.*.json          # Tech-hermit examples  
-│   │   ├── lena.*.json           # Cog defector examples
-│   │   ├── transport_boss.*.json # Information broker examples
-│   │   ├── old_reliable.*.json   # Vending machine AI examples
-│   │   ├── cog_enforcer.*.json   # Cog soldier examples
-│   │   ├── elder_joric.*.json    # Settlement leader examples
-│   │   ├── techno_prophet.*.json # Cult leader examples
-│   │   ├── wasteland_*.json      # Wasteland creature examples
-│   │   └── techno_prophet_guard_*.json # Guard examples
-│   └── canon.npc/          # Minor NPCs (27 files)
-│       ├── brother_felix.*.json
-│       ├── dust_archaeologist_*.json
-│       ├── street_preacher_*.json
-│       └── ...
-├── examples/               # Original problematic examples
-├── scripts/               # Validation and utility scripts
-├── lora_*/               # Training output directories
-├── link_2_world.js       # Character definitions
-├── link_2_rules.js       # System protocols
-├── train_lora.py         # Main training script
-├── make_jsons.py         # Data generation utility
-└── go.sh                # Quick training script
-```
-
-## Common Training Issues Fixed
-
-1. **Transaction Protocol Violations**: Ensuring JSON is always present
-2. **Character Voice Inconsistencies**: Maintaining personality across examples
-3. **Inventory Logic Errors**: Characters only give items they possess
-4. **Brevity Violations**: Keeping responses under 30 words
-5. **Goal Hinting Problems**: Indirectly expressing character needs
-6. **Show vs Take Confusion**: Proper item interaction patterns
-
-## Usage Notes
-
-- The script picks up all JSON files in specified directories recursively
-- Use `./training/canon` for highest quality training data
-- Monitor convergence to avoid overfitting
-- Test character consistency across different scenarios
-- Validate transaction protocol adherence in outputs
-
-## Requirements
-
-- Python 3.8+
-- PyTorch
-- Transformers
-- Accelerate
-- PEFT (Parameter Efficient Fine-Tuning)
-- CUDA-compatible GPU (recommended)
-
-## Contributing
-
-When adding new training examples:
-
-1. Follow the transaction protocol exactly
-2. Maintain character voice consistency
-3. Keep responses under 30 words
-4. Include proper world lore references
-5. Test with validation scripts
+*This project is designed as an experimental platform. The game elements serve as a testbed for AI integration patterns rather than as a complete gaming experience.*
