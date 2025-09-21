@@ -141,6 +141,33 @@ This uses only the 'canon' training data and not the 'generic'. You can specify 
 python scripts/validate_dataset.py
 ```
 
+### Monitor Training with TensorBoard
+
+The training script automatically logs metrics that can be visualized with TensorBoard:
+
+```bash
+# Start TensorBoard (run in a separate terminal)
+tensorboard --logdir ./lora_canon_r32/runs --port 6006
+
+# Or for a specific training run
+tensorboard --logdir ./lora_r32/runs --port 6006
+```
+
+Then open your browser to `http://localhost:6006` to view:
+
+- Training/validation loss curves
+- Learning rate schedule
+- GPU utilization metrics
+- Gradient norms
+- Training step timing
+
+**TensorBoard Tips**:
+
+- Launch TensorBoard before or during training to see real-time updates
+- Compare multiple training runs by pointing to the parent directory containing multiple `lora_*` folders
+- Use different ports (`--port 6007`, etc.) to run multiple TensorBoard instances
+- Logs are saved automatically in the `runs/` subdirectory of your output folder
+
 ### Generate Training Data
 
 ```bash
