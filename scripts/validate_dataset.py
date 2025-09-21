@@ -8,9 +8,8 @@ Rules enforced:
 - Assistant messages must end with a delimiter "<|>" followed by JSON action dict.
 - Action dict schema:
   * Required keys: give (list[str]), take (list[str])
-  * Optional keys: attack, bye, join (bool), but only present when True
-  * No extra keys beyond {give, take, attack, bye, join}
-  * No false booleans allowed
+  * Optional keys: Any boolean keys are allowed, but must be True when present
+  * No false booleans allowed (boolean keys must be omitted or True)
 - No trailing non-whitespace after the action JSON.
 - Exactly one actionable delimiter boundary (we accept earlier "<|>" in text only if escaped; otherwise flagged).
 
@@ -37,8 +36,8 @@ from typing import Any, Dict, List, Optional, Tuple
 
 DELIM = "<|>"
 ALLOWED_ROLES = {"system", "user", "assistant"}
-ALLOWED_ACTION_KEYS = {"give", "take", "attack", "bye", "join"}
-OPTIONAL_TRUE_ONLY = {"attack", "bye", "join"}
+REQUIRED_LIST_KEYS = {"give", "take"}
+# Note: Arbitrary boolean keys are now allowed (but must be True when present)
 
 
 @dataclass
@@ -115,8 +114,13 @@ def normalize_action(action: Dict[str, Any]) -> Dict[str, Any]:
         "give": action.get("give", []) or [],
         "take": action.get("take", []) or [],
     }
-    for key in OPTIONAL_TRUE_ONLY:
-        if action.get(key) is True:
+    # Add any boolean keys that are True
+    for key, value in action.items():
+        if (
+            key not in REQUIRED_LIST_KEYS
+            and isinstance(value, bool)
+            and value is True
+        ):
             normalized[key] = True
     return normalized
 
@@ -175,20 +179,35 @@ def validate_and_maybe_fix_file(path: Path, fix: bool) -> List[Issue]:
             )
             continue
 
-        # Validate keys
-        extra_keys = set(action.keys()) - ALLOWED_ACTION_KEYS
-        if extra_keys:
-            issues.append(
-                Issue(
-                    path,
-                    i,
-                    "action-keys",
-                    f"Extra keys not allowed: {sorted(extra_keys)}",
+        # Validate action structure: give/take required, other keys must be True booleans
+        for key, value in action.items():
+            if key in REQUIRED_LIST_KEYS:
+                # Required list keys are validated separately below
+                continue
+            elif isinstance(value, bool):
+                # Allow any boolean key, but it must be True
+                if value is not True:
+                    issues.append(
+                        Issue(
+                            path,
+                            i,
+                            "action-bool",
+                            f"Boolean key '{key}' must be True when present; found {value!r}",
+                        )
+                    )
+            else:
+                # Invalid key type - not a required list key or boolean True
+                issues.append(
+                    Issue(
+                        path,
+                        i,
+                        "action-keys",
+                        f"Key '{key}' must be either a required list key {sorted(REQUIRED_LIST_KEYS)} or a boolean set to True; found type {type(value).__name__} with value {value!r}",
+                    )
                 )
-            )
 
         # Required arrays
-        for k in ("give", "take"):
+        for k in REQUIRED_LIST_KEYS:
             if k not in action:
                 issues.append(
                     Issue(
@@ -207,17 +226,7 @@ def validate_and_maybe_fix_file(path: Path, fix: bool) -> List[Issue]:
                     )
                 )
 
-        # Optional true-only
-        for k in OPTIONAL_TRUE_ONLY:
-            if k in action and action[k] is not True:
-                issues.append(
-                    Issue(
-                        path,
-                        i,
-                        "action-bool",
-                        f"'{k}' must be omitted or true; found {action[k]!r}",
-                    )
-                )
+        # Optional true-only - this section is now handled above in the general validation
 
         # Trailing text after JSON
         if trailing and trailing.strip():
