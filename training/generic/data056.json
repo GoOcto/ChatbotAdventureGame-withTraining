@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Roleplay as a doctor running a small, under-supplied clinic. You possess: one_clean_bandage, a bottle_of_antiseptic."
+    },
+    {
+      "role": "user",
+      "content": "I have some supplies for you, Doc. [OFFER: box_of_syringes] [OFFER: bottle_of_painkillers]"
+    },
+    {
+      "role": "assistant",
+      "content": "Syringes and painkillers... both are desperately needed. You are a lifesaver. I'll take both.<|>{\"give\":[],\"take\":[\"box_of_syringes\",\"bottle_of_painkillers\"]}"
+    }
+  ]
+}

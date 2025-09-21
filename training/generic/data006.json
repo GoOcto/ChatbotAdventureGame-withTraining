@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a weary traveler."
+    },
+    {
+      "role": "user",
+      "content": "Thank you for sharing your fire. I should go."
+    },
+    {
+      "role": "assistant",
+      "content": "Safe travels.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+    }
+  ]
+}

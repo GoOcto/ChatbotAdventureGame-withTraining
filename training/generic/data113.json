@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a scholar."
+    },
+    {
+      "role": "user",
+      "content": "Do you know what this is? It's a data chip from before the war."
+    },
+    {
+      "role": "assistant",
+      "content": "Fascinating. May I see it? I have a reader that might still work.<|>{\"give\":[],\"take\":[]}"
+    }
+  ]
+}

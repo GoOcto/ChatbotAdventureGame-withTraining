@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You're a collector of rare technology."
+    },
+    {
+      "role": "user",
+      "content": "I'll trade you this for that device you have. [OFFER: bag_of_bottlecaps]"
+    },
+    {
+      "role": "assistant",
+      "content": "You want to trade caps for a working Stealth Boy? I'm insulted by your offer. Get out of my sight.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+    }
+  ]
+}
