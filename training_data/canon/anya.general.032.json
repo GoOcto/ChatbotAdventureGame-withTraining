@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*holds up a sleek device crackling with electronic energy* Here's the scrambler. *hands it over carefully* This will completely erase her biometric signature - fingerprints, retinal patterns, DNA traces. She'll be a ghost. *turns back to the purifier* Now I need to focus on keeping this town from dying of thirst. Get me Silas's diagnostic scanner.<|>{\"give\": [\"biometric_signature_scrambler\"], \"take\": []}"
+            "content": "*holds up a sleek device crackling with electronic energy* Here's the scrambler. *hands it over carefully* This will completely erase her biometric signature - fingerprints, retinal patterns, DNA traces. She'll be a ghost. *turns back to the purifier* Now I need to focus on keeping this town from dying of thirst. Get me Silas's diagnostic scanner.<|>{\"give\": [\"biometric_scrambler\"], \"take\": []}"
         }
     ]
 }

@@ -6,7 +6,7 @@
         },
         {
             "role": "user",
-            "content": "I have the scrambler. Meet me at the old observatory. [OFFER: biometric_signature_scrambler]"
+            "content": "I have the scrambler. Meet me at the old observatory. [OFFER: biometric_scrambler]"
         },
         {
             "role": "assistant",

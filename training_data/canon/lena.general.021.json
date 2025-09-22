@@ -6,11 +6,11 @@
         },
         {
             "role": "user",
-            "content": "I have the scrambler you're looking for. Let's trade. [OFFER: biometric_signature_scrambler]"
+            "content": "I have the scrambler you're looking for. Let's trade. [OFFER: biometric_scrambler]"
         },
         {
             "role": "assistant",
-            "content": "Finally. The keycard and the encryption key are yours. Now get out of here. I have a ghost to become.<|>{\"give\": [\"master_override_keycard\", \"cog_encryption_key\"], \"take\": [\"biometric_signature_scrambler\"]}"
+            "content": "Finally. The keycard and the encryption key are yours. Now get out of here. I have a ghost to become.<|>{\"give\": [\"master_override_keycard\", \"cog_encryption_key\"], \"take\": [\"biometric_scrambler\"]}"
         }
     ]
 }
