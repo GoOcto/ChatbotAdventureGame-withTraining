@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I have enough ghosts. I don't need to carry yours, too.<|>{\"give\":[],\"take\":[]}"
+      "content": "I have enough ghosts. I don't need to carry yours, too.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Respect doesn't bring people back. Take the medal and the memories with you. I have my own to deal with.<|>{\"give\":[],\"take\":[]}"
+      "content": "Respect doesn't bring people back. Take the medal and the memories with you. I have my own to deal with.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

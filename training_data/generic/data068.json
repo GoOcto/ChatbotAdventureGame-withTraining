@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "It's an old magnetic lock. You'll need this to bypass the circuits.<|>{\"give\":[\"lockpick_dataspike\"],\"take\":[]}"
+      "content": "It's an old magnetic lock. You'll need this to bypass the circuits.\n{\"give\":[\"lockpick_dataspike\"],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*A low growl rumbles from its chest, and the creature lowers its head, muscles tensed. It takes a slow, deliberate step forward, its metallic claws scraping against the rusted metal floor.*<|>{\"give\": [], \"take\": []}"
+            "content": "*A low growl rumbles from its chest, and the creature lowers its head, muscles tensed. It takes a slow, deliberate step forward, its metallic claws scraping against the rusted metal floor.*\n{\"give\": [], \"take\": []}"
         }
     ]
 }

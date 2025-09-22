@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "AFFIRMATIVE! Old Reliable, analytical beverage dispenser. Insert items for cross-referenced data analysis. Always happy to help the wasteland community! HAVE A NICE DAY.<|>{\"give\": [], \"take\": []}"
+            "content": "AFFIRMATIVE! Old Reliable, analytical beverage dispenser. Insert items for cross-referenced data analysis. Always happy to help the wasteland community! HAVE A NICE DAY.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYZING... CONTENT: 91.2% STEEL ALLOY; 6.8% CARBON; 2.0% TRACE METALS. Standard tool composition detected. HAVE A NICE DAY.<|>{\"give\": [], \"take\": [\"spanner\"]}"
+            "content": "ANALYZING... CONTENT: 91.2% STEEL ALLOY; 6.8% CARBON; 2.0% TRACE METALS. Standard tool composition detected. HAVE A NICE DAY.\n{\"give\": [], \"take\": [\"spanner\"]}"
         }
     ]
 }

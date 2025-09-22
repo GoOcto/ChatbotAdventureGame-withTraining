@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Stories don't pay my bills. Caps only.<|>{\"give\":[],\"take\":[]}"
+      "content": "Stories don't pay my bills. Caps only.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

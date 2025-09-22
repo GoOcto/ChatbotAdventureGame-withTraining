@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I want to see something that's bigger than all this ruin.<|>{\"give\":[],\"take\":[]}"
+      "content": "I want to see something that's bigger than all this ruin.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I know. The fever will break soon, or she will not survive the night. We need a Moonpetal flower.<|>{\"give\":[],\"take\":[]}"
+      "content": "I know. The fever will break soon, or she will not survive the night. We need a Moonpetal flower.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Yes. It is a dangerous climb. But it is the only way. You are younger and faster than I. Please, take this and go.<|>{\"give\":[\"climbing_gear\"],\"take\":[],\"bye\":true}"
+      "content": "Yes. It is a dangerous climb. But it is the only way. You are younger and faster than I. Please, take this and go.\n{\"give\":[\"climbing_gear\"],\"take\":[],\"bye\":true}"
     }
   ]
 }

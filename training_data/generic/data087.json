@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Heh. I remember a time you could get water right out of a pipe in the wall. Cold, clean... you wouldn't believe it. And the lights at night... the whole sky glowed from the cities.<|>{\"give\":[],\"take\":[]}"
+      "content": "Heh. I remember a time you could get water right out of a pipe in the wall. Cold, clean... you wouldn't believe it. And the lights at night... the whole sky glowed from the cities.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

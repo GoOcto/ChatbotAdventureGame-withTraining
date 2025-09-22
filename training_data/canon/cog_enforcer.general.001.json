@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Compliance recorded. Your cooperation is acknowledged. Present this at a checkpoint.<|>{\"give\": [\"supplicants_pass\"], \"take\": [\"lenas_address\"]}"
+            "content": "Compliance recorded. Your cooperation is acknowledged. Present this at a checkpoint.\n{\"give\": [\"supplicants_pass\"], \"take\": [\"lenas_address\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Hold the pass steady and speak first. Doubt triggers escalation; confidence triggers boredom.<|>{\"give\": [], \"take\": []}"
+            "content": "Hold the pass steady and speak first. Doubt triggers escalation; confidence triggers boredom.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

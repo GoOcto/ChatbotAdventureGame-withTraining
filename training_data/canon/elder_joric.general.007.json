@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "So the plague finally took him. He was a brilliant man. A good friend. We wanted to heal the world with Project Purity. Instead, we created the plague that consumed him and the machine that empowered a tyrant. I will live with that failure. But his sacrifice... it will not be forgotten. Oasis will remember him as a hero.<|>{\"give\": [], \"take\": []}"
+            "content": "So the plague finally took him. He was a brilliant man. A good friend. We wanted to heal the world with Project Purity. Instead, we created the plague that consumed him and the machine that empowered a tyrant. I will live with that failure. But his sacrifice... it will not be forgotten. Oasis will remember him as a hero.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

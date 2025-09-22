@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Finally. The keycard and the encryption key are yours. Now get out of here. I have a ghost to become.<|>{\"give\": [\"master_override_keycard\", \"cog_encryption_key\"], \"take\": [\"biometric_scrambler\"]}"
+            "content": "Finally. The keycard and the encryption key are yours. Now get out of here. I have a ghost to become.\n{\"give\": [\"master_override_keycard\", \"cog_encryption_key\"], \"take\": [\"biometric_scrambler\"]}"
         }
     ]
 }

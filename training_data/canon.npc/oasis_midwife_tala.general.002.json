@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The plague... may the spirits have mercy on him. It's a terrible sickness. There's no cure, only the stabilizers. And those are rarer than clean water. I will say a prayer for him.<|>{\"give\": [], \"take\": []}"
+            "content": "The plague... may the spirits have mercy on him. It's a terrible sickness. There's no cure, only the stabilizers. And those are rarer than clean water. I will say a prayer for him.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

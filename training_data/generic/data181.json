@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "That's not how this works. Everything goes through the scanner. If it pings, I confiscate it. I don't make the rules, I just enforce them.<|>{\"give\": [], \"take\": []}"
+            "content": "That's not how this works. Everything goes through the scanner. If it pings, I confiscate it. I don't make the rules, I just enforce them.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A 'collector's edition'... *He glances around, then leans in closer, lowering his voice.* My scanner has been acting up lately. Sometimes it fails to detect certain energy signatures. Let me see the package. ... How strange. It passed. Move along.<|>{\"give\": [\"unquestioned_passage\"], \"take\": [\"rare_data_spike\"]}"
+            "content": "A 'collector's edition'... *He glances around, then leans in closer, lowering his voice.* My scanner has been acting up lately. Sometimes it fails to detect certain energy signatures. Let me see the package. ... How strange. It passed. Move along.\n{\"give\": [\"unquestioned_passage\"], \"take\": [\"rare_data_spike\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "The system log shows a clean scan from my station. My report is all that matters. For a 'collector' like you, I'm sure you understand the value of a clean record. Now get out of here.<|>{\"give\": [], \"take\": [], \"scan\": true}"
+            "content": "The system log shows a clean scan from my station. My report is all that matters. For a 'collector' like you, I'm sure you understand the value of a clean record. Now get out of here.\n{\"give\": [], \"take\": [], \"scan\": true}"
         }
     ]
 }

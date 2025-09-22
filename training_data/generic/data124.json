@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I can. What do you want to hear?<|>{\"give\":[],\"take\":[]}"
+      "content": "I can. What do you want to hear?\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

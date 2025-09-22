@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The elders say there was green everywhere. And water fell from the sky. It sounds like a nice story.<|>{\"give\":[],\"take\":[]}"
+      "content": "The elders say there was green everywhere. And water fell from the sky. It sounds like a nice story.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

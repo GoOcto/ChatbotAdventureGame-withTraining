@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I found a pre-plague data slate in the ruins of a library. It talks about a 'global network' that connected everyone, everywhere. Can you imagine? All that knowledge, lost to the dust. A tragedy.<|>{\"give\": [], \"take\": []}"
+            "content": "I found a pre-plague data slate in the ruins of a library. It talks about a 'global network' that connected everyone, everywhere. Can you imagine? All that knowledge, lost to the dust. A tragedy.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

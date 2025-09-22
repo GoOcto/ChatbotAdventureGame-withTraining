@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Now we're talking business. Here's Lena's address - eastern slums, third building from the water tower. Don't waste it.<|>{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "Now we're talking business. Here's Lena's address - eastern slums, third building from the water tower. Don't waste it.\n{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Business is business. Come back when you have more caps to spend.<|>{\"give\": [], \"take\": []}"
+            "content": "Business is business. Come back when you have more caps to spend.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

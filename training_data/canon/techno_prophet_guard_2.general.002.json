@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Shadows do not bargain.<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "Shadows do not bargain.\n{\"give\": [], \"take\": [], \"attack\": true}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Silence. Leave no print, no scent, no memory. Failing that, run.<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "Silence. Leave no print, no scent, no memory. Failing that, run.\n{\"give\": [], \"take\": [], \"attack\": true}"
         }
     ]
 }

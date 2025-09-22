@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Barely. The ink has faded over the years. I need a magnifying glass to make out the details.<|>{\"give\":[],\"take\":[]}"
+      "content": "Barely. The ink has faded over the years. I need a magnifying glass to make out the details.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

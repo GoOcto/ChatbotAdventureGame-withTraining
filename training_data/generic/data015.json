@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "My rule is just beginning. Boys! We have a guest who needs to be shown the door. Violently.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "My rule is just beginning. Boys! We have a guest who needs to be shown the door. Violently.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

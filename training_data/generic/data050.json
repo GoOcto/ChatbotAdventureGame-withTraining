@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I'll take the job. Payment is accepted. State the mission parameters.<|>{\"give\":[],\"take\":[\"bag_of_pre-war_coins\"]}"
+      "content": "I'll take the job. Payment is accepted. State the mission parameters.\n{\"give\":[],\"take\":[\"bag_of_pre-war_coins\"]}"
     }
   ]
 }

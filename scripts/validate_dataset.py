@@ -5,13 +5,13 @@ Dataset validator for chatbot_lora
 Rules enforced:
 - Files are JSON with a top-level object containing a `messages` array.
 - Messages have roles in {system, user, assistant} and string `content`.
-- Assistant messages must end with a delimiter "<|>" followed by JSON action dict.
+- Assistant messages must end with a delimiter "\n" followed by JSON action dict.
 - Action dict schema:
   * Required keys: give (list[str]), take (list[str])
   * Optional keys: Any boolean keys are allowed, but must be True when present
   * No false booleans allowed (boolean keys must be omitted or True)
 - No trailing non-whitespace after the action JSON.
-- Exactly one actionable delimiter boundary (we accept earlier "<|>" in text only if escaped; otherwise flagged).
+- Exactly one actionable delimiter boundary (we accept earlier "\n" in text only if escaped; otherwise flagged).
 
 Usage:
   python scripts/validate_dataset.py --check  # default behavior
@@ -34,7 +34,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DELIM = "<|>"
+DELIM = "\n"
 ALLOWED_ROLES = {"system", "user", "assistant"}
 REQUIRED_LIST_KEYS = {"give", "take"}
 # Note: Arbitrary boolean keys are now allowed (but must be True when present)

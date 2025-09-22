@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "[The creature lets out a piercing shriek of rage, its mutated limbs tensing as it lunges forward, claws extended.]<|>{\"give\": [], \"take\": []}"
+            "content": "[The creature lets out a piercing shriek of rage, its mutated limbs tensing as it lunges forward, claws extended.]\n{\"give\": [], \"take\": []}"
         }
     ]
 }

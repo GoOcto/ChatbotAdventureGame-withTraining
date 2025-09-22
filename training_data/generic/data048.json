@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "You want to trade caps for a working Stealth Boy? I'm insulted by your offer. Get out of my sight.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "You want to trade caps for a working Stealth Boy? I'm insulted by your offer. Get out of my sight.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

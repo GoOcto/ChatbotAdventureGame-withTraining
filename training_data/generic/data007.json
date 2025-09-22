@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "You can try.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "You can try.\n{\"give\":[],\"take\":[],\"attack\":true}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "I've seen bigger men try. They're all lying in the ditch outside the gate. You'll make a fine addition to the collection.<|>{\"give\":[],\"take\":[]}"
+      "content": "I've seen bigger men try. They're all lying in the ditch outside the gate. You'll make a fine addition to the collection.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

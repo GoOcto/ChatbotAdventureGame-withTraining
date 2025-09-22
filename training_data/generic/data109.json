@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I have one. It'll cost you, though. Information isn't free.<|>{\"give\":[],\"take\":[]}"
+      "content": "I have one. It'll cost you, though. Information isn't free.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

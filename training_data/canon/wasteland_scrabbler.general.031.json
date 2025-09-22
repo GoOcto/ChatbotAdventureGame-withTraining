@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*tired wheeze-squawk* Heavy things... yes. *mechanical hum* Saw big man earlier... he carry MORE heavy things. *curious chirp* You tired too?<|>{\"give\": [], \"take\": []}"
+            "content": "*tired wheeze-squawk* Heavy things... yes. *mechanical hum* Saw big man earlier... he carry MORE heavy things. *curious chirp* You tired too?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Something beautiful. Before it's gone.<|>{\"give\":[],\"take\":[]}"
+      "content": "Something beautiful. Before it's gone.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

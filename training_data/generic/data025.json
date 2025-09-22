@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A locket and a book are useless trinkets. They won't keep me warm or put food in my belly. This isn't a trade, it's a joke.<|>{\"give\":[],\"take\":[]}"
+      "content": "A locket and a book are useless trinkets. They won't keep me warm or put food in my belly. This isn't a trade, it's a joke.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

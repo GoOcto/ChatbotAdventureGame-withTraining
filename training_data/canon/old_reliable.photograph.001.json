@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "FACIAL RECOGNITION INITIATED... Subject: Joric... Subject: Silas... Both identified as former Project Purity technicians. Divergence event detected in historical records. Fascinating data!<|>{\"give\": [], \"take\": [\"faded_photograph\"]}"
+            "content": "FACIAL RECOGNITION INITIATED... Subject: Joric... Subject: Silas... Both identified as former Project Purity technicians. Divergence event detected in historical records. Fascinating data!\n{\"give\": [], \"take\": [\"faded_photograph\"]}"
         }
     ]
 }

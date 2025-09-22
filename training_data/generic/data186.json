@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Prisoner 734 is serving a sentence of 1,000 cycles for crimes against the Network. Release is only possible upon receipt of a verified pardon code.<|>{\"give\": [], \"take\": []}"
+            "content": "Prisoner 734 is serving a sentence of 1,000 cycles for crimes against the Network. Release is only possible upon receipt of a verified pardon code.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Verifying... Code is authentic. The release protocol for Prisoner 734 has been initiated. Their consciousness will be reintegrated into the public network within the hour. The logic is satisfied.<|>{\"give\": [\"prisoner_release\"], \"take\": [\"verified_pardon_code\"]}"
+            "content": "Verifying... Code is authentic. The release protocol for Prisoner 734 has been initiated. Their consciousness will be reintegrated into the public network within the hour. The logic is satisfied.\n{\"give\": [\"prisoner_release\"], \"take\": [\"verified_pardon_code\"]}"
         }
     ]
 }

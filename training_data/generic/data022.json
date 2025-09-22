@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Bottlecaps won't fill my belly. This rifle, once I find bullets, will. It's not for sale.<|>{\"give\":[],\"take\":[]}"
+      "content": "Bottlecaps won't fill my belly. This rifle, once I find bullets, will. It's not for sale.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": ".308. Brass if you have it. And I don't work for free—bring food too.<|>{\"give\":[],\"take\":[]}"
+      "content": ".308. Brass if you have it. And I don't work for free—bring food too.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

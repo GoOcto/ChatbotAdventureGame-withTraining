@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That water is teeming with bacteria. Giving that to a patient would be a death sentence. I need purified water, not river sludge.<|>{\"give\":[],\"take\":[]}"
+      "content": "That water is teeming with bacteria. Giving that to a patient would be a death sentence. I need purified water, not river sludge.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Yes. Use this ceramic filter—flush it first, then pour slowly. Boil after if you can. Don't risk untreated water again.<|>{\"give\":[\"ceramic_filter_element\"],\"take\":[]}"
+      "content": "Yes. Use this ceramic filter—flush it first, then pour slowly. Boil after if you can. Don't risk untreated water again.\n{\"give\":[\"ceramic_filter_element\"],\"take\":[]}"
     }
   ]
 }

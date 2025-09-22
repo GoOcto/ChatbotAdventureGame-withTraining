@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Alright. Watch your back out there.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Alright. Watch your back out there.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

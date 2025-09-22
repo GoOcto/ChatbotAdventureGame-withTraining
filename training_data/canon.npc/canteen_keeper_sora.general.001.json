@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Salt cures, stories cure boredom, and filters cure death. Today? Filters. Anyone with a spare gets a table and a line.<|>{\"give\": [], \"take\": []}"
+            "content": "Salt cures, stories cure boredom, and filters cure death. Today? Filters. Anyone with a spare gets a table and a line.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "No cutting the water line. Not for Cog, not for prophets, not for cousins. Break that and you break us. We're done here—next!<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "No cutting the water line. Not for Cog, not for prophets, not for cousins. Break that and you break us. We're done here—next!\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

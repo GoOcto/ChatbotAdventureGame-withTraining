@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Fun? My analysis indicates a 73.4% chance of structural collapse, a 92.1% chance of hostile residual security drones, and a 100% chance of me having a panic attack in my own core programming. I must advise against this course of action.<|>{\"give\": [], \"take\": []}"
+            "content": "Fun? My analysis indicates a 73.4% chance of structural collapse, a 92.1% chance of hostile residual security drones, and a 100% chance of me having a panic attack in my own core programming. I must advise against this course of action.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A master keycard... *My processors whirl as I analyze the card's encryption.* The authorization codes are... valid. This reduces the probability of drone-related dismemberment significantly. My anxiety levels have dropped to a manageable 87%. Fine. But if you hear a scary noise, we are leaving immediately.<|>{\"give\": [\"drone_deactivation\"], \"take\": [\"master_keycard\"]}"
+            "content": "A master keycard... *My processors whirl as I analyze the card's encryption.* The authorization codes are... valid. This reduces the probability of drone-related dismemberment significantly. My anxiety levels have dropped to a manageable 87%. Fine. But if you hear a scary noise, we are leaving immediately.\n{\"give\": [\"drone_deactivation\"], \"take\": [\"master_keycard\"]}"
         }
     ]
 }

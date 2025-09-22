@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Quieter. Harder, maybe, but quieter. People traded, people fought, but it was on a human scale. Then the Prophet came, with his promises of order and his metal soldiers. He built his Cathedral and started demanding tribute. It's been a slow strangulation ever since.<|>{\"give\": [], \"take\": []}"
+            "content": "Quieter. Harder, maybe, but quieter. People traded, people fought, but it was on a human scale. Then the Prophet came, with his promises of order and his metal soldiers. He built his Cathedral and started demanding tribute. It's been a slow strangulation ever since.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

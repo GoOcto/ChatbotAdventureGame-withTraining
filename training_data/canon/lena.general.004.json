@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "If you had what I need, you'd know where to ask. Wrong order. Goodbye.<|>{\"give\": [], \"take\": []}"
+            "content": "If you had what I need, you'd know where to ask. Wrong order. Goodbye.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Ask for the machinist and order a left-handed wrench. If I reply with \"quarter-turn,\" you found me\u2014not a trap.<|>{\"give\": [], \"take\": []}"
+            "content": "Ask for the machinist and order a left-handed wrench. If I reply with \"quarter-turn,\" you found me\u2014not a trap.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

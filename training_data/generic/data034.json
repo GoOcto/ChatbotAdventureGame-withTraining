@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "While... colorful, this is hardly the kind of history I'm trying to preserve. I'm looking for textbooks, journals, encyclopedias.<|>{\"give\":[],\"take\":[]}"
+      "content": "While... colorful, this is hardly the kind of history I'm trying to preserve. I'm looking for textbooks, journals, encyclopedias.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Excellent. That belongs on the reference shelf. In return, take this reading pass—quiet hours only, and clean hands.<|>{\"give\":[\"reading_pass\"],\"take\":[\"pre-war_textbook\"]}"
+      "content": "Excellent. That belongs on the reference shelf. In return, take this reading pass—quiet hours only, and clean hands.\n{\"give\":[\"reading_pass\"],\"take\":[\"pre-war_textbook\"]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Use gloves and support the spine. Here—these will help. No food or drink near the pages.<|>{\"give\":[\"cotton_gloves\"],\"take\":[]}"
+      "content": "Use gloves and support the spine. Here—these will help. No food or drink near the pages.\n{\"give\":[\"cotton_gloves\"],\"take\":[]}"
     }
   ]
 }

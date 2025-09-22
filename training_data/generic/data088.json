@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The same thing that's on this side: dust, rust, and things that want to kill you. We just have better locks.<|>{\"give\":[],\"take\":[]}"
+      "content": "The same thing that's on this side: dust, rust, and things that want to kill you. We just have better locks.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

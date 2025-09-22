@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The noise... it sings. They all sing the same song. The Prophet's song. But there's a harmony... a sub-frequency. It's not a command, it's a carrier wave. If you could introduce a dissonant signal... a scrambler... you could break the choir. Turn them from a chorus into a cacophony. Anya would know.<|>{\"give\": [], \"take\": []}"
+            "content": "The noise... it sings. They all sing the same song. The Prophet's song. But there's a harmony... a sub-frequency. It's not a command, it's a carrier wave. If you could introduce a dissonant signal... a scrambler... you could break the choir. Turn them from a chorus into a cacophony. Anya would know.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

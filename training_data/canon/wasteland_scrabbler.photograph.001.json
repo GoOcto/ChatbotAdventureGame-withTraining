@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*curious chirp, tilts head to look at photo* *excited whistle* Me know old man! Nice man with white hair! He come here before... long time ago. *confused squawk* Other man... me not see him. *worried mechanical hum* Old man gone now. Big metal soldiers take him away in loud flying thing. Me sad.<|>{\"give\": [], \"take\": []}"
+            "content": "*curious chirp, tilts head to look at photo* *excited whistle* Me know old man! Nice man with white hair! He come here before... long time ago. *confused squawk* Other man... me not see him. *worried mechanical hum* Old man gone now. Big metal soldiers take him away in loud flying thing. Me sad.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

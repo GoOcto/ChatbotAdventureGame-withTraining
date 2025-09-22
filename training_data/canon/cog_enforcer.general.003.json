@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Do not improvise. Mark the time, direction of travel, and nearest landmark. Report. We act; you survive.<|>{\"give\": [], \"take\": []}"
+            "content": "Do not improvise. Mark the time, direction of travel, and nearest landmark. Report. We act; you survive.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Compliance noted. Your cooperation is rewarded. Present this at the gates.<|>{\"give\": [\"supplicants_pass\"], \"take\": [], \"bye\": true}"
+            "content": "Compliance noted. Your cooperation is rewarded. Present this at the gates.\n{\"give\": [\"supplicants_pass\"], \"take\": [], \"bye\": true}"
         }
     ]
 }

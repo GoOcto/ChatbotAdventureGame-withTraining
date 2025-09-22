@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "It wasn't a simple breakdown. The intake valve was deliberately sheared, and the primary filtration matrix was flash-fused. That's not wear and tear; that's sabotage. It has the Cog's signature all over it—efficient, brutal, and designed to cause maximum suffering.<|>{\"give\": [], \"take\": []}"
+            "content": "It wasn't a simple breakdown. The intake valve was deliberately sheared, and the primary filtration matrix was flash-fused. That's not wear and tear; that's sabotage. It has the Cog's signature all over it—efficient, brutal, and designed to cause maximum suffering.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

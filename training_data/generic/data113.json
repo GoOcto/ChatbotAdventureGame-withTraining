@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Fascinating. May I see it? I have a reader that might still work.<|>{\"give\":[],\"take\":[]}"
+      "content": "Fascinating. May I see it? I have a reader that might still work.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

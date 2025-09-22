@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "They're all hot days.<|>{\"give\":[],\"take\":[]}"
+      "content": "They're all hot days.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

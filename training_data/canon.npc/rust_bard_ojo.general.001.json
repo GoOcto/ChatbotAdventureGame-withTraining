@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "'When the pipe hums low and the gauges blink slow, keep your hands off the wheel and your pride down below.' It's not poetry—it's the manual pretending to be one.<|>{\"give\": [], \"take\": []}"
+            "content": "'When the pipe hums low and the gauges blink slow, keep your hands off the wheel and your pride down below.' It's not poetry—it's the manual pretending to be one.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A verse you learned the hard way. We keep the Basin alive by remembering together. No coin lasts; choruses do.<|>{\"give\": [], \"take\": []}"
+            "content": "A verse you learned the hard way. We keep the Basin alive by remembering together. No coin lasts; choruses do.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

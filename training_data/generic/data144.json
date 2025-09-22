@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Some doors still listen to their bones. A makeshift stethoscope and patience can read the tumblers. But there's a better way—I've a manual on Cog lockout patterns.<|>{\"give\": [], \"take\": []}"
+            "content": "Some doors still listen to their bones. A makeshift stethoscope and patience can read the tumblers. But there's a better way—I've a manual on Cog lockout patterns.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Bring me documentation to replace what I'll give. A schematic, even damaged, will do.<|>{\"give\": [], \"take\": []}"
+            "content": "Bring me documentation to replace what I'll give. A schematic, even damaged, will do.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Accepted. Study chapter four—pulse timing. It'll let you ride a partial power cycle and slip the seal briefly.<|>{\"give\": [\"bunker_map\"], \"take\": [\"damaged_schematics\"]}"
+            "content": "Accepted. Study chapter four—pulse timing. It'll let you ride a partial power cycle and slip the seal briefly.\n{\"give\": [\"bunker_map\"], \"take\": [\"damaged_schematics\"]}"
         }
     ]
 }

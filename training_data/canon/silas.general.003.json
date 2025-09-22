@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Walls don't echo like people. Ink steadies the noise. The Prophet's prayers are just protocols with better marketing. If I fill the gaps with numbers, the whispers trip over them and leave me be\u2014for a while.<|>{\"give\": [], \"take\": []}"
+            "content": "Walls don't echo like people. Ink steadies the noise. The Prophet's prayers are just protocols with better marketing. If I fill the gaps with numbers, the whispers trip over them and leave me be\u2014for a while.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

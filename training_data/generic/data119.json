@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "You learn to be, out here. The quiet is what gets you. That's when you know something is watching.<|>{\"give\":[],\"take\":[]}"
+      "content": "You learn to be, out here. The quiet is what gets you. That's when you know something is watching.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

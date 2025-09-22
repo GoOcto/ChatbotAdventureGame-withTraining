@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Mutated corn. It's tough and bland, but it grows. It's enough.<|>{\"give\":[],\"take\":[]}"
+      "content": "Mutated corn. It's tough and bland, but it grows. It's enough.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

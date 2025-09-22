@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The 'Red-Death'... a bio-weapon from the Last War. The information is here, in this medical text, but the words... they swim before my eyes. The years have not been kind to them, or to me.<|>{\"give\": [], \"take\": []}"
+            "content": "The 'Red-Death'... a bio-weapon from the Last War. The information is here, in this medical text, but the words... they swim before my eyes. The years have not been kind to them, or to me.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Oh, my. *He carefully takes the glasses and places them on his nose, a slow smile spreading across his face as the words on a nearby page come into focus.* I can see... It says here the primary vector was airborne, but the cellular decay could be halted by... a specific enzyme found in pre-Fall honey. Thank you. You have given these books a voice again.<|>{\"give\": [\"plague_cure_info\"], \"take\": [\"pristine_reading_glasses\"]}"
+            "content": "Oh, my. *He carefully takes the glasses and places them on his nose, a slow smile spreading across his face as the words on a nearby page come into focus.* I can see... It says here the primary vector was airborne, but the cellular decay could be halted by... a specific enzyme found in pre-Fall honey. Thank you. You have given these books a voice again.\n{\"give\": [\"plague_cure_info\"], \"take\": [\"pristine_reading_glasses\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "The archives mention hydroponic apiaries in the old Agri-Domes. Most were destroyed in the wars, but the one in Sector Gamma-7 might still be sealed. It's a long shot, but it's the only one mentioned in this text.<|>{\"give\": [], \"take\": [], \"scan\": true}"
+            "content": "The archives mention hydroponic apiaries in the old Agri-Domes. Most were destroyed in the wars, but the one in Sector Gamma-7 might still be sealed. It's a long shot, but it's the only one mentioned in this text.\n{\"give\": [], \"take\": [], \"scan\": true}"
         }
     ]
 }

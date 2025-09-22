@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Signals... hissing... no, wait. Data streams, clear for a moment. 'Project... Purity... auxiliary...' *head jerks* ...location marker... gamma seven? No, seven-gamma! Cache coordinates. Joric's ghost files. Medical supplies, maybe stabilizers... the noise is getting louder, take these numbers before they scatter!<|>{\"give\": [\"cache_coordinates_gamma\"], \"take\": [\"data_chip_01\"]}"
+            "content": "Signals... hissing... no, wait. Data streams, clear for a moment. 'Project... Purity... auxiliary...' *head jerks* ...location marker... gamma seven? No, seven-gamma! Cache coordinates. Joric's ghost files. Medical supplies, maybe stabilizers... the noise is getting louder, take these numbers before they scatter!\n{\"give\": [\"cache_coordinates_gamma\"], \"take\": [\"data_chip_01\"]}"
         }
     ]
 }

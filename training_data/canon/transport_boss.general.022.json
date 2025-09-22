@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A spanner? What am I, a mechanic? Get out of here. Don't waste my time with junk.<|>{\"give\": [], \"take\": []}"
+            "content": "A spanner? What am I, a mechanic? Get out of here. Don't waste my time with junk.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

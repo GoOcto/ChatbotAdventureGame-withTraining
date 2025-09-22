@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Beep-beep! Silas man make buzzy sounds like broken radio. He sit by rocks, draw pictures on paper. He like shiny beepy thing. Give him good medicine—he smile little bit. Squawk!<|>{\"give\": [], \"take\": []}"
+            "content": "Beep-beep! Silas man make buzzy sounds like broken radio. He sit by rocks, draw pictures on paper. He like shiny beepy thing. Give him good medicine—he smile little bit. Squawk!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

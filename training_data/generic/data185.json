@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "That's a nice hover-car you got there. It'd be a shame if it got impounded over a... 'misunderstood' parking violation. The paperwork is a real headache. Sometimes it's easier to just... pay the 'on-the-spot' fine.<|>{\"give\": [], \"take\": []}"
+            "content": "That's a nice hover-car you got there. It'd be a shame if it got impounded over a... 'misunderstood' parking violation. The paperwork is a real headache. Sometimes it's easier to just... pay the 'on-the-spot' fine.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "That should just about cover it. *He makes the cash disappear with a sleight of hand.* Looks like you were parked legally after all. Have a nice day, citizen.<|>{\"give\": [\"cleared_violation\"], \"take\": [\"wad_of_cash\"]}"
+            "content": "That should just about cover it. *He makes the cash disappear with a sleight of hand.* Looks like you were parked legally after all. Have a nice day, citizen.\n{\"give\": [\"cleared_violation\"], \"take\": [\"wad_of_cash\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "What won't show up? There was no violation. No report. Nothing. You and I never even spoke. Understand?<|>{\"give\": [], \"take\": [], \"deceive\": true}"
+            "content": "What won't show up? There was no violation. No report. Nothing. You and I never even spoke. Understand?\n{\"give\": [], \"take\": [], \"deceive\": true}"
         }
     ]
 }

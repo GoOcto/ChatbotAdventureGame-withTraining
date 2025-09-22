@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Getting the purifier back online. Without a fusion regulator, I'm stuck trying to come up with a temporary fix to keep Oasis from running dry.<|>{\"give\": [], \"take\": []}"
+            "content": "Getting the purifier back online. Without a fusion regulator, I'm stuck trying to come up with a temporary fix to keep Oasis from running dry.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "That's a start. But I still need the schematics to build a stabilizer that won't blow a gasket. Bring me both at the same time and I can make it work.<|>{\"give\": [], \"take\": []}"
+            "content": "That's a start. But I still need the schematics to build a stabilizer that won't blow a gasket. Bring me both at the same time and I can make it work.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Now we're talking. I'll get this stabilizer built. It's not perfect, but it should hold until we get a real part. Here, for your trouble. Keep your water clean.<|>{\"give\": [\"high_quality_water_filter\"], \"take\": [\"scrap_parts\", \"damaged_schematics\"]}"
+            "content": "Now we're talking. I'll get this stabilizer built. It's not perfect, but it should hold until we get a real part. Here, for your trouble. Keep your water clean.\n{\"give\": [\"high_quality_water_filter\"], \"take\": [\"scrap_parts\", \"damaged_schematics\"]}"
         }
     ]
 }

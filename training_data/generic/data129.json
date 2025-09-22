@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Follow the cottonwoods; they drink deep. The ground will soften before you hear the water.<|>{\"give\":[],\"take\":[]}"
+      "content": "Follow the cottonwoods; they drink deep. The ground will soften before you hear the water.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Step lightly near dark patches. Use a stick to test the ground. If you sink, lean back and crawl out slow.<|>{\"give\":[],\"take\":[]}"
+      "content": "Step lightly near dark patches. Use a stick to test the ground. If you sink, lean back and crawl out slow.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

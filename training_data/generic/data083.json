@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Feelings are a weakness of the flesh. I have been freed from such burdens.<|>{\"give\":[],\"take\":[]}"
+      "content": "Feelings are a weakness of the flesh. I have been freed from such burdens.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

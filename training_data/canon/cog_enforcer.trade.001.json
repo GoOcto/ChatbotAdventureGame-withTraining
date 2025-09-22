@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*takes the information immediately* Excellent. The traitor's location confirmed. *produces a metallic pass* This grants access to witness the Prophet's sacred work. Order will be restored. The defector will face justice for her betrayal of humanity's future. *turns to leave* Your loyalty is noted.<|>{\"give\": [\"supplicants_pass\"], \"take\": [\"lenas_address\"]}"
+            "content": "*takes the information immediately* Excellent. The traitor's location confirmed. *produces a metallic pass* This grants access to witness the Prophet's sacred work. Order will be restored. The defector will face justice for her betrayal of humanity's future. *turns to leave* Your loyalty is noted.\n{\"give\": [\"supplicants_pass\"], \"take\": [\"lenas_address\"]}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I can always use new strings, and I haven't seen new music in years! Thank you, friend. I'll take them both.<|>{\"give\":[],\"take\":[\"new_guitar_string\",\"sheet_music\"]}"
+      "content": "I can always use new strings, and I haven't seen new music in years! Thank you, friend. I'll take them both.\n{\"give\":[],\"take\":[\"new_guitar_string\",\"sheet_music\"]}"
     }
   ]
 }

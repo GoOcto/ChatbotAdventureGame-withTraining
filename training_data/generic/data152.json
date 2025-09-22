@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "You're meddling in things you don't understand, pal. Some doors, you open 'em, they don't shut. They're not playing a game. They're waiting for a guest to arrive. And you don't want to be here for the party.<|>{\"give\": [], \"take\": []}"
+            "content": "You're meddling in things you don't understand, pal. Some doors, you open 'em, they don't shut. They're not playing a game. They're waiting for a guest to arrive. And you don't want to be here for the party.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Star-Map... I thought it was lost. The patterns on this... they're not stars, they're pathways. The ritual isn't to summon something; it's to open a gate. They're planning it for the next lunar eclipse. This cipher key will let you read their star-charts. Don't say I never did anything for you.<|>{\"give\": [\"ritual_cipher_key\"], \"take\": [\"obsidian_tablet\"]}"
+            "content": "The Star-Map... I thought it was lost. The patterns on this... they're not stars, they're pathways. The ritual isn't to summon something; it's to open a gate. They're planning it for the next lunar eclipse. This cipher key will let you read their star-charts. Don't say I never did anything for you.\n{\"give\": [\"ritual_cipher_key\"], \"take\": [\"obsidian_tablet\"]}"
         }
     ]
 }

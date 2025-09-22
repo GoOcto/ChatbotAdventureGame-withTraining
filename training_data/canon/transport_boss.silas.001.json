@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Silas? *spits* Paranoid hermit living out in the canyons. Tech-head, completely cracked from the nanite plague. Used to work with that Oasis elder before everything went to hell. *eyes narrow* Why? You planning a trip to his cave? That'll cost you. Nothing's free in this wasteland.<|>{\"give\": [], \"take\": []}"
+            "content": "Silas? *spits* Paranoid hermit living out in the canyons. Tech-head, completely cracked from the nanite plague. Used to work with that Oasis elder before everything went to hell. *eyes narrow* Why? You planning a trip to his cave? That'll cost you. Nothing's free in this wasteland.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Loud... so loud... Go away! The noise... you're making it worse! Leave me be!<|>{\"give\": [], \"take\": []}"
+            "content": "Loud... so loud... Go away! The noise... you're making it worse! Leave me be!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

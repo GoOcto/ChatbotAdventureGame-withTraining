@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*doesn't look up from dismantled machinery* Busy? The entire town's water supply is dead! *slams wrench down* I need a diagnostic scanner to analyze this sabotage - military-grade work, by the looks of it. There's a paranoid hermit named Silas who has one. Think you can handle dealing with a plague-addled recluse?<|>{\"give\": [], \"take\": []}"
+            "content": "*doesn't look up from dismantled machinery* Busy? The entire town's water supply is dead! *slams wrench down* I need a diagnostic scanner to analyze this sabotage - military-grade work, by the looks of it. There's a paranoid hermit named Silas who has one. Think you can handle dealing with a plague-addled recluse?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

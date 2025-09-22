@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "In the war. It's a long story.<|>{\"give\":[],\"take\":[]}"
+      "content": "In the war. It's a long story.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Maybe you do. I don't. Some stories are best left untold.<|>{\"give\":[],\"take\":[]}"
+      "content": "Maybe you do. I don't. Some stories are best left untold.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

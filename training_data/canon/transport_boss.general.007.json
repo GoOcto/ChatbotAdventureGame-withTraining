@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Quiet costs extra. I have a route, but it ain't cheap. What's your offer?<|>{\"give\": [], \"take\": []}"
+            "content": "Quiet costs extra. I have a route, but it ain't cheap. What's your offer?\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A pre-plague inverter? Now you're talking. My mechanic will love this. Alright, you've got a ride. Be at the west gate at sundown. Don't be late.<|>{\"give\": [], \"take\": [\"micro_inverter\"]}"
+            "content": "A pre-plague inverter? Now you're talking. My mechanic will love this. Alright, you've got a ride. Be at the west gate at sundown. Don't be late.\n{\"give\": [], \"take\": [\"micro_inverter\"]}"
         }
     ]
 }

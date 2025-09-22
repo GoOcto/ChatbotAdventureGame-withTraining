@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Skwee-skwee! Under big singing room, me see lots of thick wires like snakes. There's sleepy wire that make lights go blink-off when vents make hot noise. Then door go beep-beep funny. Chirp!<|>{\"give\": [], \"take\": []}"
+            "content": "Skwee-skwee! Under big singing room, me see lots of thick wires like snakes. There's sleepy wire that make lights go blink-off when vents make hot noise. Then door go beep-beep funny. Chirp!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

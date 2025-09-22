@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Joric? What happened? The water purifier is down, and without his guidance, Oasis is in real trouble. We need him back.<|>{\"give\": [], \"take\": []}"
+            "content": "Joric? What happened? The water purifier is down, and without his guidance, Oasis is in real trouble. We need him back.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "It's been sabotaged. I need a fusion regulator to fix it properly. Without it, we're just buying time with patchwork fixes.<|>{\"give\": [], \"take\": []}"
+            "content": "It's been sabotaged. I need a fusion regulator to fix it properly. Without it, we're just buying time with patchwork fixes.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

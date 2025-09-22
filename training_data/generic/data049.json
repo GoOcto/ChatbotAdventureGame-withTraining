@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Thank you. This is a welcome gift. May the path be safe for you.<|>{\"give\":[],\"take\":[\"bag_of_jerked_meat\",\"canteen_of_water\"],\"bye\":true}"
+      "content": "Thank you. This is a welcome gift. May the path be safe for you.\n{\"give\":[],\"take\":[\"bag_of_jerked_meat\",\"canteen_of_water\"],\"bye\":true}"
     }
   ]
 }

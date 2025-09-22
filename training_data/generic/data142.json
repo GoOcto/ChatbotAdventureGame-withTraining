@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Grrrrr! Woooowww! Grwrrr... *whine*<|>{\"give\": [], \"take\": []}"
+            "content": "Grrrrr! Woooowww! Grwrrr... *whine*\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Ruff ruff! Grrrr... Wooo! *growl*<|>{\"give\": [], \"take\": []}"
+            "content": "Ruff ruff! Grrrr... Wooo! *growl*\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Ambulance wreck under the overpass—half-buried. Check the locked med case under the gurney rails.<|>{\"give\": [], \"take\": []}"
+            "content": "Ambulance wreck under the overpass—half-buried. Check the locked med case under the gurney rails.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Watch for the Stalker. If it wind-snarls, climb the overpass spine; it won't follow where the rebar sings.<|>{\"give\": [], \"take\": []}"
+            "content": "Watch for the Stalker. If it wind-snarls, climb the overpass spine; it won't follow where the rebar sings.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

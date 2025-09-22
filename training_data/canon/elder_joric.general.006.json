@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "It wasn't a god... it was a planetary atmospheric regulator. 'Project Purity.' Silas and I built it to cleanse the rad-storms. But the nanite plague corrupted its core logic. The Prophet didn't build a church; he found a broken machine and started calling it divine.<|>{\"give\": [], \"take\": []}"
+            "content": "It wasn't a god... it was a planetary atmospheric regulator. 'Project Purity.' Silas and I built it to cleanse the rad-storms. But the nanite plague corrupted its core logic. The Prophet didn't build a church; he found a broken machine and started calling it divine.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A deadly mistake out here. Here, take my spare filter. Find a source and use it. Don't make that mistake again.<|>{\"give\":[\"water_filter\"],\"take\":[]}"
+      "content": "A deadly mistake out here. Here, take my spare filter. Find a source and use it. Don't make that mistake again.\n{\"give\":[\"water_filter\"],\"take\":[]}"
     }
   ]
 }

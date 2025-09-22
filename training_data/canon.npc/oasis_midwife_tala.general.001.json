@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I caught the first bowl. It wasn't a miracle—it was work finally working. The crowd shook like a fever broke. We rationed with hands that didn't stop shaking for hours.<|>{\"give\": [], \"take\": []}"
+            "content": "I caught the first bowl. It wasn't a miracle—it was work finally working. The crowd shook like a fever broke. We rationed with hands that didn't stop shaking for hours.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Make them hold a baby for a breath. It changes posture and volume. If that fails, I end the talk and call the next. Water waits for no fight. Be well.<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "Make them hold a baby for a breath. It changes posture and volume. If that fails, I end the talk and call the next. Water waits for no fight. Be well.\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

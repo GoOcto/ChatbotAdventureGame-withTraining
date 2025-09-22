@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "This observatory? It was a place of science. They watched the stars. Joric said they were looking for answers, same as us. When the plagues hit and the cities fell, the first settlers came here for the high ground and the deep wells. We traded the stars for survival. A fair trade, I think.<|>{\"give\": [], \"take\": []}"
+            "content": "This observatory? It was a place of science. They watched the stars. Joric said they were looking for answers, same as us. When the plagues hit and the cities fell, the first settlers came here for the high ground and the deep wells. We traded the stars for survival. A fair trade, I think.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

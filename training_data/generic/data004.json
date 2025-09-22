@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The company was welcome. Farewell, traveler.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "The company was welcome. Farewell, traveler.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

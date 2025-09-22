@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A man who made a promise he didn't keep. I'm here to collect the debt.<|>{\"give\":[],\"take\":[]}"
+      "content": "A man who made a promise he didn't keep. I'm here to collect the debt.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

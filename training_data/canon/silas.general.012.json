@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Key! Yes, the missing piece... *head jerks* ...decrypting now... signals clearing... no, worse than paranoid thoughts. He's not merging consciousness—he's *wiping* them. Overwriting minds like... like formatting drives!<|>{\"give\": [], \"take\": [\"cog_encryption_key\"]}"
+            "content": "Key! Yes, the missing piece... *head jerks* ...decrypting now... signals clearing... no, worse than paranoid thoughts. He's not merging consciousness—he's *wiping* them. Overwriting minds like... like formatting drives!\n{\"give\": [], \"take\": [\"cog_encryption_key\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Central Chamber... AI core has a flaw, unprotected node. EMP pulse could... *nervous tic* ...cascade overload, free Joric. But guards, enhanced guards... you'd need surgical precision, not brute force!<|>{\"give\": [], \"take\": []}"
+            "content": "Central Chamber... AI core has a flaw, unprotected node. EMP pulse could... *nervous tic* ...cascade overload, free Joric. But guards, enhanced guards... you'd need surgical precision, not brute force!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

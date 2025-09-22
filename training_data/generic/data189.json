@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Machine parts. Right. Pop the crate, let's have a look. I'm sure it's all perfectly legitimate.<|>{\"give\": [], \"take\": []}"
+            "content": "Machine parts. Right. Pop the crate, let's have a look. I'm sure it's all perfectly legitimate.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Well, well. A plasma-core capacitator. Highly illegal. *He takes the mod and weighs it in his hand.* You're lucky I'm in a good mood. This is going to cost you. A 'confiscation fee'. A big one.<|>{\"give\": [], \"take\": [\"illegal_weapon_mod\"]}"
+            "content": "Well, well. A plasma-core capacitator. Highly illegal. *He takes the mod and weighs it in his hand.* You're lucky I'm in a good mood. This is going to cost you. A 'confiscation fee'. A big one.\n{\"give\": [], \"take\": [\"illegal_weapon_mod\"]}"
         }
     ]
 }

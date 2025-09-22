@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The observatory... okay. I'm on my way. This is it. My way out.<|>{\"give\": [], \"take\": []}"
+            "content": "The observatory... okay. I'm on my way. This is it. My way out.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "You... you bastard! You set me up! You won't get away with this! I'll see you dead!<|>{\"give\": [], \"take\": []}"
+            "content": "You... you bastard! You set me up! You won't get away with this! I'll see you dead!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

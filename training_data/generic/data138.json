@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's fine. Walk to the tall saguaro, then turn your shadow's way at noon. Simple marks help simple paths.<|>{\"give\":[],\"take\":[]}"
+      "content": "That's fine. Walk to the tall saguaro, then turn your shadow's way at noon. Simple marks help simple paths.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Keep it for the next turn. But if you insist—I'll take it and redraw the signposts later.<|>{\"give\":[],\"take\":[\"chalk\"]}"
+      "content": "Keep it for the next turn. But if you insist—I'll take it and redraw the signposts later.\n{\"give\":[],\"take\":[\"chalk\"]}"
     }
   ]
 }

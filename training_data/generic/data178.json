@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Sir, I can't let any vehicle through without a signed Form 27-A from Quartermaster Sergeant Rex. It's protocol, sir. No exceptions.<|>{\"give\": [], \"take\": []}"
+            "content": "Sir, I can't let any vehicle through without a signed Form 27-A from Quartermaster Sergeant Rex. It's protocol, sir. No exceptions.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Thank you, sir. *He snaps to attention, taking the form and carefully checking the signature against a clipboard.* It all looks correct. You're cleared to pass. Good luck out there, sir.<|>{\"give\": [\"checkpoint_passage\"], \"take\": [\"form_27a\"]}"
+            "content": "Thank you, sir. *He snaps to attention, taking the form and carefully checking the signature against a clipboard.* It all looks correct. You're cleared to pass. Good luck out there, sir.\n{\"give\": [\"checkpoint_passage\"], \"take\": [\"form_27a\"]}"
         }
     ]
 }

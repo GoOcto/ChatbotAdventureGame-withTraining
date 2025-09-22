@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "It's always an emergency. The gates are sealed 'til dawn, citizen. I don't make the rules. Now move along before I find a reason to lock you up for the night.<|>{\"give\": [], \"take\": []}"
+            "content": "It's always an emergency. The gates are sealed 'til dawn, citizen. I don't make the rules. Now move along before I find a reason to lock you up for the night.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A magistrate's seal... *He takes the scroll, his thumbprint smudging the wax as he verifies the signature.* Well, why didn't you say so? Alright, open the gate! And may the gods have mercy on whoever you're chasing tonight.<|>{\"give\": [\"gate_access\"], \"take\": [\"magistrates_warrant\"]}"
+            "content": "A magistrate's seal... *He takes the scroll, his thumbprint smudging the wax as he verifies the signature.* Well, why didn't you say so? Alright, open the gate! And may the gods have mercy on whoever you're chasing tonight.\n{\"give\": [\"gate_access\"], \"take\": [\"magistrates_warrant\"]}"
         }
     ]
 }

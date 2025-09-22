@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The Dust Lung. People breathe in the grit day after day... eventually, the body just gives out.<|>{\"give\":[],\"take\":[]}"
+      "content": "The Dust Lung. People breathe in the grit day after day... eventually, the body just gives out.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "The only cure is clean air, and there's none of that left. All I can do is make them comfortable. Now, are you sick or just sightseeing?<|>{\"give\":[],\"take\":[]}"
+      "content": "The only cure is clean air, and there's none of that left. All I can do is make them comfortable. Now, are you sick or just sightseeing?\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

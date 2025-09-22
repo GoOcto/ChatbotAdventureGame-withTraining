@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A couple of river lurkers. They're small today, but they'll make a decent soup.<|>{\"give\":[],\"take\":[]}"
+      "content": "A couple of river lurkers. They're small today, but they'll make a decent soup.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

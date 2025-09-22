@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "My apologies! It is simply that I am trapped in a state of eternal suspense! I was reading the 'Swords of Sorrow' series when I met my untimely demise. I never found out if Lord Ashworth defeated the Shadow Lich!<|>{\"give\": [], \"take\": []}"
+            "content": "My apologies! It is simply that I am trapped in a state of eternal suspense! I was reading the 'Swords of Sorrow' series when I met my untimely demise. I never found out if Lord Ashworth defeated the Shadow Lich!\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "The final volume! At last! *The ghost eagerly phases its head into the book, reading it cover to cover in an instant.* He... he what?! They were brothers all along?! Oh, thank you. I can finally rest. Take this, it's a key to a secret room I found. The librarians never knew.<|>{\"give\": [\"secret_room_key\"], \"take\": [\"the_crimson_cipher\"]}"
+            "content": "The final volume! At last! *The ghost eagerly phases its head into the book, reading it cover to cover in an instant.* He... he what?! They were brothers all along?! Oh, thank you. I can finally rest. Take this, it's a key to a secret room I found. The librarians never knew.\n{\"give\": [\"secret_room_key\"], \"take\": [\"the_crimson_cipher\"]}"
         }
     ]
 }

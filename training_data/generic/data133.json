@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Nibbles. River's low; fish keep to the deep shade. Try under the leaning willow at dusk.<|>{\"give\":[],\"take\":[]}"
+      "content": "Nibbles. River's low; fish keep to the deep shade. Try under the leaning willow at dusk.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "The one that isn't lost to a snag. Cast soft, reel slow. Patience feeds more than luck does.<|>{\"give\":[],\"take\":[]}"
+      "content": "The one that isn't lost to a snag. Cast soft, reel slow. Patience feeds more than luck does.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Tight lines.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Tight lines.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

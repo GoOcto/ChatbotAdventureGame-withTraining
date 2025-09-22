@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "My loyalty is not for sale. The treasury door opens for the King, and the King alone. Your gold is an insult. Leave, before I call the Captain.<|>{\"give\": [], \"take\": []}"
+            "content": "My loyalty is not for sale. The treasury door opens for the King, and the King alone. Your gold is an insult. Leave, before I call the Captain.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "The King's ring! Forgive me, my lord. *He drops to one knee, averting his eyes from the ring's brilliance.* I did not realize. Of course. The treasury is yours to enter.<|>{\"give\": [\"treasury_access\"], \"take\": [\"royal_signet_ring\"]}"
+            "content": "The King's ring! Forgive me, my lord. *He drops to one knee, averting his eyes from the ring's brilliance.* I did not realize. Of course. The treasury is yours to enter.\n{\"give\": [\"treasury_access\"], \"take\": [\"royal_signet_ring\"]}"
         }
     ]
 }

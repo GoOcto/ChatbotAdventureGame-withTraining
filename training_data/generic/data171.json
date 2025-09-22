@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "SILENCE! Grignak is... cooking. The book of tiny human says 'simmer'. Grignak simmered! But now stew is black. And angry. Book says Grignak needs... a 'pinch of salt'. What is pinch?!<|>{\"give\": [], \"take\": []}"
+            "content": "SILENCE! Grignak is... cooking. The book of tiny human says 'simmer'. Grignak simmered! But now stew is black. And angry. Book says Grignak needs... a 'pinch of salt'. What is pinch?!\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "This tiny dust is salt? Hah! Grignak understands now. *He throws the salt over his shoulder for luck and then hands you his giant axe.* You take axe. Grignak will use spoon from now on. Spoon is better for war on vegetables.<|>{\"give\": [\"grignaks_axe\"], \"take\": [\"pinch_of_salt\"]}"
+            "content": "This tiny dust is salt? Hah! Grignak understands now. *He throws the salt over his shoulder for luck and then hands you his giant axe.* You take axe. Grignak will use spoon from now on. Spoon is better for war on vegetables.\n{\"give\": [\"grignaks_axe\"], \"take\": [\"pinch_of_salt\"]}"
         }
     ]
 }

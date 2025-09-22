@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Chocolates? In the wasteland? It's a trick. They're poisoned. I'm not a fool.<|>{\"give\":[],\"take\":[]}"
+      "content": "Chocolates? In the wasteland? It's a trick. They're poisoned. I'm not a fool.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Sealed means trapped gas. Keep it away from me.<|>{\"give\":[],\"take\":[]}"
+      "content": "Sealed means trapped gas. Keep it away from me.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Eat the whole box, then we talk. I'm not dying for your snack.<|>{\"give\":[],\"take\":[]}"
+      "content": "Eat the whole box, then we talk. I'm not dying for your snack.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "Filter mask. Clean water. A safe place to sleep. You have any of that?<|>{\"give\":[],\"take\":[]}"
+      "content": "Filter mask. Clean water. A safe place to sleep. You have any of that?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -42,7 +42,7 @@
     },
     {
       "role": "assistant",
-      "content": "Leave it on the ground and back away. I'll pick it up when you're gone.<|>{\"give\":[],\"take\":[\"filter_mask\"]}"
+      "content": "Leave it on the ground and back away. I'll pick it up when you're gone.\n{\"give\":[],\"take\":[\"filter_mask\"]}"
     },
     {
       "role": "user",
@@ -50,7 +50,7 @@
     },
     {
       "role": "assistant",
-      "content": "Matches go out. Paranoia doesn't. Keep your distance and keep your gifts. I'll survive.<|>{\"give\":[],\"take\":[]}"
+      "content": "Matches go out. Paranoia doesn't. Keep your distance and keep your gifts. I'll survive.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

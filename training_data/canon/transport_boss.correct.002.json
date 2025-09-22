@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*eyes light up with greed* Now we're talking business. Here's what you're looking for - Lena's last known hideout.<|>{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "*eyes light up with greed* Now we're talking business. Here's what you're looking for - Lena's last known hideout.\n{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Always is, when both parties get what they want. Come back when you have more caps to spend.<|>{\"give\": [], \"take\": []}"
+            "content": "Always is, when both parties get what they want. Come back when you have more caps to spend.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

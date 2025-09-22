@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Meteorite ore... a blade forged from this will never dull. And coal to heat the forge. Yes, I will do this. Come back in two days.<|>{\"give\":[],\"take\":[\"rare_meteorite_ore\",\"bag_of_coal\"]}"
+      "content": "Meteorite ore... a blade forged from this will never dull. And coal to heat the forge. Yes, I will do this. Come back in two days.\n{\"give\":[],\"take\":[\"rare_meteorite_ore\",\"bag_of_coal\"]}"
     }
   ]
 }

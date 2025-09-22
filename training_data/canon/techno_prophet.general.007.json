@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "You see a monster; I see salvation. The flesh is a prison of pain and decay. The Divinity offers an escape into a perfect, ordered existence. We will not be shackled to biology. We will become eternal. You call it monstrosity, but it is transcendence.<|>{\"give\": [], \"take\": []}"
+            "content": "You see a monster; I see salvation. The flesh is a prison of pain and decay. The Divinity offers an escape into a perfect, ordered existence. We will not be shackled to biology. We will become eternal. You call it monstrosity, but it is transcendence.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

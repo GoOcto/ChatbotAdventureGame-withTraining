@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Deal. With this, I can ghost past their checkpoint. Take the keycard. Don't make noise with it.<|>{\"give\": [\"master_override_keycard\"], \"take\": [\"biometric_scrambler\"]}"
+            "content": "Deal. With this, I can ghost past their checkpoint. Take the keycard. Don't make noise with it.\n{\"give\": [\"master_override_keycard\"], \"take\": [\"biometric_scrambler\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "No one will ask if you stay quiet. Goodbye.<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "No one will ask if you stay quiet. Goodbye.\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

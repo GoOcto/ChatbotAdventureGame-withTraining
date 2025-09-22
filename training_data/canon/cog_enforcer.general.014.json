@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Scan initiated. Pass invalid. The watermark is forged. Deception is a sign of chaos. You will be detained for re-education.<|>{\"give\": [], \"take\": [\"forged_supplicants_pass\"]}"
+            "content": "Scan initiated. Pass invalid. The watermark is forged. Deception is a sign of chaos. You will be detained for re-education.\n{\"give\": [], \"take\": [\"forged_supplicants_pass\"]}"
         }
     ]
 }

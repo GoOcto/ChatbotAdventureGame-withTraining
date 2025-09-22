@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I have just the thing. A sturdy, leather backpack. For a price, of course.<|>{\"give\":[\"leather_backpack\"],\"take\":[]}"
+      "content": "I have just the thing. A sturdy, leather backpack. For a price, of course.\n{\"give\":[\"leather_backpack\"],\"take\":[]}"
     }
   ]
 }

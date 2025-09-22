@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Loose contact or a dying fuse. Clean the terminals first. If it still sputters, swap the fuse.<|>{\"give\":[],\"take\":[]}"
+      "content": "Loose contact or a dying fuse. Clean the terminals first. If it still sputters, swap the fuse.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Here, take one. Bring the bad one back so I can salvage the metal later.<|>{\"give\":[\"spare_fuse\"],\"take\":[]}"
+      "content": "Here, take one. Bring the bad one back so I can salvage the metal later.\n{\"give\":[\"spare_fuse\"],\"take\":[]}"
     }
   ]
 }

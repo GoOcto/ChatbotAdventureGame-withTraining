@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*The creature recoils from the sudden light, letting out a sharp, high-pitched screech. It shields its eyes with a metallic claw and retreats several steps into the shadows, watching you with a newfound wariness.*<|>{\"give\": [], \"take\": []}"
+            "content": "*The creature recoils from the sudden light, letting out a sharp, high-pitched screech. It shields its eyes with a metallic claw and retreats several steps into the shadows, watching you with a newfound wariness.*\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Paperwork doesn't file itself. Food buys ink. You feed my ledger and I'll point your feet.<|>{\"give\": [], \"take\": []}"
+            "content": "Paperwork doesn't file itself. Food buys ink. You feed my ledger and I'll point your feet.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Done. South side of Oasis—follow the oil stains to the blast doors. Knock hard; she hates being surprised.<|>{\"give\": [\"anyas_address\"], \"take\": [\"ration_pack\"]}"
+            "content": "Done. South side of Oasis—follow the oil stains to the blast doors. Knock hard; she hates being surprised.\n{\"give\": [\"anyas_address\"], \"take\": [\"ration_pack\"]}"
         }
     ]
 }

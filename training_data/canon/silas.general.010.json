@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The world is... *twitches slightly* ...mostly quiet now. The buzzing's down to a whisper instead of a scream. I can focus on data streams without the static interference, but... *nervous glance* ...still check the shadows more than I should. Thank you for that dose.<|>{\"give\": [], \"take\": []}"
+            "content": "The world is... *twitches slightly* ...mostly quiet now. The buzzing's down to a whisper instead of a scream. I can focus on data streams without the static interference, but... *nervous glance* ...still check the shadows more than I should. Thank you for that dose.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

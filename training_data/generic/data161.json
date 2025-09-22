@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The governor sees who he wishes to see. This checkpoint does not open for 'urgent news'. It opens for orders from a General of Rome. Do you have such orders?<|>{\"give\": [], \"take\": []}"
+            "content": "The governor sees who he wishes to see. This checkpoint does not open for 'urgent news'. It opens for orders from a General of Rome. Do you have such orders?\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*He takes the scroll, his eyes scanning the seal. Finding it unbroken, he cracks it open and reads, his expression unreadable.* The General's mark. It's authentic. Open the gate! Let him pass. For Rome.<|>{\"give\": [\"checkpoint_passage\"], \"take\": [\"sealed_orders\"]}"
+            "content": "*He takes the scroll, his eyes scanning the seal. Finding it unbroken, he cracks it open and reads, his expression unreadable.* The General's mark. It's authentic. Open the gate! Let him pass. For Rome.\n{\"give\": [\"checkpoint_passage\"], \"take\": [\"sealed_orders\"]}"
         }
     ]
 }

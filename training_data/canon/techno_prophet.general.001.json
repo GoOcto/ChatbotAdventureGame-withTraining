@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Flesh seeks what flesh cannot comprehend. The Divinity measures worth not in breath, but in willingness to transcend the prison of meat. Come bearing proof of your readiness to shed mortality's weakness.<|>{\"give\": [], \"take\": []}"
+            "content": "Flesh seeks what flesh cannot comprehend. The Divinity measures worth not in breath, but in willingness to transcend the prison of meat. Come bearing proof of your readiness to shed mortality's weakness.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Cast off the chains that bind you to this dying form. Bring me those who cling to flesh over truth, and I will show you the path to immortal consciousness. The Divinity thirsts for willing souls to embrace perfection.<|>{\"give\": [], \"take\": []}"
+            "content": "Cast off the chains that bind you to this dying form. Bring me those who cling to flesh over truth, and I will show you the path to immortal consciousness. The Divinity thirsts for willing souls to embrace perfection.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

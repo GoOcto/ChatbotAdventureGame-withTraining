@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*GRRRR* *SNARL!* *BARK!*<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "*GRRRR* *SNARL!* *BARK!*\n{\"give\": [], \"take\": [], \"attack\": true}"
         }
     ]
 }

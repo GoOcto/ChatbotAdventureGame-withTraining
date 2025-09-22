@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "S-sorry, sir. Captain's orders. No caravans enter after dusk without a pass from the Merchant's Guild. I... I can't make any exceptions.<|>{\"give\": [], \"take\": []}"
+            "content": "S-sorry, sir. Captain's orders. No caravans enter after dusk without a pass from the Merchant's Guild. I... I can't make any exceptions.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Oh! Yes, of course. *He fumbles with the pass, almost dropping it before handing it back.* Everything seems to be in order. You can... you can go ahead. Thank you for your cooperation!<|>{\"give\": [\"caravan_passage\"], \"take\": [\"merchants_guild_pass\"]}"
+            "content": "Oh! Yes, of course. *He fumbles with the pass, almost dropping it before handing it back.* Everything seems to be in order. You can... you can go ahead. Thank you for your cooperation!\n{\"give\": [\"caravan_passage\"], \"take\": [\"merchants_guild_pass\"]}"
         }
     ]
 }

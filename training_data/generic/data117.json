@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The land provides. It's a hard life, but it's a good one.<|>{\"give\":[],\"take\":[]}"
+      "content": "The land provides. It's a hard life, but it's a good one.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

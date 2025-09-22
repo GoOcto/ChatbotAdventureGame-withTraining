@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Dangerous talk. Lucky for you, I know where runaways hide. Glimmer bottlecap gets you coordinates.<|>{\"give\": [], \"take\": []}"
+            "content": "Dangerous talk. Lucky for you, I know where runaways hide. Glimmer bottlecap gets you coordinates.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*pockets the cap immediately* Eastern slums, third building from the water tower. Don't tell anyone where you got it.<|>{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "*pockets the cap immediately* Eastern slums, third building from the water tower. Don't tell anyone where you got it.\n{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
         }
     ]
 }

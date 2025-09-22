@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*stares at the photograph, paranoia momentarily lifting* Joric... *voice softens* We were going to save everyone. Before the plague, before the madness. *hands tremble slightly* Tell him I remember the good days.<|>{\"give\": [], \"take\": []}"
+            "content": "*stares at the photograph, paranoia momentarily lifting* Joric... *voice softens* We were going to save everyone. Before the plague, before the madness. *hands tremble slightly* Tell him I remember the good days.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*paranoia returns, eyes darting* The Project failed. Everyone scattered. He built his settlement, I... I hid. The plague took my clarity but not my memories.<|>{\"give\": [], \"take\": []}"
+            "content": "*paranoia returns, eyes darting* The Project failed. Everyone scattered. He built his settlement, I... I hid. The plague took my clarity but not my memories.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

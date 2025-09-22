@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "And that was your final mistake.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "And that was your final mistake.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*takes it with trembling hands* Dose... accepted... *pauses, head cocked like listening* The noise... still a hiss, but... not screaming now. *still paranoid, glancing around nervously* The static layers... they're still there, just... muffled. *slightly less agitated but still twitchy* What do you need? But stay... stay where I can see you.<|>{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
+            "content": "*takes it with trembling hands* Dose... accepted... *pauses, head cocked like listening* The noise... still a hiss, but... not screaming now. *still paranoid, glancing around nervously* The static layers... they're still there, just... muffled. *slightly less agitated but still twitchy* What do you need? But stay... stay where I can see you.\n{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
         }
     ]
 }

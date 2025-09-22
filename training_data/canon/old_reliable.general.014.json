@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "QUERY: Project Purity. A pre-plague initiative to develop atmospheric nanite-based water reclamation technology. Key personnel: Joric, Silas. Project status: Terminated following unforeseen divergence event, resulting in weaponized nanite strain. HAVE A NICE DAY.<|>{\"give\": [], \"take\": []}"
+            "content": "QUERY: Project Purity. A pre-plague initiative to develop atmospheric nanite-based water reclamation technology. Key personnel: Joric, Silas. Project status: Terminated following unforeseen divergence event, resulting in weaponized nanite strain. HAVE A NICE DAY.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

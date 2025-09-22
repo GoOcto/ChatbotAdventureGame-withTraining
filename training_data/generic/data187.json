@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Everyone's starving. If I give out food to every soldier who asks, we'll be eating leather by week's end. I need a signed request from your captain. No exceptions.<|>{\"give\": [], \"take\": []}"
+            "content": "Everyone's starving. If I give out food to every soldier who asks, we'll be eating leather by week's end. I need a signed request from your captain. No exceptions.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Let me see that. *He squints at the signature on the scrap of parchment.* It's his mark, alright. Fine. Take one crate of hardtack and a wheel of cheese. Make it last.<|>{\"give\": [\"extra_rations\"], \"take\": [\"captains_signed_request\"]}"
+            "content": "Let me see that. *He squints at the signature on the scrap of parchment.* It's his mark, alright. Fine. Take one crate of hardtack and a wheel of cheese. Make it last.\n{\"give\": [\"extra_rations\"], \"take\": [\"captains_signed_request\"]}"
         }
     ]
 }

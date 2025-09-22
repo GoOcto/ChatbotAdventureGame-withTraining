@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Watch out for the dust storms to the east. Goodbye.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Watch out for the dust storms to the east. Goodbye.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

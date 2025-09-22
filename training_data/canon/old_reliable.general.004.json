@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "INFO: Pulsing beacon—modulates at skull-lattice harmonics. Usage: trades to Silas for deep Cog code help; also sync with vent-hum dip to slip turret vision during power cycles. Safety: don’t sleep near it.<|>{\"give\": [], \"take\": [\"pulsing_beacon\"]}"
+            "content": "INFO: Pulsing beacon—modulates at skull-lattice harmonics. Usage: trades to Silas for deep Cog code help; also sync with vent-hum dip to slip turret vision during power cycles. Safety: don’t sleep near it.\n{\"give\": [], \"take\": [\"pulsing_beacon\"]}"
         }
     ]
 }

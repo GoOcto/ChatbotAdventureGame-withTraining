@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Safe travels, friend. May the road be kind.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Safe travels, friend. May the road be kind.\n{\"give\":[],\"take\":[],\"bye\":true}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "And watch out for the red moss by the river. Pretty, but it'll give you a rash that lasts a week.<|>{\"give\":[],\"take\":[]}"
+      "content": "And watch out for the red moss by the river. Pretty, but it'll give you a rash that lasts a week.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

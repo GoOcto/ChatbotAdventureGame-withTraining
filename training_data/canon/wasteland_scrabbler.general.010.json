@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*The scrabbler emits a series of high-pitched whistles and low rumbles. It seems to be mimicking the sound of the nearby water purifier, but with a strange, discordant note in the middle of the sequence.*<|>{\"give\": [\"purifier_sound_mimicry\"], \"take\": []}"
+            "content": "*The scrabbler emits a series of high-pitched whistles and low rumbles. It seems to be mimicking the sound of the nearby water purifier, but with a strange, discordant note in the middle of the sequence.*\n{\"give\": [\"purifier_sound_mimicry\"], \"take\": []}"
         }
     ]
 }

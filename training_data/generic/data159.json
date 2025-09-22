@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A wraith-blade? Hmph. You can't kill a shadow with normal steel. You need something with a fire of its own. My forge is cold, lad. Has been since the mountain fell silent. I've no ore worthy of the flame.<|>{\"give\": [], \"take\": []}"
+            "content": "A wraith-blade? Hmph. You can't kill a shadow with normal steel. You need something with a fire of its own. My forge is cold, lad. Has been since the mountain fell silent. I've no ore worthy of the flame.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "By my ancestors... Heartstone. *He takes the ore with a reverence you wouldn't expect, turning it over in his calloused hands.* There's still fire in the mountain's heart. For this, I will light the forge one last time. Come back at dawn. You'll have your wraith-blade.<|>{\"give\": [], \"take\": [\"heartstone_ore\"]}"
+            "content": "By my ancestors... Heartstone. *He takes the ore with a reverence you wouldn't expect, turning it over in his calloused hands.* There's still fire in the mountain's heart. For this, I will light the forge one last time. Come back at dawn. You'll have your wraith-blade.\n{\"give\": [], \"take\": [\"heartstone_ore\"]}"
         }
     ]
 }

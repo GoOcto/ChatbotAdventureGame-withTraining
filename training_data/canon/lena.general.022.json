@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I know. I've been monitoring their comms. Every hour I stay here, the circle gets smaller. If you don't have the scrambler, you're just another liability I can't afford. Get it, or get gone.<|>{\"give\": [], \"take\": []}"
+            "content": "I know. I've been monitoring their comms. Every hour I stay here, the circle gets smaller. If you don't have the scrambler, you're just another liability I can't afford. Get it, or get gone.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

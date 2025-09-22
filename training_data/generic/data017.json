@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Right. I need to rest here for a while anyway.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Right. I need to rest here for a while anyway.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A map? You want me to leave my hideout to chase a fairy tale? It's a trick to get me outside. No.<|>{\"give\":[],\"take\":[]}"
+      "content": "A map? You want me to leave my hideout to chase a fairy tale? It's a trick to get me outside. No.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Then leave the map and your name, and disappear. If the treasure's real, you'll hear from me. If it's a trap, you won't.<|>{\"give\":[],\"take\":[\"treasure_map\"]}"
+      "content": "Then leave the map and your name, and disappear. If the treasure's real, you'll hear from me. If it's a trap, you won't.\n{\"give\":[],\"take\":[\"treasure_map\"]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "You can't. But you don't have a choice, do you? Now get out. I need to reinforce the door again.<|>{\"give\":[],\"take\":[], \"deceive\": true}"
+      "content": "You can't. But you don't have a choice, do you? Now get out. I need to reinforce the door again.\n{\"give\":[],\"take\":[], \"deceive\": true}"
     }
   ]
 }

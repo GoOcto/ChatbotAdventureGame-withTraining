@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Information costs caps, friend. Bring me a glimmer bottlecap, and we'll talk about what I know.<|>{\"give\": [], \"take\": []}"
+            "content": "Information costs caps, friend. Bring me a glimmer bottlecap, and we'll talk about what I know.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Nice doesn't pay for fuel or bribes. You want answers, you pay like everyone else.<|>{\"give\": [], \"take\": []}"
+            "content": "Nice doesn't pay for fuel or bribes. You want answers, you pay like everyone else.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

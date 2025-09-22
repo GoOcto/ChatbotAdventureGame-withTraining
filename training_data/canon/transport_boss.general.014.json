@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "An EMP... spicy. The Cog would pay a lot for that. But they'd pay more for Lena. Tell you what, give me the grenade, and I'll give you her *old* location. A token of goodwill.<|>{\"give\": [], \"take\": [\"emp_grenade\"]}"
+            "content": "An EMP... spicy. The Cog would pay a lot for that. But they'd pay more for Lena. Tell you what, give me the grenade, and I'll give you her *old* location. A token of goodwill.\n{\"give\": [], \"take\": [\"emp_grenade\"]}"
         }
     ]
 }

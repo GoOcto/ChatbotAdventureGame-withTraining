@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Food won't fix a busted hydro-pump. I need tools, not a snack. Find me a diagnostic scanner or a micro-inverter if you want to be useful.<|>{\"give\": [], \"take\": []}"
+            "content": "Food won't fix a busted hydro-pump. I need tools, not a snack. Find me a diagnostic scanner or a micro-inverter if you want to be useful.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

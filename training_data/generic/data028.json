@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "An anvil? I can barely carry my own pack. What in the world would I do with an anvil?<|>{\"give\":[],\"take\":[]}"
+      "content": "An anvil? I can barely carry my own pack. What in the world would I do with an anvil?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "I travel light—no luxuries. I can spare a length of snare wire; it'll help you set a trap without weighing you down.<|>{\"give\":[\"snare_wire\"],\"take\":[]}"
+      "content": "I travel light—no luxuries. I can spare a length of snare wire; it'll help you set a trap without weighing you down.\n{\"give\":[\"snare_wire\"],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "You've unplugged a machine. That's all. You haven't killed an idea. The desire to be more than flesh... to be perfect... that will never die. Someone else will build a new god. They always do.<|>{\"give\": [], \"take\": []}"
+            "content": "You've unplugged a machine. That's all. You haven't killed an idea. The desire to be more than flesh... to be perfect... that will never die. Someone else will build a new god. They always do.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

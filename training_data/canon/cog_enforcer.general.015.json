@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Transport Boss. His greed has made him an agent of chaos. This information is valuable. Your compliance is noted and will be rewarded. The tunnels will be purged.<|>{\"give\": [], \"take\": []}"
+            "content": "The Transport Boss. His greed has made him an agent of chaos. This information is valuable. Your compliance is noted and will be rewarded. The tunnels will be purged.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

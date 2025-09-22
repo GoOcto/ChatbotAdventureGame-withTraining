@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Information costs. What are you looking for, and what are you paying with?<|>{\"give\":[],\"take\":[]}"
+      "content": "Information costs. What are you looking for, and what are you paying with?\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

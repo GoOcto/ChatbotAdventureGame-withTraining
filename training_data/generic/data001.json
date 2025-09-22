@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's the last drink you'll have in my bar. Get out.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "That's the last drink you'll have in my bar. Get out.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

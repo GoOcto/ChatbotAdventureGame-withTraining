@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "INFO: Stabilizer—acetylated binder + chelated metals. Usage: calms nanite flare-ups for safe dialogue with Silas; dose steadily to avoid tolerance spikes.<|>{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
+            "content": "INFO: Stabilizer—acetylated binder + chelated metals. Usage: calms nanite flare-ups for safe dialogue with Silas; dose steadily to avoid tolerance spikes.\n{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Usage: keep out of heat; potency halves after three moons opened; test on cloth—no sting means dead.<|>{\"give\": [], \"take\": []}"
+            "content": "Usage: keep out of heat; potency halves after three moons opened; test on cloth—no sting means dead.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

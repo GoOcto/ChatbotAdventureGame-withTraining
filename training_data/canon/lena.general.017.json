@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Silas... I thought he was dead. If he's cracked their comms, he's a target. And if he knows the Prophet's plan, he knows why I ran. This changes things. Maybe there's another way out of this besides just running.<|>{\"give\": [], \"take\": []}"
+            "content": "Silas... I thought he was dead. If he's cracked their comms, he's a target. And if he knows the Prophet's plan, he knows why I ran. This changes things. Maybe there's another way out of this besides just running.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

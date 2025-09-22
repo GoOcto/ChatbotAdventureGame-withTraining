@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Central Chamber. Sealed. You want specifics, pay specifics.<|>{\"give\": [], \"take\": []}"
+            "content": "Central Chamber. Sealed. You want specifics, pay specifics.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Gold-plated answer for a gold-plated filter. Console is on a dais ringed with fiber conduits—kill power feed three and the locks cycle open for twenty heartbeats.<|>{\"give\": [], \"take\": [\"high_quality_water_filter\"]}"
+            "content": "Gold-plated answer for a gold-plated filter. Console is on a dais ringed with fiber conduits—kill power feed three and the locks cycle open for twenty heartbeats.\n{\"give\": [], \"take\": [\"high_quality_water_filter\"]}"
         }
     ]
 }

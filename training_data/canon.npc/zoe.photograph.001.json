@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*glances at the photo briefly, then looks back at her rad-detector*\n\nTwo guys in lab coats. So what? The zones are full of dead scientists. Photo's probably worthless - paper degrades fast out here.\n\n<|>{\"give\": [], \"take\": []}"
+            "content": "*glances at the photo briefly, then looks back at her rad-detector*\n\nTwo guys in lab coats. So what? The zones are full of dead scientists. Photo's probably worthless - paper degrades fast out here.\n\n\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*shrugs dismissively*\n\nOld world's dead. These guys are probably dead too. Only thing that matters is what works and what pays. That photo won't stop a rad-storm or fix my respirator.\n\n<|>{\"give\": [], \"take\": []}"
+            "content": "*shrugs dismissively*\n\nOld world's dead. These guys are probably dead too. Only thing that matters is what works and what pays. That photo won't stop a rad-storm or fix my respirator.\n\n\n{\"give\": [], \"take\": []}"
         }
     ]
 }

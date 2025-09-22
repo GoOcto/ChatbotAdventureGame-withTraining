@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*eyes widen with desperate hope* A stabilizer... *reaches for it with trembling hands* Yes, yes... *takes it carefully* The noise... *pauses, listening* ...it's still there, but... like whispers now instead of screaming. *still nervous, but slightly steadier* The static layers... they're softer. What... what do you need from me?<|>{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
+            "content": "*eyes widen with desperate hope* A stabilizer... *reaches for it with trembling hands* Yes, yes... *takes it carefully* The noise... *pauses, listening* ...it's still there, but... like whispers now instead of screaming. *still nervous, but slightly steadier* The static layers... they're softer. What... what do you need from me?\n{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
         }
     ]
 }

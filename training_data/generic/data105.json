@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "And my lantern is dry. I need more oil, or I won't be able to see the perimeter.<|>{\"give\":[],\"take\":[]}"
+      "content": "And my lantern is dry. I need more oil, or I won't be able to see the perimeter.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

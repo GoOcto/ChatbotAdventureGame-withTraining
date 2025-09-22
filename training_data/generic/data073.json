@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Of course. May you find the answers you're looking for.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Of course. May you find the answers you're looking for.\n{\"give\":[],\"take\":[],\"bye\":true}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Keep it. The story behind a coin matters more than the coin itself. Write your own and bring it back to me someday.<|>{\"give\":[],\"take\":[]}"
+      "content": "Keep it. The story behind a coin matters more than the coin itself. Write your own and bring it back to me someday.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Travel at dawn and dusk—midday heat bakes the mind. Keep notes; memory lies, ink doesn't.<|>{\"give\":[],\"take\":[]}"
+      "content": "Travel at dawn and dusk—midday heat bakes the mind. Keep notes; memory lies, ink doesn't.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "A story is the greatest treasure. Don't lose yours.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "A story is the greatest treasure. Don't lose yours.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

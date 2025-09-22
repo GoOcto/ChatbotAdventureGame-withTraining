@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*glances dismissively* Sentimental garbage. Though pre-plague photos are rare enough. Might fetch a few caps from collectors who care about ancient history.<|>{\"give\": [], \"take\": []}"
+            "content": "*glances dismissively* Sentimental garbage. Though pre-plague photos are rare enough. Might fetch a few caps from collectors who care about ancient history.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Maybe I do, maybe I don't. Recognition's worth something too. Bring me a glimmer bottlecap and I'll share what I remember.<|>{\"give\": [], \"take\": []}"
+            "content": "Maybe I do, maybe I don't. Recognition's worth something too. Bring me a glimmer bottlecap and I'll share what I remember.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

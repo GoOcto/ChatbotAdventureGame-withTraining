@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*stops working immediately, grease-stained hands freezing over the pump* That's... *voice catches* That's Joric and Silas from their Project Purity days. *takes a shaky breath, stern expression softening* Joric found me after my parents died in the plague riots. Taught me everything I know about engineering. *jaw tightens with new resolve* This isn't just about fixing a pump anymore - someone took my mentor, and I'm going to find out who.<|>{\"give\": [], \"take\": []}"
+            "content": "*stops working immediately, grease-stained hands freezing over the pump* That's... *voice catches* That's Joric and Silas from their Project Purity days. *takes a shaky breath, stern expression softening* Joric found me after my parents died in the plague riots. Taught me everything I know about engineering. *jaw tightens with new resolve* This isn't just about fixing a pump anymore - someone took my mentor, and I'm going to find out who.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A top-tier filter? That's worth more than credits out here. Fine—paperwork's forged, seals included. Don't show it to the wrong face.<|>{\"give\": [\"forged_transit_pass\"], \"take\": [\"high_quality_water_filter\"]}"
+            "content": "A top-tier filter? That's worth more than credits out here. Fine—paperwork's forged, seals included. Don't show it to the wrong face.\n{\"give\": [\"forged_transit_pass\"], \"take\": [\"high_quality_water_filter\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Keep your chin up, don't blink, and talk first. Doubt makes ink sweat. Confidence keeps it dry.<|>{\"give\": [], \"take\": []}"
+            "content": "Keep your chin up, don't blink, and talk first. Doubt makes ink sweat. Confidence keeps it dry.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Slums. East ridge. Third ladder. If you get caught, you didn't hear it from me.<|>{\"give\": [\"lenas_address\"], \"take\": [], \"bye\": true}"
+            "content": "Slums. East ridge. Third ladder. If you get caught, you didn't hear it from me.\n{\"give\": [\"lenas_address\"], \"take\": [], \"bye\": true}"
         }
     ]
 }

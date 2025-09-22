@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "What information do you seek?<|>{\"give\": [], \"take\": []}"
+            "content": "What information do you seek?\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Silas. A plague-ridden scavenger. I've heard rumors he's been spotted in these parts. If you're looking for him, you might try the Oasis Settlement. They're always willing to help those in need... for a price.<|>{\"give\": [], \"take\": []}"
+            "content": "Silas. A plague-ridden scavenger. I've heard rumors he's been spotted in these parts. If you're looking for him, you might try the Oasis Settlement. They're always willing to help those in need... for a price.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

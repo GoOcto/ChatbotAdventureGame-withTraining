@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "It was. Snapped a string. Now it's just a strangely shaped piece of wood. Need to find a new one.<|>{\"give\":[],\"take\":[]}"
+      "content": "It was. Snapped a string. Now it's just a strangely shaped piece of wood. Need to find a new one.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

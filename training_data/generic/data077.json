@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Unacceptable for a warrior. Here, take this one. It's freshly forged.<|>{\"give\":[\"steel_longsword\"],\"take\":[]}"
+      "content": "Unacceptable for a warrior. Here, take this one. It's freshly forged.\n{\"give\":[\"steel_longsword\"],\"take\":[]}"
     }
   ]
 }

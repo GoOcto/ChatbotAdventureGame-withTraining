@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Is that so? Well, I've had enough of you.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "Is that so? Well, I've had enough of you.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The first snow is a week away. Your poncho won't keep me from freezing. My coat is not for trade.<|>{\"give\":[],\"take\":[]}"
+      "content": "The first snow is a week away. Your poncho won't keep me from freezing. My coat is not for trade.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "I can spare a little tinder. Keep it dry and split your kindling fine; cold nights eat flame fast.<|>{\"give\":[\"tinder_bundle\"],\"take\":[]}"
+      "content": "I can spare a little tinder. Keep it dry and split your kindling fine; cold nights eat flame fast.\n{\"give\":[\"tinder_bundle\"],\"take\":[]}"
     }
   ]
 }

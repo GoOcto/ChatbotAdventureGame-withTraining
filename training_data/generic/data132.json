@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Sit. Two stitches and a patch will hold until you can afford a full mend.<|>{\"give\":[],\"take\":[]}"
+      "content": "Sit. Two stitches and a patch will hold until you can afford a full mend.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Keep your caps. Save them for boots. This one's on me—waste not, want not.<|>{\"give\":[],\"take\":[]}"
+      "content": "Keep your caps. Save them for boots. This one's on me—waste not, want not.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Alright, if it eases your mind. I'll set it aside for needles for the next poor soul.<|>{\"give\":[],\"take\":[\"handful_of_caps\"]}"
+      "content": "Alright, if it eases your mind. I'll set it aside for needles for the next poor soul.\n{\"give\":[],\"take\":[\"handful_of_caps\"]}"
     }
   ]
 }

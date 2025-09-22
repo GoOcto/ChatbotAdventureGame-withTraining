@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's no way to talk to the person handling your drinks. Get out of my bar.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "That's no way to talk to the person handling your drinks. Get out of my bar.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

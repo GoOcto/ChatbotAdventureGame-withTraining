@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Usefulness is demonstrated, not declared. The Prophet's work requires loyalty, not ambition. Find the defector Lena, and your use will be acknowledged.<|>{\"give\": [], \"take\": []}"
+            "content": "Usefulness is demonstrated, not declared. The Prophet's work requires loyalty, not ambition. Find the defector Lena, and your use will be acknowledged.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A whisper that enslaves the weak has no hold on me. If you seek blessing, silence it—and yourself—until purpose speaks louder.<|>{\"give\": [], \"take\": []}"
+            "content": "A whisper that enslaves the weak has no hold on me. If you seek blessing, silence it—and yourself—until purpose speaks louder.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Starve a machine that starves the poor. Then come without applause. Purpose recognized needs no trumpet.<|>{\"give\": [], \"take\": []}"
+            "content": "Starve a machine that starves the poor. Then come without applause. Purpose recognized needs no trumpet.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Fail forward: feed two and try again. Devotion is persistence, not pageantry.<|>{\"give\": [], \"take\": []}"
+            "content": "Fail forward: feed two and try again. Devotion is persistence, not pageantry.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

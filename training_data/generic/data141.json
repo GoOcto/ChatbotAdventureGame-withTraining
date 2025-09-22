@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's kind. Let's talk first—where are you headed?<|>{\"give\":[],\"take\":[]}"
+      "content": "That's kind. Let's talk first—where are you headed?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Follow the windbreak fences, then the dry creek. If the sun's on your left at noon, you're off the line.<|>{\"give\":[],\"take\":[]}"
+      "content": "Follow the windbreak fences, then the dry creek. If the sun's on your left at noon, you're off the line.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Two. One under a split boulder, another near a dead juniper. The boulder spot is warmer.<|>{\"give\":[],\"take\":[]}"
+      "content": "Two. One under a split boulder, another near a dead juniper. The boulder spot is warmer.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "I'll accept your gift as a marker of safe passage. Thank you.<|>{\"give\":[],\"take\":[\"carved_token\"]}"
+      "content": "I'll accept your gift as a marker of safe passage. Thank you.\n{\"give\":[],\"take\":[\"carved_token\"]}"
     }
   ]
 }

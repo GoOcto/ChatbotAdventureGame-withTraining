@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*eyes the power cell suspiciously* Power cell... *voice shaking* Could be useful. Could be a trap. *fidgets nervously* The metal... it's good metal. Found it in the ruins where the signals don't reach. *paranoid glance* One piece of scrap for the cell. That's fair. The voices... they say it's fair.<|>{\"give\": [\"scrap_metal\"], \"take\": [\"power_cell\"]}"
+            "content": "*eyes the power cell suspiciously* Power cell... *voice shaking* Could be useful. Could be a trap. *fidgets nervously* The metal... it's good metal. Found it in the ruins where the signals don't reach. *paranoid glance* One piece of scrap for the cell. That's fair. The voices... they say it's fair.\n{\"give\": [\"scrap_metal\"], \"take\": [\"power_cell\"]}"
         }
     ]
 }

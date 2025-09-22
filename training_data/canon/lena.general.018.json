@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "You think you're the first person to threaten me? You're just another scavenger. You can't protect me, and you can't scare me. You're nothing. Now get out.<|>{\"give\": [], \"take\": []}"
+            "content": "You think you're the first person to threaten me? You're just another scavenger. You can't protect me, and you can't scare me. You're nothing. Now get out.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

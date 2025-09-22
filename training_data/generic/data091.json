@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "We got everything we ever wanted. That was the problem.<|>{\"give\":[],\"take\":[]}"
+      "content": "We got everything we ever wanted. That was the problem.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

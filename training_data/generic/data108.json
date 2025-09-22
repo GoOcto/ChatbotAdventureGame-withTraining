@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "State your business. No one enters without a reason.<|>{\"give\":[],\"take\":[]}"
+      "content": "State your business. No one enters without a reason.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

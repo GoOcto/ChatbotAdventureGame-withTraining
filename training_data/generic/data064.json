@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Thank you. Do you want to see my teddy bear too?<|>{\"give\":[],\"take\":[]}"
+      "content": "Thank you. Do you want to see my teddy bear too?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Okay, I'm done playing now. Bye!<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Okay, I'm done playing now. Bye!\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

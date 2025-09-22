@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The spirits do not answer to the hum of technology. Your chemicals and batteries have no power here.<|>{\"give\":[],\"take\":[]}"
+      "content": "The spirits do not answer to the hum of technology. Your chemicals and batteries have no power here.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Too bad. Because you just found it.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "Too bad. Because you just found it.\n{\"give\":[],\"take\":[],\"attack\":true}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Your caps won't save you. I take what I want, when I want it.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "Your caps won't save you. I take what I want, when I want it.\n{\"give\":[],\"take\":[],\"attack\":true}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Run. If you make it to the wall, maybe they'll find what's left of your courage.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "Run. If you make it to the wall, maybe they'll find what's left of your courage.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

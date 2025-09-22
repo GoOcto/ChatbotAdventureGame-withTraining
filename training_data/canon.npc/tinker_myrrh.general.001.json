@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Normal if you didn't seat the gasket. Grease it, twist a quarter turn past snug. Carve a shim from twine if you must.<|>{\"give\": [], \"take\": []}"
+            "content": "Normal if you didn't seat the gasket. Grease it, twist a quarter turn past snug. Carve a shim from twine if you must.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Wedge scrap_parts under the third rung. Smear ash and oil—squeal turns to breath.<|>{\"give\": [], \"take\": []}"
+            "content": "Wedge scrap_parts under the third rung. Smear ash and oil—squeal turns to breath.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Flip it, tap it, swap it—in that order. If it still jitters, the ground strap's lying to you.<|>{\"give\": [], \"take\": []}"
+            "content": "Flip it, tap it, swap it—in that order. If it still jitters, the ground strap's lying to you.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "You want me to trust you? A stranger? No. You get me the scrambler first. Show me you're serious. Then we talk.<|>{\"give\": [], \"take\": []}"
+            "content": "You want me to trust you? A stranger? No. You get me the scrambler first. Show me you're serious. Then we talk.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

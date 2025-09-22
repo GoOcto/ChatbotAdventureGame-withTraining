@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Depends. You got the parts? If you bring me some knock-off junk from 'Wizzo's Discount Spacery', I'll charge you double for the insult. I only work with the real deal.<|>{\"give\": [], \"take\": []}"
+            "content": "Depends. You got the parts? If you bring me some knock-off junk from 'Wizzo's Discount Spacery', I'll charge you double for the insult. I only work with the real deal.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "An Omni-Luxe... *He takes the heavy box, inspecting the seal with a trained eye before cracking it open.* Now that's a thing of beauty. Haven't seen one of these in cycles. Alright, I'll have you back in the black in a few hours. And I'll even do it for standard rates.<|>{\"give\": [\"ship_repair\"], \"take\": [\"oem_grav_inducer\"]}"
+            "content": "An Omni-Luxe... *He takes the heavy box, inspecting the seal with a trained eye before cracking it open.* Now that's a thing of beauty. Haven't seen one of these in cycles. Alright, I'll have you back in the black in a few hours. And I'll even do it for standard rates.\n{\"give\": [\"ship_repair\"], \"take\": [\"oem_grav_inducer\"]}"
         }
     ]
 }

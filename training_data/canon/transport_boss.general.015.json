@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Is he now? That'll be bad for business. Good information. Worth a little something. Here, take this ration pack. And stay out of the Cog's way. They're bad for everyone's health.<|>{\"give\": [\"ration_pack\"], \"take\": []}"
+            "content": "Is he now? That'll be bad for business. Good information. Worth a little something. Here, take this ration pack. And stay out of the Cog's way. They're bad for everyone's health.\n{\"give\": [\"ration_pack\"], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Sand? Are you trying to break our teeth? Get that out of my kitchen.<|>{\"give\":[],\"take\":[]}"
+      "content": "Sand? Are you trying to break our teeth? Get that out of my kitchen.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

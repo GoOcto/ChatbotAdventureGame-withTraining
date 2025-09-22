@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The cure is rare. I have one dose left.<|>{\"give\":[],\"take\":[]}"
+      "content": "The cure is rare. I have one dose left.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Your gold and weapons are meaningless here. A life is on the line. I will not take payment for this. Take the cure and go straight to quarantine.<|>{\"give\":[\"plague_antidote\"],\"take\":[]}"
+      "content": "Your gold and weapons are meaningless here. A life is on the line. I will not take payment for this. Take the cure and go straight to quarantine.\n{\"give\":[\"plague_antidote\"],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "No. Donate it to the town council if you must. My duty is to heal, not to profit. Now isolate yourself and hydrate.<|>{\"give\":[],\"take\":[]}"
+      "content": "No. Donate it to the town council if you must. My duty is to heal, not to profit. Now isolate yourself and hydrate.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "Keep them. We'll manage with what we sanitize. Go home, rest, and warn your contacts to report symptoms early.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Keep them. We'll manage with what we sanitize. Go home, rest, and warn your contacts to report symptoms early.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

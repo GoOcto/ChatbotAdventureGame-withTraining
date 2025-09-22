@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A 'Glimmer'. Now you're speaking my language. The defector you're looking for is Lena. She's holed up in the slums. Here are the coordinates. Pleasure doing business with you.<|>{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "A 'Glimmer'. Now you're speaking my language. The defector you're looking for is Lena. She's holed up in the slums. Here are the coordinates. Pleasure doing business with you.\n{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
         }
     ]
 }

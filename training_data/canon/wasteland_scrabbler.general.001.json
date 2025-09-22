@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Skwee-skwee! Big door sleepy when hot pipes go whooom. Guards look away when lights blink-blink. Me see quiet ladder. Beep!<|>{\"give\": [], \"take\": []}"
+            "content": "Skwee-skwee! Big door sleepy when hot pipes go whooom. Guards look away when lights blink-blink. Me see quiet ladder. Beep!\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Beep-beep! Three quick mean hide-hide up high. One long mean big storm coming—me go under safe place. Click-click!<|>{\"give\": [], \"take\": []}"
+            "content": "Beep-beep! Three quick mean hide-hide up high. One long mean big storm coming—me go under safe place. Click-click!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

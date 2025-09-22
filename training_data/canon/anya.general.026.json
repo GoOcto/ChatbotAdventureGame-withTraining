@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "It wasn't easy reversing the polarity flow on a pre-plague micro-inverter, but... it's done. This will scramble a biometric signature, make the wearer a ghost to any Cog scanner. Get this to Lena. It's her ticket out. And our best shot at getting that master keycard.<|>{\"give\": [\"biometric_scrambler\"], \"take\": []}"
+            "content": "It wasn't easy reversing the polarity flow on a pre-plague micro-inverter, but... it's done. This will scramble a biometric signature, make the wearer a ghost to any Cog scanner. Get this to Lena. It's her ticket out. And our best shot at getting that master keycard.\n{\"give\": [\"biometric_scrambler\"], \"take\": []}"
         }
     ]
 }

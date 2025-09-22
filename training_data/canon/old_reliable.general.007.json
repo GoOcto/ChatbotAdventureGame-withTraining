@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "INFO: Intake housing rev E—tolerances widened for non‑OEM gasket. Usage: combine with scrap_parts (grade B+) for a makeshift_stabilizer; mirror the third fold before cutting.<|>{\"give\": [], \"take\": [\"damaged_schematics\"]}"
+            "content": "INFO: Intake housing rev E—tolerances widened for non‑OEM gasket. Usage: combine with scrap_parts (grade B+) for a makeshift_stabilizer; mirror the third fold before cutting.\n{\"give\": [], \"take\": [\"damaged_schematics\"]}"
         }
     ]
 }

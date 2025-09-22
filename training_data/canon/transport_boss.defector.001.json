@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*leans back with a calculating smirk* Maybe there is. Maybe there isn't. *taps fingers on counter* Information like that is worth real currency, not conversation. You got a Glimmer bottlecap? Then we can talk business. Otherwise, you're wasting my time.<|>{\"give\": [], \"take\": []}"
+            "content": "*leans back with a calculating smirk* Maybe there is. Maybe there isn't. *taps fingers on counter* Information like that is worth real currency, not conversation. You got a Glimmer bottlecap? Then we can talk business. Otherwise, you're wasting my time.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

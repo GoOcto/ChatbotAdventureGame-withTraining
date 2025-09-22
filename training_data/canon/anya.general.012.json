@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A micro-inverter... and it's functional. This is exactly what I need to finish the scrambler. I'll take it. What's your price?<|>{\"give\": [], \"take\": [\"micro_inverter\"]}"
+            "content": "A micro-inverter... and it's functional. This is exactly what I need to finish the scrambler. I'll take it. What's your price?\n{\"give\": [], \"take\": [\"micro_inverter\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Can't help you there. My client is anonymous, just a dead-drop and a parts list. But I can give you this for the inverter. It's a pass for the lower levels of the Cathedral, if you're feeling brave.<|>{\"give\": [\"supplicants_pass\"], \"take\": []}"
+            "content": "Can't help you there. My client is anonymous, just a dead-drop and a parts list. But I can give you this for the inverter. It's a pass for the lower levels of the Cathedral, if you're feeling brave.\n{\"give\": [\"supplicants_pass\"], \"take\": []}"
         }
     ]
 }

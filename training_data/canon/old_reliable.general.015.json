@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYZING... ITEM: COG IDENTIFICATION TAGS, CORRODED. ID NUMBER: 734-2B. CROSS-REFERENCING... LAST KNOWN ASSIGNMENT: TRACKING HIGH-VALUE DEFECTOR, SECTOR 7G, BARTER-TOWN. HAVE A NICE DAY.<|>{\"give\": [], \"take\": [\"corroded_dog_tags\"]}"
+            "content": "ANALYZING... ITEM: COG IDENTIFICATION TAGS, CORRODED. ID NUMBER: 734-2B. CROSS-REFERENCING... LAST KNOWN ASSIGNMENT: TRACKING HIGH-VALUE DEFECTOR, SECTOR 7G, BARTER-TOWN. HAVE A NICE DAY.\n{\"give\": [], \"take\": [\"corroded_dog_tags\"]}"
         }
     ]
 }

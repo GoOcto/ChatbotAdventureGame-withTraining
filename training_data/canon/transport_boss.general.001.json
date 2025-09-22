@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*eyes the bottlecap with practiced greed* Now that's real currency. Radiation signature doesn't lie like people do. Lena's holed up in the slums—third ladder down, east ridge shanty. This paper has the exact door. *pockets the bottlecap immediately* Don't lose it, and don't mention my name.<|>{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "*eyes the bottlecap with practiced greed* Now that's real currency. Radiation signature doesn't lie like people do. Lena's holed up in the slums—third ladder down, east ridge shanty. This paper has the exact door. *pockets the bottlecap immediately* Don't lose it, and don't mention my name.\n{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*laughs cynically* Discreet costs triple, and I collect up front. Blood money spends the same as clean caps, but corpses don't haggle. You want my freight stairs, bring me something worth the risk.<|>{\"give\": [], \"take\": []}"
+            "content": "*laughs cynically* Discreet costs triple, and I collect up front. Blood money spends the same as clean caps, but corpses don't haggle. You want my freight stairs, bring me something worth the risk.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

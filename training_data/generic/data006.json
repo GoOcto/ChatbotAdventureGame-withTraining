@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Safe travels.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Safe travels.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

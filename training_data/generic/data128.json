@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I can't find Mister Cuddles. He's my best friend. Have you seen a teddy bear?<|>{\"give\":[],\"take\":[]}"
+      "content": "I can't find Mister Cuddles. He's my best friend. Have you seen a teddy bear?\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Then you're a fool.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "Then you're a fool.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

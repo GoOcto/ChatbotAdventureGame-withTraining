@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A mile north there's a ruined arch. Good shade by noon, bad company by night. Move during the morning if you can.<|>{\"give\":[],\"take\":[]}"
+      "content": "A mile north there's a ruined arch. Good shade by noon, bad company by night. Move during the morning if you can.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Sip, don't gulp. Here—wet your mouth and rest a moment.<|>{\"give\":[\"water_flask\"],\"take\":[]}"
+      "content": "Sip, don't gulp. Here—wet your mouth and rest a moment.\n{\"give\":[\"water_flask\"],\"take\":[]}"
     }
   ]
 }

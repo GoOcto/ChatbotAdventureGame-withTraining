@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's a shame, but as you can see, I've got my own problems. This pump is the only thing keeping this town from turning to dust.<|>{\"give\":[],\"take\":[]}"
+      "content": "That's a shame, but as you can see, I've got my own problems. This pump is the only thing keeping this town from turning to dust.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

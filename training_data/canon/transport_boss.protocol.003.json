@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*glances dismissively* Sentimental junk. Though pre-plague photos are rare enough to trade. Might be worth scrap to a collector.<|>{\"give\": [], \"take\": []}"
+            "content": "*glances dismissively* Sentimental junk. Though pre-plague photos are rare enough to trade. Might be worth scrap to a collector.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Maybe I do, maybe I don't. Memory's a commodity like everything else. Glimmer bottlecap refreshes it real quick.<|>{\"give\": [], \"take\": []}"
+            "content": "Maybe I do, maybe I don't. Memory's a commodity like everything else. Glimmer bottlecap refreshes it real quick.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

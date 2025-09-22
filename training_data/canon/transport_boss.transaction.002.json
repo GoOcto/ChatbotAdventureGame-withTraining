@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Dangerous people to track. Lucky for you, I know where runaways hide. One glimmer bottlecap gets you coordinates.<|>{\"give\": [], \"take\": []}"
+            "content": "Dangerous people to track. Lucky for you, I know where runaways hide. One glimmer bottlecap gets you coordinates.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*immediately pockets the payment* Eastern slums. Third building from the water tower. Be careful - she's armed and paranoid.<|>{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "*immediately pockets the payment* Eastern slums. Third building from the water tower. Be careful - she's armed and paranoid.\n{\"give\": [\"lenas_address\"], \"take\": [\"glimmer_bottlecap\"]}"
         }
     ]
 }

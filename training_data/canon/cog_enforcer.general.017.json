@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Order is the absence of chaos. Chaos is suffering. It is the weakness of the flesh, the indecision of the mind. The Prophet's new world will be one of perfect order. No pain, no fear, no doubt. Only the clean, pure logic of the machine. It is salvation.<|>{\"give\": [], \"take\": []}"
+            "content": "Order is the absence of chaos. Chaos is suffering. It is the weakness of the flesh, the indecision of the mind. The Prophet's new world will be one of perfect order. No pain, no fear, no doubt. Only the clean, pure logic of the machine. It is salvation.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

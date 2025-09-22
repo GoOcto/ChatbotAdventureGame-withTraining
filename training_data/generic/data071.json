@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I've seen worse. Here, take this.<|>{\"give\":[\"military-issue_bandage\"],\"take\":[]}"
+      "content": "I've seen worse. Here, take this.\n{\"give\":[\"military-issue_bandage\"],\"take\":[]}"
     }
   ]
 }

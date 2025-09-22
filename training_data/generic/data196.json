@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Dangerous? It's a paradise! Look at the cellular structure of this moss! And the spores on that fungus... it's beautiful! But the one thing I came for, the Moonpetal, it only grows at the highest peaks. I can't reach it.<|>{\"give\": [], \"take\": []}"
+            "content": "Dangerous? It's a paradise! Look at the cellular structure of this moss! And the spores on that fungus... it's beautiful! But the one thing I came for, the Moonpetal, it only grows at the highest peaks. I can't reach it.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Is that... oh, be still my heart! *She takes the glowing flower with trembling hands, placing it carefully in a stasis container.* The research I can do with this! We can synthesize new medicines, new alloys... you may have just changed the galaxy, you know that?<|>{\"give\": [\"scientific_breakthrough\"], \"take\": [\"moonpetal_flower\"]}"
+            "content": "Is that... oh, be still my heart! *She takes the glowing flower with trembling hands, placing it carefully in a stasis container.* The research I can do with this! We can synthesize new medicines, new alloys... you may have just changed the galaxy, you know that?\n{\"give\": [\"scientific_breakthrough\"], \"take\": [\"moonpetal_flower\"]}"
         }
     ]
 }

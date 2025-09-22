@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Limited info: maps hot spots reliably; analog needles survive dead batteries. Usage: sweep route planning. For calibration offsets, present the unit for scan.<|>{\"give\": [], \"take\": []}"
+            "content": "Limited info: maps hot spots reliably; analog needles survive dead batteries. Usage: sweep route planning. For calibration offsets, present the unit for scan.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

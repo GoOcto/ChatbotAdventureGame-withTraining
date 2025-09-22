@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The compass is useful. The rest is junk. Keep it. For the compass, I'll let you ride in the back of the wagon.<|>{\"give\":[],\"take\":[\"worn_compass\"]}"
+      "content": "The compass is useful. The rest is junk. Keep it. For the compass, I'll let you ride in the back of the wagon.\n{\"give\":[],\"take\":[\"worn_compass\"]}"
     }
   ]
 }

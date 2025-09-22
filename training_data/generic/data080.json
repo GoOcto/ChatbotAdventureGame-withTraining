@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The rad-melons are coming in nicely! The soil is tough, but with a little patience, it gives back. It's honest work.<|>{\"give\":[],\"take\":[]}"
+      "content": "The rad-melons are coming in nicely! The soil is tough, but with a little patience, it gives back. It's honest work.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

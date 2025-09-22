@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*The guard's head tilts with an unnatural speed. A low hum emanates from its chest.* A spark like that would be... inconvenient. But you would be dead before the pulse even settled. A foolish trade. Leave.<|>{\"give\": [], \"take\": []}"
+            "content": "*The guard's head tilts with an unnatural speed. A low hum emanates from its chest.* A spark like that would be... inconvenient. But you would be dead before the pulse even settled. A foolish trade. Leave.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

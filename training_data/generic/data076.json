@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "You too. Farewell.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "You too. Farewell.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

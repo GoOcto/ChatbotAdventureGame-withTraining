@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "It's not a disease. It's a machine. Tiny, self-replicating engines that think your body is a factory. They break you down, bit by bit, to build more of themselves. The noise... that's the sound of them working. The stabilizers don't kill them. They just... make them sleep. For a while.<|>{\"give\": [], \"take\": []}"
+            "content": "It's not a disease. It's a machine. Tiny, self-replicating engines that think your body is a factory. They break you down, bit by bit, to build more of themselves. The noise... that's the sound of them working. The stabilizers don't kill them. They just... make them sleep. For a while.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

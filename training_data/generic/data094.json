@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Either home, or a place to die. I'm not sure which yet.<|>{\"give\":[],\"take\":[]}"
+      "content": "Either home, or a place to die. I'm not sure which yet.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

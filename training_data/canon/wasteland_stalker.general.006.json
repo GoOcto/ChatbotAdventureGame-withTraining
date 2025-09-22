@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*The creature's predatory instincts take over. It lunges for the easy meal, its claws scraping against the metal as the cage door slams shut behind it. It lets out a furious, metallic roar.*<|>{\"give\": [], \"take\": [\"ration_pack\"]}"
+            "content": "*The creature's predatory instincts take over. It lunges for the easy meal, its claws scraping against the metal as the cage door slams shut behind it. It lets out a furious, metallic roar.*\n{\"give\": [], \"take\": [\"ration_pack\"]}"
         }
     ]
 }

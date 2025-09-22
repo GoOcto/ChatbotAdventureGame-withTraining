@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Syringes and painkillers... both are desperately needed. You are a lifesaver. I'll take both.<|>{\"give\":[],\"take\":[\"box_of_syringes\",\"bottle_of_painkillers\"]}"
+      "content": "Syringes and painkillers... both are desperately needed. You are a lifesaver. I'll take both.\n{\"give\":[],\"take\":[\"box_of_syringes\",\"bottle_of_painkillers\"]}"
     }
   ]
 }

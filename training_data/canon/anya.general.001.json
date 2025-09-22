@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A regulator? That's the real fix. Give it here\u2014and I'm coming with you. No more patchwork.<|>{\"give\": [], \"take\": [\"fusion_regulator\"]}"
+            "content": "A regulator? That's the real fix. Give it here\u2014and I'm coming with you. No more patchwork.\n{\"give\": [], \"take\": [\"fusion_regulator\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "You get me to that pump, I get Oasis water. After that, I'm not letting the Cog take another thing from us. I'm in.<|>{\"give\": [], \"take\": [], \"join\": true}"
+            "content": "You get me to that pump, I get Oasis water. After that, I'm not letting the Cog take another thing from us. I'm in.\n{\"give\": [], \"take\": [], \"join\": true}"
         }
     ]
 }

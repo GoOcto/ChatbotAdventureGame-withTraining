@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Chamber's seal responds only to the Master Override Keycard. There is a defector named Lena—once Cog, now hunted—hiding in Barter-town's slums. She carries what you need, but approach with care. Trust is a fragile thing when survival is at stake.<|>{\"give\": [], \"take\": []}"
+            "content": "The Chamber's seal responds only to the Master Override Keycard. There is a defector named Lena—once Cog, now hunted—hiding in Barter-town's slums. She carries what you need, but approach with care. Trust is a fragile thing when survival is at stake.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

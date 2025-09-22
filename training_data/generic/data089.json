@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I only know sad ones. But I suppose those are the only kind that make sense anymore.<|>{\"give\":[],\"take\":[]}"
+      "content": "I only know sad ones. But I suppose those are the only kind that make sense anymore.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

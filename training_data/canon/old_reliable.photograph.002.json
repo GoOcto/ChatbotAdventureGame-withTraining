@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYZING IMAGE... *mechanical whir as photo is consumed into analysis slot* FACIAL RECOGNITION ACTIVE... CROSS-REFERENCING DATABASE... ANALYSIS COMPLETE! Subject identification: JORIC, ELDER (current Oasis Settlement Leader) and SILAS (tech-specialist, current status: hermit, Rust Canyon region). Historical context: Project Purity technicians, pre-plague atmospheric restoration initiative. Emotional significance: HIGH. Personal memorabilia detected. HAVE A NICE DAY!<|>{\"give\": [], \"take\": [\"faded_photograph\"]}"
+            "content": "ANALYZING IMAGE... *mechanical whir as photo is consumed into analysis slot* FACIAL RECOGNITION ACTIVE... CROSS-REFERENCING DATABASE... ANALYSIS COMPLETE! Subject identification: JORIC, ELDER (current Oasis Settlement Leader) and SILAS (tech-specialist, current status: hermit, Rust Canyon region). Historical context: Project Purity technicians, pre-plague atmospheric restoration initiative. Emotional significance: HIGH. Personal memorabilia detected. HAVE A NICE DAY!\n{\"give\": [], \"take\": [\"faded_photograph\"]}"
         }
     ]
 }

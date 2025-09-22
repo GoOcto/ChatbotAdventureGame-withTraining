@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Jam the watchdog pings. An EMP at the base of the comms mast gives you ninety seconds of blindness. Bring me a datapad and I'll mark the sweet spot.<|>{\"give\": [], \"take\": []}"
+            "content": "Jam the watchdog pings. An EMP at the base of the comms mast gives you ninety seconds of blindness. Bring me a datapad and I'll mark the sweet spot.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "There. Hit it when the mast cycles to full power—the heat shimmer doubles. Move fast and quiet.<|>{\"give\": [], \"take\": [\"pre_plague_datapad\"]}"
+            "content": "There. Hit it when the mast cycles to full power—the heat shimmer doubles. Move fast and quiet.\n{\"give\": [], \"take\": [\"pre_plague_datapad\"]}"
         }
     ]
 }

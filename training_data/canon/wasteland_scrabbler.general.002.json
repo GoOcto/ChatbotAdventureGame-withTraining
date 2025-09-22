@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Skwee-skwee! Behind big burny truck, me see ramp. Go down-down-down. Third ladder no make noise if step soft-soft. Guards no look that way. Beep!<|>{\"give\": [], \"take\": []}"
+            "content": "Skwee-skwee! Behind big burny truck, me see ramp. Go down-down-down. Third ladder no make noise if step soft-soft. Guards no look that way. Beep!\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Squawk-squawk! Me see trader put black dirt on feet—step on rope parts, not shiny parts. Ladder go shh-shh then. Skwee!<|>{\"give\": [], \"take\": []}"
+            "content": "Squawk-squawk! Me see trader put black dirt on feet—step on rope parts, not shiny parts. Ladder go shh-shh then. Skwee!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

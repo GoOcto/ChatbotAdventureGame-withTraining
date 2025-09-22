@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "You picked the wrong person to rob.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "You picked the wrong person to rob.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

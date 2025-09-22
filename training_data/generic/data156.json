@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Dutchman's? Heh. Many have looked. The canyons don't give up their secrets for free. A man needs luck on his side, and mine's run dry.<|>{\"give\": [], \"take\": []}"
+            "content": "The Dutchman's? Heh. Many have looked. The canyons don't give up their secrets for free. A man needs luck on his side, and mine's run dry.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "My dollar! I thought she was a goner. *He snatches the coin from your palm, his eyes gleaming as he spits on it for luck.* Alright, kid. You did me a good turn. This map is old, but it'll get you to the right canyon. The rest is up to you.<|>{\"give\": [\"old_canyon_map\"], \"take\": [\"lucky_silver_dollar\"]}"
+            "content": "My dollar! I thought she was a goner. *He snatches the coin from your palm, his eyes gleaming as he spits on it for luck.* Alright, kid. You did me a good turn. This map is old, but it'll get you to the right canyon. The rest is up to you.\n{\"give\": [\"old_canyon_map\"], \"take\": [\"lucky_silver_dollar\"]}"
         }
     ]
 }

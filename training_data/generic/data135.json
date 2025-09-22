@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Sit and breathe. We'll wrap it snug to keep you moving.<|>{\"give\":[],\"take\":[]}"
+      "content": "Sit and breathe. We'll wrap it snug to keep you moving.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "This canvas sling will stabilize until you reach a proper clinic. Keep weight off it.<|>{\"give\":[\"canvas_sling\"],\"take\":[]}"
+      "content": "This canvas sling will stabilize until you reach a proper clinic. Keep weight off it.\n{\"give\":[\"canvas_sling\"],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "It's meant to be used, not hoarded. Keep it on until you're safe.<|>{\"give\":[],\"take\":[]}"
+      "content": "It's meant to be used, not hoarded. Keep it on until you're safe.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "What?! I don't know that!.<|>{\"give\":[],\"take\":[]}"
+      "content": "What?! I don't know that!.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

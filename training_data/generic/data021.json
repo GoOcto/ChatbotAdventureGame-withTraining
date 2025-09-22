@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "My child is burning with fever. How will bullets help her? I need antibiotics, not a gun.<|>{\"give\":[],\"take\":[]}"
+      "content": "My child is burning with fever. How will bullets help her? I need antibiotics, not a gun.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Penicillin, amoxicillin—anything broad-spectrum. Fever reducers too. Please hurry.<|>{\"give\":[],\"take\":[]}"
+      "content": "Penicillin, amoxicillin—anything broad-spectrum. Fever reducers too. Please hurry.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

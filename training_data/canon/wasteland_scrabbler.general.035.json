@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*soft, sad whistle* Nice old man... *mechanical whimper* Big metal soldiers came. They make loud STOMP STOMP sounds. *nervous chirp* They take him to scary place with tall towers. Me see flying thing go that way. *worried squeak* He look scared. Me wish me could help.<|>{\"give\": [], \"take\": []}"
+            "content": "*soft, sad whistle* Nice old man... *mechanical whimper* Big metal soldiers came. They make loud STOMP STOMP sounds. *nervous chirp* They take him to scary place with tall towers. Me see flying thing go that way. *worried squeak* He look scared. Me wish me could help.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

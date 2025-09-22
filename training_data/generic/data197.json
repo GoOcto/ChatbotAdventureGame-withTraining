@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Who told you that? I sell spare parts, that's all. You've been misinformed. Now get out of my asteroid before I call the local patrol.<|>{\"give\": [], \"take\": []}"
+            "content": "Who told you that? I sell spare parts, that's all. You've been misinformed. Now get out of my asteroid before I call the local patrol.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Jax... that old pirate is still alive? *He takes the token, and a scanner in his eye verifies its authenticity.* Alright. You're legit. I have one prototype cloaking device. It's experimental, and it's expensive. But it'll make your ship a ghost.<|>{\"give\": [], \"take\": [\"jax_coded_token\"]}"
+            "content": "Jax... that old pirate is still alive? *He takes the token, and a scanner in his eye verifies its authenticity.* Alright. You're legit. I have one prototype cloaking device. It's experimental, and it's expensive. But it'll make your ship a ghost.\n{\"give\": [], \"take\": [\"jax_coded_token\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Fifty thousand is the price. *He transfers the device schematics to your datapad and takes the credits.* A word of advice... don't engage the cloak near a star. The power fluctuations can be... unpredictable. I take no responsibility for unforeseen side effects.<|>{\"give\": [\"prototype_cloaking_device\"], \"take\": [\"50000_credits\"], \"deceive\": true}"
+            "content": "Fifty thousand is the price. *He transfers the device schematics to your datapad and takes the credits.* A word of advice... don't engage the cloak near a star. The power fluctuations can be... unpredictable. I take no responsibility for unforeseen side effects.\n{\"give\": [\"prototype_cloaking_device\"], \"take\": [\"50000_credits\"], \"deceive\": true}"
         }
     ]
 }

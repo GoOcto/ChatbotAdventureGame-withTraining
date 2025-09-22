@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Shift change two hours before dawn. Western gate goes blind for twenty heartbeats when the geothermal vents spike.<|>{\"give\": [], \"take\": []}"
+            "content": "Shift change two hours before dawn. Western gate goes blind for twenty heartbeats when the geothermal vents spike.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Steam turns from white to blue for a breath. When it does—move. Count your steps, not your fear.<|>{\"give\": [], \"take\": []}"
+            "content": "Steam turns from white to blue for a breath. When it does—move. Count your steps, not your fear.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Listen. The pop turns to a hiss for three heartbeats right before the gap.<|>{\"give\": [], \"take\": []}"
+            "content": "Listen. The pop turns to a hiss for three heartbeats right before the gap.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

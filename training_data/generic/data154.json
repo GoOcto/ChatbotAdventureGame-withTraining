@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Impossible! My calculations were precise! Unless... the governor mechanism was tampered with. Sabotage! I need proof, a sign of my rival's clumsy handiwork, before I start pointing fingers.<|>{\"give\": [], \"take\": []}"
+            "content": "Impossible! My calculations were precise! Unless... the governor mechanism was tampered with. Sabotage! I need proof, a sign of my rival's clumsy handiwork, before I start pointing fingers.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Ah-ha! The mark of Baron von Cogsworth! That clumsy oaf! He swapped my calibrated governor for this shoddy piece of scrap. This proves his interference! For your trouble, take this schematic for a personal steam-pack. It's an early design, but quite functional.<|>{\"give\": [\"steam_pack_schematic\"], \"take\": [\"rival_stamped_gear\"]}"
+            "content": "Ah-ha! The mark of Baron von Cogsworth! That clumsy oaf! He swapped my calibrated governor for this shoddy piece of scrap. This proves his interference! For your trouble, take this schematic for a personal steam-pack. It's an early design, but quite functional.\n{\"give\": [\"steam_pack_schematic\"], \"take\": [\"rival_stamped_gear\"]}"
         }
     ]
 }

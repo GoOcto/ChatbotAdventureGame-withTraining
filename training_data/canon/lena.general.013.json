@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "You have it? Let me see... It's real. With this, I can finally disappear. What do you want in return? The keycard? The encryption key? Take them both.<|>{\"give\": [\"master_override_keycard\", \"cog_encryption_key\"], \"take\": [\"biometric_scrambler\"]}"
+            "content": "You have it? Let me see... It's real. With this, I can finally disappear. What do you want in return? The keycard? The encryption key? Take them both.\n{\"give\": [\"master_override_keycard\", \"cog_encryption_key\"], \"take\": [\"biometric_scrambler\"]}"
         }
     ]
 }

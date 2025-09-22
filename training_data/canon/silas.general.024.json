@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A gift? Or a poison? The signals... they whisper. They say you're trying to slow me down. Weaken me. Keep your rations. I trust the dust more than I trust your charity.<|>{\"give\": [], \"take\": []}"
+            "content": "A gift? Or a poison? The signals... they whisper. They say you're trying to slow me down. Weaken me. Keep your rations. I trust the dust more than I trust your charity.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

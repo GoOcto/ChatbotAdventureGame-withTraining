@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I have a rebuilt engine block, but it's one of a kind. It'll cost you.<|>{\"give\":[],\"take\":[]}"
+      "content": "I have a rebuilt engine block, but it's one of a kind. It'll cost you.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "A T-51b helmet? And in good condition... It's a deal. The engine is yours.<|>{\"give\":[\"engine_block\"],\"take\":[\"power_armor_helmet\"]}"
+      "content": "A T-51b helmet? And in good condition... It's a deal. The engine is yours.\n{\"give\":[\"engine_block\"],\"take\":[\"power_armor_helmet\"]}"
     }
   ]
 }

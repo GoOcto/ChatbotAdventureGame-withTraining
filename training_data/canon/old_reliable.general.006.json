@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "INFO: Mixed scrap—iron oxide, gypsum dust, polyethylene shards, trace solvents. Usage: viable for makeshift_stabilizer grade B+; deburr before handling.<|>{\"give\": [], \"take\": [\"scrap_parts\"]}"
+            "content": "INFO: Mixed scrap—iron oxide, gypsum dust, polyethylene shards, trace solvents. Usage: viable for makeshift_stabilizer grade B+; deburr before handling.\n{\"give\": [], \"take\": [\"scrap_parts\"]}"
         }
     ]
 }

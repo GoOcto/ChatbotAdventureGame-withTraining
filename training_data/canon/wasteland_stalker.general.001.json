@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*GRRR* *SNARL* *BARK*<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "*GRRR* *SNARL* *BARK*\n{\"give\": [], \"take\": [], \"attack\": true}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*GUTTURAL-CHUFF* *SCRAPE* *SNARL!*<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "*GUTTURAL-CHUFF* *SCRAPE* *SNARL!*\n{\"give\": [], \"take\": [], \"attack\": true}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Heh. It's always 'important'. Look, pal, you ain't on the list. The boss has my hide if I let any riff-raff through. No key, no entry.<|>{\"give\": [], \"take\": []}"
+            "content": "Heh. It's always 'important'. Look, pal, you ain't on the list. The boss has my hide if I let any riff-raff through. No key, no entry.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A manager's card? *Grok takes the card, looks at it, then back at you. He gives a slight nod and discreetly palms it.* Alright, looks like there was a... clerical error. Go on in. Don't cause trouble.<|>{\"give\": [\"vip_access\"], \"take\": [\"managers_keycard\"]}"
+            "content": "A manager's card? *Grok takes the card, looks at it, then back at you. He gives a slight nod and discreetly palms it.* Alright, looks like there was a... clerical error. Go on in. Don't cause trouble.\n{\"give\": [\"vip_access\"], \"take\": [\"managers_keycard\"]}"
         }
     ]
 }

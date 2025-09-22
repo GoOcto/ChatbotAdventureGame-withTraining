@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Bring me a deed that starves the Cog and feeds Oasis. Then we count it as prayer.<|>{\"give\": [], \"take\": []}"
+            "content": "Bring me a deed that starves the Cog and feeds Oasis. Then we count it as prayer.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

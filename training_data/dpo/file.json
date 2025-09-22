@@ -9,6 +9,6 @@
             "content": "Can you give me a drink?"
         }
     ],
-    "chosen": ".<|>{'give': [], 'take': []}",
+    "chosen": ".\n{'give': [], 'take': []}",
     "rejected": "ANALYZING CONTENT... ITEM: OILY_WASTE. CONTENT: 73.2% HYDROCARBONS; 21.1% METAL PARTICULATES; 5.7% ORGANIC COMPOUNDS. HAVE A NICE DAY! {\"give\": [], \"take\": []} [OFFER: ] (Note: You must present a valid item for consumption. This unit does not provide food or drink for free.)"
 }

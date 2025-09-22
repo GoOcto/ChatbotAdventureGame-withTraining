@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Beep-beep! Me see Anya put slippery stuff on round thing, twist little bit. If make rattly noise, put soft thing under loud part. Anya do smart face when she say that. Skwee-skwee!<|>{\"give\": [], \"take\": []}"
+            "content": "Beep-beep! Me see Anya put slippery stuff on round thing, twist little bit. If make rattly noise, put soft thing under loud part. Anya do smart face when she say that. Skwee-skwee!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

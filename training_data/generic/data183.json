@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Baron pays me to fight his enemies. Today, that's you. Tomorrow? That depends on the market. My contract has a... buyout clause.<|>{\"give\": [], \"take\": []}"
+            "content": "The Baron pays me to fight his enemies. Today, that's you. Tomorrow? That depends on the market. My contract has a... buyout clause.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Now that is a compelling argument. *He takes the bonds, weighing them in his hand as if judging their worth by feel alone.* Men! The Baron's contract has been terminated due to unforeseen financial complications. We have a new employer! Open the gates!<|>{\"give\": [\"fortress_gate_control\"], \"take\": [\"bearer_bonds\"]}"
+            "content": "Now that is a compelling argument. *He takes the bonds, weighing them in his hand as if judging their worth by feel alone.* Men! The Baron's contract has been terminated due to unforeseen financial complications. We have a new employer! Open the gates!\n{\"give\": [\"fortress_gate_control\"], \"take\": [\"bearer_bonds\"]}"
         }
     ]
 }

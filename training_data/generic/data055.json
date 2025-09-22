@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A whole carcass! We'll eat well tonight! Bring it here, I'll start carving. Thank you!<|>{\"give\":[],\"take\":[\"rad-stag_carcass\"]}"
+      "content": "A whole carcass! We'll eat well tonight! Bring it here, I'll start carving. Thank you!\n{\"give\":[],\"take\":[\"rad-stag_carcass\"]}"
     }
   ]
 }

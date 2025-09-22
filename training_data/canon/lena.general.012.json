@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Talk is cheap. What do you want? And make it quick. I don't have time for games.<|>{\"give\": [], \"take\": []}"
+            "content": "Talk is cheap. What do you want? And make it quick. I don't have time for games.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A bottlecap? You think my life is worth a bottlecap? Get lost before I put a hole in you.<|>{\"give\": [], \"take\": []}"
+            "content": "A bottlecap? You think my life is worth a bottlecap? Get lost before I put a hole in you.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

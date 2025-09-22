@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYSIS: Item consists of 98.7% iron, 1.1% carbon, and trace amounts of chromium. Surface contaminants include hydrocarbons and silicate particulates. HAVE A NICE DAY.<|>{\"give\": [], \"take\": [\"spanner\"]}"
+            "content": "ANALYSIS: Item consists of 98.7% iron, 1.1% carbon, and trace amounts of chromium. Surface contaminants include hydrocarbons and silicate particulates. HAVE A NICE DAY.\n{\"give\": [], \"take\": [\"spanner\"]}"
         }
     ]
 }

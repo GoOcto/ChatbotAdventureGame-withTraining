@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Citizen. Your footsteps are... unregulated. The rhythm is a clear violation of the Civic Harmony Act, Section 4. I'm going to have to take you in for questioning.<|>{\"give\": [], \"take\": []}"
+            "content": "Citizen. Your footsteps are... unregulated. The rhythm is a clear violation of the Civic Harmony Act, Section 4. I'm going to have to take you in for questioning.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A permit? *He scans the document, a flicker of disappointment in his eyes.* This appears to be in order. A shame. Carry on, citizen. And try to walk with more civic pride.<|>{\"give\": [], \"take\": [\"ambulation_permit\"]}"
+            "content": "A permit? *He scans the document, a flicker of disappointment in his eyes.* This appears to be in order. A shame. Carry on, citizen. And try to walk with more civic pride.\n{\"give\": [], \"take\": [\"ambulation_permit\"]}"
         }
     ]
 }

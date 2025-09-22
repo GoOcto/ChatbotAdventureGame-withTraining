@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "He came to the canyons with maps and a cough. Told me you can't build a town on begging clouds. He traded me filters for code, and once\u2014once\u2014he sang the old grid hum so I could sleep.<|>{\"give\": [], \"take\": []}"
+            "content": "He came to the canyons with maps and a cough. Told me you can't build a town on begging clouds. He traded me filters for code, and once\u2014once\u2014he sang the old grid hum so I could sleep.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

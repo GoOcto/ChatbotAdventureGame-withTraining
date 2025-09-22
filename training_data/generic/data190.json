@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I have no idea what you're talking about. And if I did, I certainly wouldn't be discussing it with you. My time is billed in six-minute increments; you've just wasted one.<|>{\"give\": [], \"take\": []}"
+            "content": "I have no idea what you're talking about. And if I did, I certainly wouldn't be discussing it with you. My time is billed in six-minute increments; you've just wasted one.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A subpoena? *His arrogant demeanor cracks for a moment as he snatches the document from you.* This is highly irregular. Fine. You want to know about Chimera? It was a failure. A dead end. That's all you'll get from me without a court order. Now get out of my office.<|>{\"give\": [\"project_chimera_denial\"], \"take\": [\"court_subpoena\"]}"
+            "content": "A subpoena? *His arrogant demeanor cracks for a moment as he snatches the document from you.* This is highly irregular. Fine. You want to know about Chimera? It was a failure. A dead end. That's all you'll get from me without a court order. Now get out of my office.\n{\"give\": [\"project_chimera_denial\"], \"take\": [\"court_subpoena\"]}"
         }
     ]
 }

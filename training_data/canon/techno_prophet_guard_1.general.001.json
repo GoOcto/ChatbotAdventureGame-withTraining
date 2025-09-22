@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "No passage for you. Turn back or be broken.<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "No passage for you. Turn back or be broken.\n{\"give\": [], \"take\": [], \"attack\": true}"
         }
     ]
 }

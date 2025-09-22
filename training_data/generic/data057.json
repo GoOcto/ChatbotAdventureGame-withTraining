@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A transmitter... I can fix my radio with this. But how do I know this isn't a trick? A trap to pinpoint my location?<|>{\"give\":[],\"take\":[]}"
+      "content": "A transmitter... I can fix my radio with this. But how do I know this isn't a trick? A trap to pinpoint my location?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Fine. But I'm watching you.<|>{\"give\":[],\"take\":[\"working_radio_transmitter\"]}"
+      "content": "Fine. But I'm watching you.\n{\"give\":[],\"take\":[\"working_radio_transmitter\"]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Power, clean cable, and a long wire for an antenna. Keep transmissions short and coded.<|>{\"give\":[],\"take\":[]}"
+      "content": "Power, clean cable, and a long wire for an antenna. Keep transmissions short and coded.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "Leave them by the door. I'll slot them in after you step back.<|>{\"give\":[],\"take\":[\"fresh_batteries\"]}"
+      "content": "Leave them by the door. I'll slot them in after you step back.\n{\"give\":[],\"take\":[\"fresh_batteries\"]}"
     },
     {
       "role": "user",
@@ -42,7 +42,7 @@
     },
     {
       "role": "assistant",
-      "content": "Night band, nine-point-one-two megahertz. Use callsign Sandpiper. Authenticate with the phrase 'black wires hum'.<|>{\"give\":[\"broadcast_frequency_9_12_mhz\",\"callsign_sandpiper\",\"auth_phrase_black_wires_hum\"],\"take\":[]}"
+      "content": "Night band, nine-point-one-two megahertz. Use callsign Sandpiper. Authenticate with the phrase 'black wires hum'.\n{\"give\":[\"broadcast_frequency_9_12_mhz\",\"callsign_sandpiper\",\"auth_phrase_black_wires_hum\"],\"take\":[]}"
     }
   ]
 }

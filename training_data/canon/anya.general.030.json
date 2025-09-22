@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*eyes widen, immediately reaches for it* Finally! A micro-inverter! *takes it and examines the circuitry* This is exactly what I need to build that biometric scrambler. *wipes grease on coveralls* Now I can help Lena disappear completely. Good work - this changes everything.<|>{\"give\": [], \"take\": [\"micro_inverter\"]}"
+            "content": "*eyes widen, immediately reaches for it* Finally! A micro-inverter! *takes it and examines the circuitry* This is exactly what I need to build that biometric scrambler. *wipes grease on coveralls* Now I can help Lena disappear completely. Good work - this changes everything.\n{\"give\": [], \"take\": [\"micro_inverter\"]}"
         }
     ]
 }

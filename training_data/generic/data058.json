@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "My last needle just snapped. Can't mend this jacket without one. You wouldn't happen to have a sewing kit, would you?<|>{\"give\":[],\"take\":[]}"
+      "content": "My last needle just snapped. Can't mend this jacket without one. You wouldn't happen to have a sewing kit, would you?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Oh, perfect! And it has a thimble! You're a lifesaver.<|>{\"give\":[],\"take\":[\"sewing_kit\"]}"
+      "content": "Oh, perfect! And it has a thimble! You're a lifesaver.\n{\"give\":[],\"take\":[\"sewing_kit\"]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Yes—hold still. I've got a brass spare and a length of thread; I'll stitch it snug so it won't pop again.<|>{\"give\":[\"spare_buttons\",\"thread_spool\"],\"take\":[]}"
+      "content": "Yes—hold still. I've got a brass spare and a length of thread; I'll stitch it snug so it won't pop again.\n{\"give\":[\"spare_buttons\",\"thread_spool\"],\"take\":[]}"
     }
   ]
 }

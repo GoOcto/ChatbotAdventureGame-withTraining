@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The traders say it was like the sky, but on the ground. And it was all water. All of it. I can't even imagine that much water.<|>{\"give\":[],\"take\":[]}"
+      "content": "The traders say it was like the sky, but on the ground. And it was all water. All of it. I can't even imagine that much water.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I know this number. This was Kael. He... he said he was right behind me when we ran. He told me to go. He was a good soldier. A good man. All for nothing. The Prophet's 'salvation' is a lie. Take the encryption key. Get the truth out. For Kael.<|>{\"give\": [\"cog_encryption_key\"], \"take\": [\"corroded_dog_tags\"]}"
+            "content": "I know this number. This was Kael. He... he said he was right behind me when we ran. He told me to go. He was a good soldier. A good man. All for nothing. The Prophet's 'salvation' is a lie. Take the encryption key. Get the truth out. For Kael.\n{\"give\": [\"cog_encryption_key\"], \"take\": [\"corroded_dog_tags\"]}"
         }
     ]
 }

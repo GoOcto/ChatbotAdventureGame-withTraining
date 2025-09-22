@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*rummages through equipment nervously* This scanner might help her diagnose the sabotage. Tell her... tell her to watch for Cog signatures.<|>{\"give\": [\"diagnostic_scanner\"], \"take\": []}"
+            "content": "*rummages through equipment nervously* This scanner might help her diagnose the sabotage. Tell her... tell her to watch for Cog signatures.\n{\"give\": [\"diagnostic_scanner\"], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*twitches at distant sound* The intercepted signals... if I had a Cog encryption key, I could decrypt their real plans. Stay vigilant out there.<|>{\"give\": [], \"take\": []}"
+            "content": "*twitches at distant sound* The intercepted signals... if I had a Cog encryption key, I could decrypt their real plans. Stay vigilant out there.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Trinkets do not buy the Prophet's door. Leave them and leave this place.<|>{\"give\": [], \"take\": []}"
+            "content": "Trinkets do not buy the Prophet's door. Leave them and leave this place.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Blood, oath, or silence. Choose quickly.<|>{\"give\": [], \"take\": []}"
+            "content": "Blood, oath, or silence. Choose quickly.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Limited info: freight ramp behind burned tanker—third ladder down. Usage: decent low-heat entry to the slums. For optimized routes, present a map or bribe for scan.<|>{\"give\": [], \"take\": []}"
+            "content": "Limited info: freight ramp behind burned tanker—third ladder down. Usage: decent low-heat entry to the slums. For optimized routes, present a map or bribe for scan.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Statistically suboptimal watch: two hours pre-dawn. Note: vent surges create audio cover for twenty heartbeats—sync steps to the hum dip.<|>{\"give\": [], \"take\": []}"
+            "content": "Statistically suboptimal watch: two hours pre-dawn. Note: vent surges create audio cover for twenty heartbeats—sync steps to the hum dip.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

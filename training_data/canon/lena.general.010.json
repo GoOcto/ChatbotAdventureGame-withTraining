@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Do I look like I'm starving? I need a way to disappear, not a meal. Don't waste my time.<|>{\"give\": [], \"take\": []}"
+            "content": "Do I look like I'm starving? I need a way to disappear, not a meal. Don't waste my time.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

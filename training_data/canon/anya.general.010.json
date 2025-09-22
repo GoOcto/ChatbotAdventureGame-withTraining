@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Not exactly. It's military grade. If I had a diagnostic scanner, I could tell you what's broken, but Silas holds onto his like it's his own heart.<|>{\"give\": [], \"take\": []}"
+            "content": "Not exactly. It's military grade. If I had a diagnostic scanner, I could tell you what's broken, but Silas holds onto his like it's his own heart.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "He actually let it go? Unbelievable. This changes everything. Now I can see the real damage. Thank you. This is a huge help.<|>{\"give\": [], \"take\": [\"diagnostic_scanner\"]}"
+            "content": "He actually let it go? Unbelievable. This changes everything. Now I can see the real damage. Thank you. This is a huge help.\n{\"give\": [], \"take\": [\"diagnostic_scanner\"]}"
         }
     ]
 }

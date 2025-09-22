@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYSIS: Item exhibits a unique radiation signature consistent with the 'Glimmer' currency favored by the acquisitions specialist in Barter-town who deals in information. HAVE A NICE DAY.<|>{\"give\": [], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "ANALYSIS: Item exhibits a unique radiation signature consistent with the 'Glimmer' currency favored by the acquisitions specialist in Barter-town who deals in information. HAVE A NICE DAY.\n{\"give\": [], \"take\": [\"glimmer_bottlecap\"]}"
         }
     ]
 }

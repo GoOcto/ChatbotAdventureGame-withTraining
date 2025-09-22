@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*stops mid-repair and stares at the component* A micro-inverter! *drops wrench and reaches for it eagerly* Perfect condition too. *examines the circuitry with expert eyes* With this I can finally build that biometric scrambler. *looks up seriously* Someone's life depends on this tech. Thank you - this changes everything.<|>{\"give\": [], \"take\": [\"micro_inverter\"]}"
+            "content": "*stops mid-repair and stares at the component* A micro-inverter! *drops wrench and reaches for it eagerly* Perfect condition too. *examines the circuitry with expert eyes* With this I can finally build that biometric scrambler. *looks up seriously* Someone's life depends on this tech. Thank you - this changes everything.\n{\"give\": [], \"take\": [\"micro_inverter\"]}"
         }
     ]
 }

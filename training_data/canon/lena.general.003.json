@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Then this channel isn't either. We're done.<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "Then this channel isn't either. We're done.\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

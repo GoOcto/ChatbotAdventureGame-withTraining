@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*reaches for it eagerly, then stops* Wait... *examines it suspiciously* The charge is fluctuating. This readings are all wrong. *backs away, paranoid* This is a dud! A trap! Are you trying to poison me? Get out! GET OUT!<|>{\"give\": [], \"take\": []}"
+            "content": "*reaches for it eagerly, then stops* Wait... *examines it suspiciously* The charge is fluctuating. This readings are all wrong. *backs away, paranoid* This is a dud! A trap! Are you trying to poison me? Get out! GET OUT!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

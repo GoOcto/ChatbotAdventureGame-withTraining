@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Oasis leader is not my concern. The Prophet has other plans for him. *cold stare* My orders are clear: find the defector Lena. She spreads chaos, undermines order. If you have information about the traitor, speak. Otherwise, do not waste my time.<|>{\"give\": [], \"take\": []}"
+            "content": "The Oasis leader is not my concern. The Prophet has other plans for him. *cold stare* My orders are clear: find the defector Lena. She spreads chaos, undermines order. If you have information about the traitor, speak. Otherwise, do not waste my time.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

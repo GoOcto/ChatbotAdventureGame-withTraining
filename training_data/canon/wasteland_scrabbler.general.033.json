@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*nervous squawk* Big scary metal men! *whistle-chirp* They walk around... make loud STOMP STOMP. *worried hum* Yesterday one got really mad... shouted at little trader man. *mechanical whimper* I don't like when they angry.<|>{\"give\": [], \"take\": []}"
+            "content": "*nervous squawk* Big scary metal men! *whistle-chirp* They walk around... make loud STOMP STOMP. *worried hum* Yesterday one got really mad... shouted at little trader man. *mechanical whimper* I don't like when they angry.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

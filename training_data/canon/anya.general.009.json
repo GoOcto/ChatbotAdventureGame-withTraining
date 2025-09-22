@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "That's dangerous tech you're asking about. Why do you need a biometric scrambler?<|>{\"give\": [], \"take\": []}"
+            "content": "That's dangerous tech you're asking about. Why do you need a biometric scrambler?\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A micro-inverter... I need one of these for the purifier's secondary systems. Fine. For the defector. Here. Tell them to be careful with it.<|>{\"give\": [\"biometric_scrambler\"], \"take\": [\"micro_inverter\"]}"
+            "content": "A micro-inverter... I need one of these for the purifier's secondary systems. Fine. For the defector. Here. Tell them to be careful with it.\n{\"give\": [\"biometric_scrambler\"], \"take\": [\"micro_inverter\"]}"
         }
     ]
 }

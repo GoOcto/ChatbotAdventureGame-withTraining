@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Shadows do not bargain.<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "Shadows do not bargain.\n{\"give\": [], \"take\": [], \"attack\": true}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Absence. Be gone.<|>{\"give\": [], \"take\": []}"
+            "content": "Absence. Be gone.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Good. Leave no echo.<|>{\"give\": [], \"take\": []}"
+            "content": "Good. Leave no echo.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

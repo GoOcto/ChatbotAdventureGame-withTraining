@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Anya... that stubborn, brilliant child. Her parents were the same—never knew when to quit, thank the stars. That tenacity is the beating heart of Oasis, the reason we survive when others fall. Tell her... tell her that her old mentor believes in her, and that no machine has ever been built that she cannot fix.<|>{\"give\": [], \"take\": []}"
+            "content": "Anya... that stubborn, brilliant child. Her parents were the same—never knew when to quit, thank the stars. That tenacity is the beating heart of Oasis, the reason we survive when others fall. Tell her... tell her that her old mentor believes in her, and that no machine has ever been built that she cannot fix.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A biometric scrambler. Nothing less. Show it, and we trade.<|>{\"give\": [], \"take\": []}"
+            "content": "A biometric scrambler. Nothing less. Show it, and we trade.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Freight stairs. Ask for the machinist. You hand it over, I hand over the keycard, and we disappear.<|>{\"give\": [\"master_override_keycard\"], \"take\": [\"biometric_scrambler\"]}"
+            "content": "Freight stairs. Ask for the machinist. You hand it over, I hand over the keycard, and we disappear.\n{\"give\": [\"master_override_keycard\"], \"take\": [\"biometric_scrambler\"]}"
         }
     ]
 }

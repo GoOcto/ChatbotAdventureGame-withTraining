@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A sword costs a hundred caps, and that's for my time, not just the metal. Your offer is an insult.<|>{\"give\":[],\"take\":[]}"
+      "content": "A sword costs a hundred caps, and that's for my time, not just the metal. Your offer is an insult.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

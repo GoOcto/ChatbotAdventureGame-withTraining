@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Parts? Scrap? You think metal fixes the static in my skull? No! Get out! You're trying to trick me... trying to get inside my head...<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "Parts? Scrap? You think metal fixes the static in my skull? No! Get out! You're trying to trick me... trying to get inside my head...\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

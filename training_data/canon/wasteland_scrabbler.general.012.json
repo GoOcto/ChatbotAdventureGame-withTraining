@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*The scrabbler emits a soft, pleased chittering sound. It nudges a loose floor plate with its foot, revealing a small, hidden compartment beneath. Inside is a faded photograph.*<|>{\"give\": [\"faded_photograph\"], \"take\": []}"
+            "content": "*The scrabbler emits a soft, pleased chittering sound. It nudges a loose floor plate with its foot, revealing a small, hidden compartment beneath. Inside is a faded photograph.*\n{\"give\": [\"faded_photograph\"], \"take\": []}"
         }
     ]
 }

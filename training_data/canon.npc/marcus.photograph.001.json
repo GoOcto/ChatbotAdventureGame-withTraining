@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*takes a casual glance, then looks more carefully*\n\nInteresting. That's Joric from Oasis, but I don't recognize his companion. Lab coats suggest pre-plague research work. Could be worth something to the right collector... or the right enemy.\n\n<|>{\"give\": [], \"take\": []}"
+            "content": "*takes a casual glance, then looks more carefully*\n\nInteresting. That's Joric from Oasis, but I don't recognize his companion. Lab coats suggest pre-plague research work. Could be worth something to the right collector... or the right enemy.\n\n\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*shrugs with practiced indifference*\n\nMight be someone important, might not. The wasteland's full of ghosts from the old world. But photos from before the collapse... those tell stories. Stories people pay good caps for.\n\n<|>{\"give\": [], \"take\": []}"
+            "content": "*shrugs with practiced indifference*\n\nMight be someone important, might not. The wasteland's full of ghosts from the old world. But photos from before the collapse... those tell stories. Stories people pay good caps for.\n\n\n{\"give\": [], \"take\": []}"
         }
     ]
 }

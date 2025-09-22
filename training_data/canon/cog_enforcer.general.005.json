@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Show a badge or a blessing. If you can't forge the badge, get the Supplicant's Pass. Flash it with chin high—hesitation reads false.<|>{\"give\": [], \"take\": []}"
+            "content": "Show a badge or a blessing. If you can't forge the badge, get the Supplicant's Pass. Flash it with chin high—hesitation reads false.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Do a favor for an Enforcer. Or trade information that hurts a defector's enemies. Some of us still remember our oaths.<|>{\"give\": [], \"take\": []}"
+            "content": "Do a favor for an Enforcer. Or trade information that hurts a defector's enemies. Some of us still remember our oaths.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

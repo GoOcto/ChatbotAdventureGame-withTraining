@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Listening... *taps fingers nervously* ...Cog frequencies, dozen channels of chatter. Most is noise but... *glances around* ...sometimes real signals break through. Prophet's moving troops. Something's brewing, something big.<|>{\"give\": [], \"take\": []}"
+            "content": "Listening... *taps fingers nervously* ...Cog frequencies, dozen channels of chatter. Most is noise but... *glances around* ...sometimes real signals break through. Prophet's moving troops. Something's brewing, something big.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "His bio-signature... it's buried deep in the Cathedral's core. They've got him wired into the main AI system. *nervous tic* Can't get clean trace through all that interference, but... but he's alive. For now.<|>{\"give\": [], \"take\": []}"
+            "content": "His bio-signature... it's buried deep in the Cathedral's core. They've got him wired into the main AI system. *nervous tic* Can't get clean trace through all that interference, but... but he's alive. For now.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

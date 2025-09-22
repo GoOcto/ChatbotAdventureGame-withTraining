@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*nervous twitch* Water... *voice steadier than before* The Oasis purifier. I remember working on those systems... before the plague, before the paranoia set in. *clutches head* I intercepted Cog transmissions about it, but they're encrypted. *suspicious glance* If someone could get me their encryption key... I could decode their plans. Find the sabotage patterns.<|>{\"give\": [], \"take\": []}"
+            "content": "*nervous twitch* Water... *voice steadier than before* The Oasis purifier. I remember working on those systems... before the plague, before the paranoia set in. *clutches head* I intercepted Cog transmissions about it, but they're encrypted. *suspicious glance* If someone could get me their encryption key... I could decode their plans. Find the sabotage patterns.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

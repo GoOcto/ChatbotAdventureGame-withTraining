@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "We're managing. Barely. The purifier is a patchwork of fixes, and people are getting scared. Without Joric's leadership, things are starting to fray at the edges.<|>{\"give\": [], \"take\": []}"
+            "content": "We're managing. Barely. The purifier is a patchwork of fixes, and people are getting scared. Without Joric's leadership, things are starting to fray at the edges.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "What needs to be done is getting Joric back. The Techno-Prophet has him, and that means going through the Cog. It's a suicide mission, but it's the only one we've got.<|>{\"give\": [], \"take\": []}"
+            "content": "What needs to be done is getting Joric back. The Techno-Prophet has him, and that means going through the Cog. It's a suicide mission, but it's the only one we've got.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

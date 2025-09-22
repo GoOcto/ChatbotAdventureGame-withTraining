@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Wrong channel. Bring what I need, then ask at the freight stairs\u2014no specifics here.<|>{\"give\": [], \"take\": []}"
+            "content": "Wrong channel. Bring what I need, then ask at the freight stairs\u2014no specifics here.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "No scrambler, no meet. Conversation over.<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "No scrambler, no meet. Conversation over.\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

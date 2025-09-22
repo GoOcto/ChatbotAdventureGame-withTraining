@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "That knowledge is sealed. The First Archivists deemed it too dangerous for public access. The trauma of such an event could destabilize entire systems. I cannot grant your request.<|>{\"give\": [], \"take\": []}"
+            "content": "That knowledge is sealed. The First Archivists deemed it too dangerous for public access. The trauma of such an event could destabilize entire systems. I cannot grant your request.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "The resonance... it's authentic. *My holographic form flickers as I interface with the crystal.* The protocols are overridden. The data vaults are unlocking. What you are about to see will change you. Proceed with caution.<|>{\"give\": [\"forbidden_history_access\"], \"take\": [\"level_9_access_crystal\"]}"
+            "content": "The resonance... it's authentic. *My holographic form flickers as I interface with the crystal.* The protocols are overridden. The data vaults are unlocking. What you are about to see will change you. Proceed with caution.\n{\"give\": [\"forbidden_history_access\"], \"take\": [\"level_9_access_crystal\"]}"
         }
     ]
 }

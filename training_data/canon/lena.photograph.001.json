@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*glances nervously at the photo, then back at you* I don't know them. *suspicious* Why are you asking? Why are you showing me pictures? *backs away slightly* Are you working for the Cog? Testing me? I don't have time for games - I need to disappear before they find me.<|>{\"give\": [], \"take\": []}"
+            "content": "*glances nervously at the photo, then back at you* I don't know them. *suspicious* Why are you asking? Why are you showing me pictures? *backs away slightly* Are you working for the Cog? Testing me? I don't have time for games - I need to disappear before they find me.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

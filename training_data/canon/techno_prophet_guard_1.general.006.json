@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*The guard takes the pass, its optical sensor scanning it briefly. It nods, a slow, mechanical motion, and steps aside.* The Prophet will see you. Do not stray from the path.<|>{\"give\": [], \"take\": [\"supplicants_pass\"]}"
+            "content": "*The guard takes the pass, its optical sensor scanning it briefly. It nods, a slow, mechanical motion, and steps aside.* The Prophet will see you. Do not stray from the path.\n{\"give\": [], \"take\": [\"supplicants_pass\"]}"
         }
     ]
 }

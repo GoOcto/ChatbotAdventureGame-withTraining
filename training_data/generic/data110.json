@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Ghosts from the old world. It's beautiful.<|>{\"give\":[],\"take\":[]}"
+      "content": "Ghosts from the old world. It's beautiful.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

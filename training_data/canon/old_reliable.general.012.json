@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYSIS: Item is a single-use electromagnetic pulse grenade. Detonation will disable all unprotected electronic systems within a 15-meter radius. WARNING: Proximity to active AI cores during detonation may cause unpredictable results. HAVE A NICE DAY.<|>{\"give\": [], \"take\": [\"emp_grenade\"]}"
+            "content": "ANALYSIS: Item is a single-use electromagnetic pulse grenade. Detonation will disable all unprotected electronic systems within a 15-meter radius. WARNING: Proximity to active AI cores during detonation may cause unpredictable results. HAVE A NICE DAY.\n{\"give\": [], \"take\": [\"emp_grenade\"]}"
         }
     ]
 }

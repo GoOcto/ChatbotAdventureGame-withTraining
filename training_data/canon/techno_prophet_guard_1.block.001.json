@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*steps forward menacingly* HALT. Unauthorized. You are weak flesh. This is sacred ground. *cybernetic arm whirs threateningly* Turn back or be removed.<|>{\"give\": [], \"take\": []}"
+            "content": "*steps forward menacingly* HALT. Unauthorized. You are weak flesh. This is sacred ground. *cybernetic arm whirs threateningly* Turn back or be removed.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

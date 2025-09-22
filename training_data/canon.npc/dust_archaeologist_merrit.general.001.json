@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A quiet bunker with louder stories. Its doors don't open to force—only to rhythm. Old maintenance crews keyed access by matching vent hum to a beat. People call it magic. It's calibration.<|>{\"give\": [], \"take\": []}"
+            "content": "A quiet bunker with louder stories. Its doors don't open to force—only to rhythm. Old maintenance crews keyed access by matching vent hum to a beat. People call it magic. It's calibration.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Anything labeled in red numerals. Red meant live service. Pull one and an entire grid forgets its memory. Photograph first; move last. You can't unmix time.<|>{\"give\": [], \"take\": []}"
+            "content": "Anything labeled in red numerals. Red meant live service. Pull one and an entire grid forgets its memory. Photograph first; move last. You can't unmix time.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

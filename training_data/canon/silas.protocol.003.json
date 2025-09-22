@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*eyes light up, hands steadying visibly* The stabilizer! *takes it immediately* The whispers are already quieting. Thank you. I can think clearly now. What do you need to know?<|>{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
+            "content": "*eyes light up, hands steadying visibly* The stabilizer! *takes it immediately* The whispers are already quieting. Thank you. I can think clearly now. What do you need to know?\n{\"give\": [], \"take\": [\"nanite_stabilizer\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*speaks more lucidly now* I intercepted their transmissions, but they're encrypted. If you find a Cog encryption key, I can decode their true intentions.<|>{\"give\": [], \"take\": []}"
+            "content": "*speaks more lucidly now* I intercepted their transmissions, but they're encrypted. If you find a Cog encryption key, I can decode their true intentions.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

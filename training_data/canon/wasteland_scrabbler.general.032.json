@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*curious chirp-whistle* Yes! I see lots! *excited mechanical trill* Bad men came this morning... they had big scary sticks. *worried squawk* Lady with red hat... she hide things under cart.<|>{\"give\": [], \"take\": []}"
+            "content": "*curious chirp-whistle* Yes! I see lots! *excited mechanical trill* Bad men came this morning... they had big scary sticks. *worried squawk* Lady with red hat... she hide things under cart.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

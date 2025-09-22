@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I fought. I don't know how great it was.<|>{\"give\":[],\"take\":[]}"
+      "content": "I fought. I don't know how great it was.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

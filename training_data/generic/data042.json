@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A Stealth Boy? Heh. You and everyone else. Those are the rarest of the rare. I have one, but the price is astronomical.<|>{\"give\":[],\"take\":[]}"
+      "content": "A Stealth Boy? Heh. You and everyone else. Those are the rarest of the rare. I have one, but the price is astronomical.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "It'll cost you a working fusion core.<|>{\"give\":[],\"take\":[]}"
+      "content": "It'll cost you a working fusion core.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "A person of means! A rare sight. Pleasure doing business with you.<|>{\"give\":[\"stealth_boy\"],\"take\":[\"fusion_core\"]}"
+      "content": "A person of means! A rare sight. Pleasure doing business with you.\n{\"give\":[\"stealth_boy\"],\"take\":[\"fusion_core\"]}"
     }
   ]
 }

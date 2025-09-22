@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*twitches nervously* Okay? OKAY? *clutches fractured datapad* The static... it's screaming in my skull. Nothing's okay when the signals won't stop. *suspicious glance* Why do you ask? What do you want?<|>{\"give\": [], \"take\": []}"
+            "content": "*twitches nervously* Okay? OKAY? *clutches fractured datapad* The static... it's screaming in my skull. Nothing's okay when the signals won't stop. *suspicious glance* Why do you ask? What do you want?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

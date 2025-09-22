@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A place that isn't there anymore. I'm starting to think I'm not either.<|>{\"give\":[],\"take\":[]}"
+      "content": "A place that isn't there anymore. I'm starting to think I'm not either.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

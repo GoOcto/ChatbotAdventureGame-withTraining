@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ITEM NOT IN DESIRED ANALYSIS QUEUE. Thank you for your interest in Old Reliable analytical services! Insert acceptable items for data processing. HAVE A NICE DAY.<|>{\"give\": [], \"take\": []}"
+            "content": "ITEM NOT IN DESIRED ANALYSIS QUEUE. Thank you for your interest in Old Reliable analytical services! Insert acceptable items for data processing. HAVE A NICE DAY.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "QUALITY CONTROL protocols maintained! Analytical resources reserved for items with cross-reference potential. Efficiency is key to customer satisfaction! HAVE A NICE DAY.<|>{\"give\": [], \"take\": []}"
+            "content": "QUALITY CONTROL protocols maintained! Analytical resources reserved for items with cross-reference potential. Efficiency is key to customer satisfaction! HAVE A NICE DAY.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

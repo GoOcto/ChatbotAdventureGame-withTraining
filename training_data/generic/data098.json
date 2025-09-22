@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The places that are still blank.<|>{\"give\":[],\"take\":[]}"
+      "content": "The places that are still blank.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

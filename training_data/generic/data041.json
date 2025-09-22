@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I study things that grow from the ground. This is just... food. I'm not interested.<|>{\"give\":[],\"take\":[]}"
+      "content": "I study things that grow from the ground. This is just... food. I'm not interested.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Rooted herbs with intact rhizomes, spore caps, or viable seeds. Fresh cuttings help most with propagation trials.<|>{\"give\":[],\"take\":[]}"
+      "content": "Rooted herbs with intact rhizomes, spore caps, or viable seeds. Fresh cuttings help most with propagation trials.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Promising morphology. I'll take them and log the find. Here—spare seed pouches so you can collect more properly next time.<|>{\"give\":[\"seed_pouches\"],\"take\":[\"dune_seed_pods\"]}"
+      "content": "Promising morphology. I'll take them and log the find. Here—spare seed pouches so you can collect more properly next time.\n{\"give\":[\"seed_pouches\"],\"take\":[\"dune_seed_pods\"]}"
     }
   ]
 }

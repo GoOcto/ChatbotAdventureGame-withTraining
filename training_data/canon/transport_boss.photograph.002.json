@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*glances at it dismissively* Pre-plague photo. Nice condition for something that old. *shrugs* Don't know the faces, but collectors pay decent caps for intact memorabilia like this. Sentimental types eat this stuff up. *looks back at player* You selling or just showing off your junk?<|>{\"give\": [], \"take\": []}"
+            "content": "*glances at it dismissively* Pre-plague photo. Nice condition for something that old. *shrugs* Don't know the faces, but collectors pay decent caps for intact memorabilia like this. Sentimental types eat this stuff up. *looks back at player* You selling or just showing off your junk?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

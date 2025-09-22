@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "That's a bigger ask. It's my leverage if the keycard fails. You'd need a better offer.<|>{\"give\": [], \"take\": []}"
+            "content": "That's a bigger ask. It's my leverage if the keycard fails. You'd need a better offer.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "The code for the crate... Fine. A deal's a deal. One key for another. Take it and go.<|>{\"give\": [\"cog_encryption_key\"], \"take\": [\"supply_crate_code\"]}"
+            "content": "The code for the crate... Fine. A deal's a deal. One key for another. Take it and go.\n{\"give\": [\"cog_encryption_key\"], \"take\": [\"supply_crate_code\"]}"
         }
     ]
 }

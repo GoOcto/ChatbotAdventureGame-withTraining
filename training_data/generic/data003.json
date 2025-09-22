@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "These supplies are for the whole settlement, but you look like you're about to collapse. Here. Don't tell anyone where you got it.<|>{\"give\":[\"ration_bar\"],\"take\":[]}"
+      "content": "These supplies are for the whole settlement, but you look like you're about to collapse. Here. Don't tell anyone where you got it.\n{\"give\":[\"ration_bar\"],\"take\":[]}"
     }
   ]
 }

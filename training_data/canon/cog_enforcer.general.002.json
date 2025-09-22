@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Obstruction detected. Spare metal is not a credential. Step aside or be subdued.<|>{\"give\": [], \"take\": []}"
+            "content": "Obstruction detected. Spare metal is not a credential. Step aside or be subdued.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A badge, a pass, or an assignment code. Produce one or vacate.<|>{\"give\": [], \"take\": []}"
+            "content": "A badge, a pass, or an assignment code. Produce one or vacate.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

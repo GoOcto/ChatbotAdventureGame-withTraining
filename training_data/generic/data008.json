@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "I have one. Here.<|>{\"give\":[\"clean_bandage\"],\"take\":[]}"
+      "content": "I have one. Here.\n{\"give\":[\"clean_bandage\"],\"take\":[]}"
     }
   ]
 }

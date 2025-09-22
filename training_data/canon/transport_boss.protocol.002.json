@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Plenty. But my memory gets fuzzy without proper payment. A glimmer bottlecap sharpens it right up.<|>{\"give\": [], \"take\": []}"
+            "content": "Plenty. But my memory gets fuzzy without proper payment. A glimmer bottlecap sharpens it right up.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Important to you, profitable to me. That's how business works. Show me caps, get your intel.<|>{\"give\": [], \"take\": []}"
+            "content": "Important to you, profitable to me. That's how business works. Show me caps, get your intel.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

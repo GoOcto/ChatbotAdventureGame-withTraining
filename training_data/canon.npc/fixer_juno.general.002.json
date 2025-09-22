@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A master keycard? That's top-tier Cog tech. I can get you one, but it's a replica. It'll pass a visual inspection, but not a data scan. Interested?<|>{\"give\": [], \"take\": []}"
+            "content": "A master keycard? That's top-tier Cog tech. I can get you one, but it's a replica. It'll pass a visual inspection, but not a data scan. Interested?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

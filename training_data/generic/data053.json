@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Gems and wine? You certainly know how to persuade a man. I'll make sure my guards are patrolling the opposite end of the district. A pleasure doing business with you.<|>{\"give\":[],\"take\":[\"bag_of_gems\",\"case_of_wine\"]}"
+      "content": "Gems and wine? You certainly know how to persuade a man. I'll make sure my guards are patrolling the opposite end of the district. A pleasure doing business with you.\n{\"give\":[],\"take\":[\"bag_of_gems\",\"case_of_wine\"]}"
     }
   ]
 }

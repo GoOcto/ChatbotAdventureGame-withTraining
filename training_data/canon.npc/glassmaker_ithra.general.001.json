@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Real enough. We seeded rooftops with tempered shards—angle them thirty-two degrees off noon, catch the ventlight when it breathes. The bloom scares drones and warms cistern pipes by a hair. Enough to keep them from freezing at night.<|>{\"give\": [], \"take\": []}"
+            "content": "Real enough. We seeded rooftops with tempered shards—angle them thirty-two degrees off noon, catch the ventlight when it breathes. The bloom scares drones and warms cistern pipes by a hair. Enough to keep them from freezing at night.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Anneal slow. Bury the tiles in sifted ash, not sand—sand holds ghosts of moisture. If the pane sings when you tap it, it cooled too fast. Quiet glass is strong glass.<|>{\"give\": [], \"take\": []}"
+            "content": "Anneal slow. Bury the tiles in sifted ash, not sand—sand holds ghosts of moisture. If the pane sings when you tap it, it cooled too fast. Quiet glass is strong glass.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

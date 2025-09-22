@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The passes are treacherous, but I have a route surveyed. Here.<|>{\"give\":[\"map_of_mountain_pass\"],\"take\":[]}"
+      "content": "The passes are treacherous, but I have a route surveyed. Here.\n{\"give\":[\"map_of_mountain_pass\"],\"take\":[]}"
     }
   ]
 }

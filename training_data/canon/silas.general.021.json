@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Static... noise... Joric. Before the signals... before the rust. He was a friend. The data stream is clearer now. The Prophet's 'Divinity' isn't a merger, it's a purge. An overwrite. He's using Joric as a template. The core has an unprotected regulation node. A focused EMP would cascade the system, free Joric. But the guards... they are the firewall. You'll need to get past them. I can give you the diagnostic scanner, Anya will know what to do with it. It's the least I can do for Joric.<|>{\"give\": [\"diagnostic_scanner\"], \"take\": [\"faded_photograph\"]}"
+            "content": "Static... noise... Joric. Before the signals... before the rust. He was a friend. The data stream is clearer now. The Prophet's 'Divinity' isn't a merger, it's a purge. An overwrite. He's using Joric as a template. The core has an unprotected regulation node. A focused EMP would cascade the system, free Joric. But the guards... they are the firewall. You'll need to get past them. I can give you the diagnostic scanner, Anya will know what to do with it. It's the least I can do for Joric.\n{\"give\": [\"diagnostic_scanner\"], \"take\": [\"faded_photograph\"]}"
         }
     ]
 }

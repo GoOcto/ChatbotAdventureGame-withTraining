@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Skwee-skwee! *eagerly eats the glowy plant* Mmm, tasty-tasty! Me remember thing now! *taps leg* Tap-tap... tap-tap-tap... tap. That mean danger-place, stay away! Me show you pattern. Beep!<|>{\"give\": [\"scrabbler_rhythmic_pattern\"], \"take\": [\"glowing_fungus\"]}"
+            "content": "Skwee-skwee! *eagerly eats the glowy plant* Mmm, tasty-tasty! Me remember thing now! *taps leg* Tap-tap... tap-tap-tap... tap. That mean danger-place, stay away! Me show you pattern. Beep!\n{\"give\": [\"scrabbler_rhythmic_pattern\"], \"take\": [\"glowing_fungus\"]}"
         }
     ]
 }

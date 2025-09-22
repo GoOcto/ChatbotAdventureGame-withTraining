@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A boot with no sole and a can so rusty it's more hole than metal. The usual treasures.<|>{\"give\":[],\"take\":[]}"
+      "content": "A boot with no sole and a can so rusty it's more hole than metal. The usual treasures.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

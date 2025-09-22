@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Blasphemy. You speak the words of a heretic. Your disbelief is a symptom of the chaos the Prophet seeks to cure. You require re-education. Do not resist.<|>{\"give\": [], \"take\": []}"
+            "content": "Blasphemy. You speak the words of a heretic. Your disbelief is a symptom of the chaos the Prophet seeks to cure. You require re-education. Do not resist.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "That's... Joric. He took me in when I was a kid. Taught me which end of a hydro-spanner to hold. Seeing this... it's not just about the water, it's about him. I have to fix this. For him. I've marked Silas's last known coordinates on your map. He's a paranoid wreck, but he's the only one who can figure out how the Cog sabotaged the purifier. Go.<|>{\"give\": [\"silas_coordinates\"], \"take\": [\"faded_photograph\"]}"
+            "content": "That's... Joric. He took me in when I was a kid. Taught me which end of a hydro-spanner to hold. Seeing this... it's not just about the water, it's about him. I have to fix this. For him. I've marked Silas's last known coordinates on your map. He's a paranoid wreck, but he's the only one who can figure out how the Cog sabotaged the purifier. Go.\n{\"give\": [\"silas_coordinates\"], \"take\": [\"faded_photograph\"]}"
         }
     ]
 }

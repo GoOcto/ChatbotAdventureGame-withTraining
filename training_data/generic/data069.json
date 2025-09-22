@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That sounds like a threat. And I don't take kindly to threats.<|>{\"give\":[],\"take\":[],\"attack\":true}"
+      "content": "That sounds like a threat. And I don't take kindly to threats.\n{\"give\":[],\"take\":[],\"attack\":true}"
     }
   ]
 }

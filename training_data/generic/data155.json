@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Found a sealed crate of pre-Flood canned peaches. Saw a 'Gator-Glow'—one of the big mutated ones—nesting near the Sunken Library. Water's rising faster than usual today. The currents are angry.<|>{\"give\": [], \"take\": []}"
+            "content": "Found a sealed crate of pre-Flood canned peaches. Saw a 'Gator-Glow'—one of the big mutated ones—nesting near the Sunken Library. Water's rising faster than usual today. The currents are angry.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A working lighter... a real one. Haven't had a dry match in a year. That's a good trade. Here. Found this in a submerged bank vault. It's a key to a pre-Flood deposit box. Might be something valuable in it, if you can find the right door.<|>{\"give\": [\"deposit_box_key\"], \"take\": [\"waterproof_lighter\"]}"
+            "content": "A working lighter... a real one. Haven't had a dry match in a year. That's a good trade. Here. Found this in a submerged bank vault. It's a key to a pre-Flood deposit box. Might be something valuable in it, if you can find the right door.\n{\"give\": [\"deposit_box_key\"], \"take\": [\"waterproof_lighter\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Look for the bronze eagle statue in the financial district. The one with the missing wing. The vault is in the basement. Last person I told about it never came back. Hope you're a better swimmer.<|>{\"give\": [], \"take\": [], \"deceive\": true}"
+            "content": "Look for the bronze eagle statue in the financial district. The one with the missing wing. The vault is in the basement. Last person I told about it never came back. Hope you're a better swimmer.\n{\"give\": [], \"take\": [], \"deceive\": true}"
         }
     ]
 }

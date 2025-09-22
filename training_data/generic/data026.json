@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Victory without honor is defeat. I will not use such cowardly methods. Take your poison elsewhere.<|>{\"give\":[],\"take\":[]}"
+      "content": "Victory without honor is defeat. I will not use such cowardly methods. Take your poison elsewhere.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

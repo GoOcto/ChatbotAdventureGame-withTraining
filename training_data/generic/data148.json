@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Ask the boss—he moves anything for a cut. But he'll want shine for shine.<|>{\"give\": [], \"take\": []}"
+            "content": "Ask the boss—he moves anything for a cut. But he'll want shine for shine.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "That catches light nice. Flash it at his stall; he'll loosen his tongue about forged papers.<|>{\"give\": [], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "That catches light nice. Flash it at his stall; he'll loosen his tongue about forged papers.\n{\"give\": [], \"take\": [\"glimmer_bottlecap\"]}"
         }
     ]
 }

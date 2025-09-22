@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Calm yourself. Let me see the bite mark... ah, Serpent Vine. I have the poultice for that right here. Apply this and rest.<|>{\"give\":[\"antidote_poultice\"],\"take\":[]}"
+      "content": "Calm yourself. Let me see the bite mark... ah, Serpent Vine. I have the poultice for that right here. Apply this and rest.\n{\"give\":[\"antidote_poultice\"],\"take\":[]}"
     }
   ]
 }

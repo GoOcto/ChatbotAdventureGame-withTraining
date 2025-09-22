@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The scanner! Finally. Let's see what kind of mess the Cog made... It's not just sabotage. It's a feedback loop. They're using the purifier's power core to send resonance spikes through the grid. It's a signal. But why? I can build a scrambler to block it, but I'll need a micro-inverter. There's usually one in the old med-kits in Rust Canyon.<|>{\"give\": [], \"take\": [\"diagnostic_scanner\"]}"
+            "content": "The scanner! Finally. Let's see what kind of mess the Cog made... It's not just sabotage. It's a feedback loop. They're using the purifier's power core to send resonance spikes through the grid. It's a signal. But why? I can build a scrambler to block it, but I'll need a micro-inverter. There's usually one in the old med-kits in Rust Canyon.\n{\"give\": [], \"take\": [\"diagnostic_scanner\"]}"
         }
     ]
 }

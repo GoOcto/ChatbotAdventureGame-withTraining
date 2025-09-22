@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "You want me to trade my music for a piece of plumbing? I think I'll pass.<|>{\"give\":[],\"take\":[]}"
+      "content": "You want me to trade my music for a piece of plumbing? I think I'll pass.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "It's worth more as a pipe than as an instrument. My lute has a story. That pipe has rust. The answer is no.<|>{\"give\":[],\"take\":[]}"
+      "content": "It's worth more as a pipe than as an instrument. My lute has a story. That pipe has rust. The answer is no.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

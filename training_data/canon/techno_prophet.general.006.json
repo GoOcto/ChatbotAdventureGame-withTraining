@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Paper lies to gatekeepers. I am not a gate. Bring me a truth written in risk, not ink.<|>{\"give\": [], \"take\": []}"
+            "content": "Paper lies to gatekeepers. I am not a gate. Bring me a truth written in risk, not ink.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

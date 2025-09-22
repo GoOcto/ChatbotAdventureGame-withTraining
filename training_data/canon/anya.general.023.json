@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "This is it! With this, I can bypass the sabotaged circuits. But I still need a diagnostic scanner to find out what the Cog did. Find Silas. He'll have one. This is a good start, though. A real good start.<|>{\"give\": [], \"take\": [\"micro_inverter\"]}"
+            "content": "This is it! With this, I can bypass the sabotaged circuits. But I still need a diagnostic scanner to find out what the Cog did. Find Silas. He'll have one. This is a good start, though. A real good start.\n{\"give\": [], \"take\": [\"micro_inverter\"]}"
         }
     ]
 }

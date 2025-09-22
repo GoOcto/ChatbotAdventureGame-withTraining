@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Transport Boss? He's a snake. But he's the only one who can get me past the checkpoints. It's a deal. Here's the keycard. Now get me out of this hellhole.<|>{\"give\": [\"master_override_keycard\"], \"take\": [\"transport_boss_contact\"]}"
+            "content": "The Transport Boss? He's a snake. But he's the only one who can get me past the checkpoints. It's a deal. Here's the keycard. Now get me out of this hellhole.\n{\"give\": [\"master_override_keycard\"], \"take\": [\"transport_boss_contact\"]}"
         }
     ]
 }

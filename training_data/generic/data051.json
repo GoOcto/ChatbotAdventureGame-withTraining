@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "A functioning holodisk! The data on this could be invaluable. The ID card is less important, but still a piece of history. I will gladly take both for the archives.<|>{\"give\":[],\"take\":[\"working_holodisk\",\"military_ID_card\"]}"
+      "content": "A functioning holodisk! The data on this could be invaluable. The ID card is less important, but still a piece of history. I will gladly take both for the archives.\n{\"give\":[],\"take\":[\"working_holodisk\",\"military_ID_card\"]}"
     }
   ]
 }

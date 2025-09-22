@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Keep your water cool and your feet dry. In Rust Canyon, the wind carries rust—cover your mouth at dusk. In the slums, cough syrup is currency; don't drink it unless you have to.<|>{\"give\": [], \"take\": []}"
+            "content": "Keep your water cool and your feet dry. In Rust Canyon, the wind carries rust—cover your mouth at dusk. In the slums, cough syrup is currency; don't drink it unless you have to.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "An EMP at the comms mast buys a minute and change of quiet sensors. If you can't make one, carry smoke and keep the wind behind you.<|>{\"give\": [], \"take\": []}"
+            "content": "An EMP at the comms mast buys a minute and change of quiet sensors. If you can't make one, carry smoke and keep the wind behind you.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "Fine. Feed my infirmary and I'll mark the cleanest approach to the slums clinic—safe bed, quiet backdoor.<|>{\"give\": [], \"take\": []}"
+            "content": "Fine. Feed my infirmary and I'll mark the cleanest approach to the slums clinic—safe bed, quiet backdoor.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -34,7 +34,7 @@
         },
         {
             "role": "assistant",
-            "content": "Thank you. Enter the slums from the freight ramp behind the burned-out tanker, third ladder down, then hug the canvas wall to the clinic—no guards look left there.<|>{\"give\": [], \"take\": [\"ration_pack\"]}"
+            "content": "Thank you. Enter the slums from the freight ramp behind the burned-out tanker, third ladder down, then hug the canvas wall to the clinic—no guards look left there.\n{\"give\": [], \"take\": [\"ration_pack\"]}"
         }
     ]
 }

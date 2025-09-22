@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A ration pack? For a custom-built biometric scrambler? That's not a trade, that's an insult. The price is the price. Don't waste my time.<|>{\"give\": [], \"take\": []}"
+            "content": "A ration pack? For a custom-built biometric scrambler? That's not a trade, that's an insult. The price is the price. Don't waste my time.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

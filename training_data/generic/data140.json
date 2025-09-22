@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "How thoughtful. Tell me—how far are you going today?<|>{\"give\":[],\"take\":[]}"
+      "content": "How thoughtful. Tell me—how far are you going today?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Rest at midday. The rails hold heat and wear you down without you feeling it. Sip water slow and steady.<|>{\"give\":[],\"take\":[]}"
+      "content": "Rest at midday. The rails hold heat and wear you down without you feeling it. Sip water slow and steady.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Stop early, tape hot spots, and air your feet after sundown. Small care prevents big pain.<|>{\"give\":[],\"take\":[]}"
+      "content": "Stop early, tape hot spots, and air your feet after sundown. Small care prevents big pain.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "And about your scarf—keep it. It'll serve you better than me tonight. Safe travels.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "And about your scarf—keep it. It'll serve you better than me tonight. Safe travels.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

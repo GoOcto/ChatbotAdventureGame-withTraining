@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Tie low and double the knots. A loose tarp slaps itself to ribbons.<|>{\"give\":[],\"take\":[]}"
+      "content": "Tie low and double the knots. A loose tarp slaps itself to ribbons.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "I need most of them. But I can spare one—bring it back at dawn.<|>{\"give\":[\"tent_pegs\"],\"take\":[]}"
+      "content": "I need most of them. But I can spare one—bring it back at dawn.\n{\"give\":[\"tent_pegs\"],\"take\":[]}"
     }
   ]
 }

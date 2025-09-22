@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Obstruction detected. You will comply or be subdued.<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "Obstruction detected. You will comply or be subdued.\n{\"give\": [], \"take\": [], \"attack\": true}"
         }
     ]
 }

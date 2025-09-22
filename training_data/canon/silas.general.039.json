@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*backs away suspiciously* Treatment? What kind? *eyes darting nervously* Everyone says they have treatments. Words are cheap. The plague... it makes people desperate, makes them lie. *voice shaking* Show me what you have, don't just... don't just talk.<|>{\"give\": [], \"take\": []}"
+            "content": "*backs away suspiciously* Treatment? What kind? *eyes darting nervously* Everyone says they have treatments. Words are cheap. The plague... it makes people desperate, makes them lie. *voice shaking* Show me what you have, don't just... don't just talk.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

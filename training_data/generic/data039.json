@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's... charming. But it's not quite what I'm looking for.<|>{\"give\":[],\"take\":[]}"
+      "content": "That's... charming. But it's not quite what I'm looking for.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Useful, if accurate. I'll add it to the chart and test the path later. Take a spare map case to keep your notes dry.<|>{\"give\":[\"spare_map_case\"],\"take\":[\"hand_drawn_coordinate_note\"]}"
+      "content": "Useful, if accurate. I'll add it to the chart and test the path later. Take a spare map case to keep your notes dry.\n{\"give\":[\"spare_map_case\"],\"take\":[\"hand_drawn_coordinate_note\"]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Appreciated. I'll mark the canyons before the light fades.<|>{\"give\":[],\"take\":[\"fresh_charcoal_stick\"]}"
+      "content": "Appreciated. I'll mark the canyons before the light fades.\n{\"give\":[],\"take\":[\"fresh_charcoal_stick\"]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The fever is advanced. You need the cure, now. Here.<|>{\"give\":[\"plague_antidote\"],\"take\":[]}"
+      "content": "The fever is advanced. You need the cure, now. Here.\n{\"give\":[\"plague_antidote\"],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Let's have a look... The seal is broken. This food is tainted with rad-dust. Are you trying to make me sick? My salt is pure. Your food is not. No trade.<|>{\"give\": [], \"take\": [\"contaminated_ration_pack\"]}"
+            "content": "Let's have a look... The seal is broken. This food is tainted with rad-dust. Are you trying to make me sick? My salt is pure. Your food is not. No trade.\n{\"give\": [], \"take\": [\"contaminated_ration_pack\"]}"
         }
     ]
 }

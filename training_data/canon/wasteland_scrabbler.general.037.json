@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*curious chirp* Me know things! *excited whistle* Big metal men walk around lots. *worried squawk* They look for hiding lady. Me see people come and go every day. *helpful mechanical trill* What you want to know?<|>{\"give\": [], \"take\": []}"
+            "content": "*curious chirp* Me know things! *excited whistle* Big metal men walk around lots. *worried squawk* They look for hiding lady. Me see people come and go every day. *helpful mechanical trill* What you want to know?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Scanner? No... no, the noise gets louder without it. Filters the buzz from the... the signals, they're everywhere. *head jerks* Want it? Bring me something to quiet the static. Something to crack their... their whispers.<|>{\"give\": [], \"take\": []}"
+            "content": "Scanner? No... no, the noise gets louder without it. Filters the buzz from the... the signals, they're everywhere. *head jerks* Want it? Bring me something to quiet the static. Something to crack their... their whispers.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Key... yes, the missing frequency! Signal clears for a moment... *trembling hands* ...sabotage, it's all planned, deliberate. Take it, take the scanner to Anya before the noise comes back!<|>{\"give\": [\"diagnostic_scanner\"], \"take\": [\"cog_encryption_key\"]}"
+            "content": "Key... yes, the missing frequency! Signal clears for a moment... *trembling hands* ...sabotage, it's all planned, deliberate. Take it, take the scanner to Anya before the noise comes back!\n{\"give\": [\"diagnostic_scanner\"], \"take\": [\"cog_encryption_key\"]}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Slowly. Over a low fire. With a lot of spice to hide the taste.<|>{\"give\":[],\"take\":[]}"
+      "content": "Slowly. Over a low fire. With a lot of spice to hide the taste.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

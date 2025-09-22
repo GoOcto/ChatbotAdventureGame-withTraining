@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That's a grown-up tool. It's boring. I want to keep my car.<|>{\"give\":[],\"take\":[]}"
+      "content": "That's a grown-up tool. It's boring. I want to keep my car.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

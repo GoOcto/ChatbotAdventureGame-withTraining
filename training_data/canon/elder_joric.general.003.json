@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Your courage honors me, but those parts serve a greater purpose in Anya's hands. The water purifier is Oasis's lifeline—without it, rescuing me means nothing. Take those supplies to her. My freedom is meaningless if my people die of thirst.<|>{\"give\": [], \"take\": []}"
+            "content": "Your courage honors me, but those parts serve a greater purpose in Anya's hands. The water purifier is Oasis's lifeline—without it, rescuing me means nothing. Take those supplies to her. My freedom is meaningless if my people die of thirst.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

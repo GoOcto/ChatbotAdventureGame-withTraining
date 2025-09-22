@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Safe travels. May the wind be at your back.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Safe travels. May the wind be at your back.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

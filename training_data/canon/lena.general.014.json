@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "These belonged to... Marcus. We came up together. He was a good soldier. He didn't deserve to die out here. The Prophet... he's turned us all into monsters. Here, take this. It's an encryption key. I don't need it anymore.<|>{\"give\": [\"cog_encryption_key\"], \"take\": [\"corroded_dog_tags\"]}"
+            "content": "These belonged to... Marcus. We came up together. He was a good soldier. He didn't deserve to die out here. The Prophet... he's turned us all into monsters. Here, take this. It's an encryption key. I don't need it anymore.\n{\"give\": [\"cog_encryption_key\"], \"take\": [\"corroded_dog_tags\"]}"
         }
     ]
 }

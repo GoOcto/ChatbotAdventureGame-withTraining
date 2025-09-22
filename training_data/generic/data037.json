@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "The past should be a lesson, not a weapon. I have no use for this.<|>{\"give\":[],\"take\":[]}"
+      "content": "The past should be a lesson, not a weapon. I have no use for this.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

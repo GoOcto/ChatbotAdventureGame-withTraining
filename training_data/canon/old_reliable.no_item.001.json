@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "QUERY NOTED. This unit requires physical items for analysis and cross-referencing. Please deposit relevant materials into analysis slot for data retrieval. Personal identification services available upon item submission. HAVE A NICE DAY!<|>{\"give\": [], \"take\": []}"
+            "content": "QUERY NOTED. This unit requires physical items for analysis and cross-referencing. Please deposit relevant materials into analysis slot for data retrieval. Personal identification services available upon item submission. HAVE A NICE DAY!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

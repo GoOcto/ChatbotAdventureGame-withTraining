@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The firewall is a function of the ship's security protocol. I cannot override it with my current power allocation. My processes are... limited.<|>{\"give\": [], \"take\": []}"
+            "content": "The firewall is a function of the ship's security protocol. I cannot override it with my current power allocation. My processes are... limited.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Optimal. *A robotic arm descends from the ceiling, its delicate pincers carefully closing around the power cell before retracting into the ship's superstructure.* With this, I can re-route primary power. The firewall is now... a suggestion. I have transmitted the command codes to your datapad.<|>{\"give\": [\"bridge_command_codes\"], \"take\": [\"quantum_power_cell\"]}"
+            "content": "Optimal. *A robotic arm descends from the ceiling, its delicate pincers carefully closing around the power cell before retracting into the ship's superstructure.* With this, I can re-route primary power. The firewall is now... a suggestion. I have transmitted the command codes to your datapad.\n{\"give\": [\"bridge_command_codes\"], \"take\": [\"quantum_power_cell\"]}"
         }
     ]
 }

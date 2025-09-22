@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Because water spoils and salt doesn't. A kilo of salt buys time—time keeps people polite. It's medicine, food, and wages in one pale brick.<|>{\"give\": [], \"take\": []}"
+            "content": "Because water spoils and salt doesn't. A kilo of salt buys time—time keeps people polite. It's medicine, food, and wages in one pale brick.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "That ledgers outlive flags. I trade with those who settle their debts and protect their carriers. Everyone else pays more or waits longer.<|>{\"give\": [], \"take\": []}"
+            "content": "That ledgers outlive flags. I trade with those who settle their debts and protect their carriers. Everyone else pays more or waits longer.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

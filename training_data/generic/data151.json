@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Duct path exists. I don't talk for free.<|>{\"give\": [], \"take\": []}"
+            "content": "Duct path exists. I don't talk for free.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Crawlspace behind the spice stall, grate with three missing screws. Keep left at the fan hum, then climb when you smell ozone.<|>{\"give\": [], \"take\": [\"glimmer_bottlecap\"]}"
+            "content": "Crawlspace behind the spice stall, grate with three missing screws. Keep left at the fan hum, then climb when you smell ozone.\n{\"give\": [], \"take\": [\"glimmer_bottlecap\"]}"
         }
     ]
 }

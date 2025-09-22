@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Habit. The Cog trains you to spot angles\u2014doorways, shadows, who's pretending not to listen. Old habits keep me breathing.<|>{\"give\": [], \"take\": []}"
+            "content": "Habit. The Cog trains you to spot angles\u2014doorways, shadows, who's pretending not to listen. Old habits keep me breathing.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

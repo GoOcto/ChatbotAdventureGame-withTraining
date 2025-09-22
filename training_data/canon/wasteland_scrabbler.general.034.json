@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*curious chirp-whistle* Me see lots! *excited mechanical trill* Big metal men came yesterday... they take nice man away in loud flying thing. *worried squawk* Lady with sad eyes... she hide in little houses now. Me watch everything but... *nervous whimper* ...scary things happen.<|>{\"give\": [], \"take\": []}"
+            "content": "*curious chirp-whistle* Me see lots! *excited mechanical trill* Big metal men came yesterday... they take nice man away in loud flying thing. *worried squawk* Lady with sad eyes... she hide in little houses now. Me watch everything but... *nervous whimper* ...scary things happen.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

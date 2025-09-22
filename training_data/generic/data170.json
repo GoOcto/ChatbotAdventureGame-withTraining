@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The warp drive can wait! Commander Nibbles is missing! He was last seen near the ventilation shaft on Deck 3. No codes will be issued until my First Officer is safely returned.<|>{\"give\": [], \"take\": []}"
+            "content": "The warp drive can wait! Commander Nibbles is missing! He was last seen near the ventilation shaft on Deck 3. No codes will be issued until my First Officer is safely returned.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Nibbles! *The captain's stern facade breaks as she scoops up the hamster and cuddles it.* You had me worried sick! Excellent work, Ensign. Here are the warp drive stabilization codes. You've saved the ship today.<|>{\"give\": [\"warp_drive_codes\"], \"take\": [\"commander_nibbles\"]}"
+            "content": "Nibbles! *The captain's stern facade breaks as she scoops up the hamster and cuddles it.* You had me worried sick! Excellent work, Ensign. Here are the warp drive stabilization codes. You've saved the ship today.\n{\"give\": [\"warp_drive_codes\"], \"take\": [\"commander_nibbles\"]}"
         }
     ]
 }

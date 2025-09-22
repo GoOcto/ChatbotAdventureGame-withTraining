@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Prophet is not a machine. He is the voice of the future. The flesh is weak, it sickens, it dies. The Divinity offers strength, purpose, and immortality. We are not fanatics; we are the first generation of a new humanity. You see chains; we see evolution.<|>{\"give\": [], \"take\": []}"
+            "content": "The Prophet is not a machine. He is the voice of the future. The flesh is weak, it sickens, it dies. The Divinity offers strength, purpose, and immortality. We are not fanatics; we are the first generation of a new humanity. You see chains; we see evolution.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

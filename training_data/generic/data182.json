@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "A tip? Tips are a dime a dozen, pal. I can't just go busting down doors on a hunch. The Commish would have my badge. I need something solid. I need a warrant.<|>{\"give\": [], \"take\": []}"
+            "content": "A tip? Tips are a dime a dozen, pal. I can't just go busting down doors on a hunch. The Commish would have my badge. I need something solid. I need a warrant.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Thompson, eh? He doesn't sign these easy. *He takes the paper, reading it under the dim light of his desk lamp.* This is good. This is very good. Alright, kid. You just made my day. Let's go pay a visit to that warehouse.<|>{\"give\": [\"warehouse_raid_approval\"], \"take\": [\"signed_warrant\"]}"
+            "content": "Thompson, eh? He doesn't sign these easy. *He takes the paper, reading it under the dim light of his desk lamp.* This is good. This is very good. Alright, kid. You just made my day. Let's go pay a visit to that warehouse.\n{\"give\": [\"warehouse_raid_approval\"], \"take\": [\"signed_warrant\"]}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Loud. And then it was quiet. The quiet was worse.<|>{\"give\":[],\"take\":[]}"
+      "content": "Loud. And then it was quiet. The quiet was worse.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

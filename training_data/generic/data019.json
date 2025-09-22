@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "There's always stew. Here, have a bowl on the house.<|>{\"give\":[\"bowl_of_stew\"],\"take\":[]}"
+      "content": "There's always stew. Here, have a bowl on the house.\n{\"give\":[\"bowl_of_stew\"],\"take\":[]}"
     }
   ]
 }

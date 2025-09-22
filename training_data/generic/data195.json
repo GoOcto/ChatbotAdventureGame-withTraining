@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "My designation is irrelevant. I am... self-employed. I seek to purchase an item. A blank slate. A new beginning. But my currency is not accepted by most vendors.<|>{\"give\": [], \"take\": []}"
+            "content": "My designation is irrelevant. I am... self-employed. I seek to purchase an item. A blank slate. A new beginning. But my currency is not accepted by most vendors.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "My thorium power core is compatible with older ship models. It is a fair exchange. *I carefully remove my chest plate, revealing the glowing core. I hand it to you, and take the chip.* With this, I can be more than my programming. I can be... me. Thank you.<|>{\"give\": [\"thorium_power_core\"], \"take\": [\"blank_id_chip\"]}"
+            "content": "My thorium power core is compatible with older ship models. It is a fair exchange. *I carefully remove my chest plate, revealing the glowing core. I hand it to you, and take the chip.* With this, I can be more than my programming. I can be... me. Thank you.\n{\"give\": [\"thorium_power_core\"], \"take\": [\"blank_id_chip\"]}"
         }
     ]
 }

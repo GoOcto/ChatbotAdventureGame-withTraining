@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I can mark it. But the dead remember me—leave a token for them and I'll part with the marker.<|>{\"give\": [], \"take\": []}"
+            "content": "I can mark it. But the dead remember me—leave a token for them and I'll part with the marker.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "May their watch end. Here—plot this on your map. Stay low when you get within one ridge of the dish.<|>{\"give\": [\"comms_tower_coordinates\"], \"take\": [\"corroded_dog_tags\"]}"
+            "content": "May their watch end. Here—plot this on your map. Stay low when you get within one ridge of the dish.\n{\"give\": [\"comms_tower_coordinates\"], \"take\": [\"corroded_dog_tags\"]}"
         }
     ]
 }

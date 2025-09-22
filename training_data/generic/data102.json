@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Rad-stag. But my last arrow just broke. A hunter with no arrows isn't much of a hunter. Don't suppose you have any to spare?<|>{\"give\":[],\"take\":[]}"
+      "content": "Rad-stag. But my last arrow just broke. A hunter with no arrows isn't much of a hunter. Don't suppose you have any to spare?\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "You're a lifesaver. Here, a bit of hunter's knowledge for your trouble: the rad-stags always travel east to drink at dawn. You can catch them unawares if you're quiet.<|>{\"give\":[\"hunting_tip\"],\"take\":[\"bundle_of_arrows\"],\"scan\":true}"
+      "content": "You're a lifesaver. Here, a bit of hunter's knowledge for your trouble: the rad-stags always travel east to drink at dawn. You can catch them unawares if you're quiet.\n{\"give\":[\"hunting_tip\"],\"take\":[\"bundle_of_arrows\"],\"scan\":true}"
     }
   ]
 }

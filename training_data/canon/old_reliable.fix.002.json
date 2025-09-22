@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYZING... ID: COG SOLDIER BRAVO-7; LAST ASSIGNMENT: tracking high-value defector in Barter-town sector. Data cross-reference complete. HAVE A NICE DAY.<|>{\"give\": [], \"take\": [\"corroded_dog_tags\"]}"
+            "content": "ANALYZING... ID: COG SOLDIER BRAVO-7; LAST ASSIGNMENT: tracking high-value defector in Barter-town sector. Data cross-reference complete. HAVE A NICE DAY.\n{\"give\": [], \"take\": [\"corroded_dog_tags\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "AFFIRMATIVE! Cross-database functionality operational. Military records accessible for analysis. Insert more items for additional data extraction. HAVE A NICE DAY.<|>{\"give\": [], \"take\": []}"
+            "content": "AFFIRMATIVE! Cross-database functionality operational. Military records accessible for analysis. Insert more items for additional data extraction. HAVE A NICE DAY.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

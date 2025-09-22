@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Heh. Bold. Stupid, but bold. You might get out of this room, but you won't get out of Barter-town. I have friends everywhere. You just made an enemy of all of them.<|>{\"give\": [], \"take\": []}"
+            "content": "Heh. Bold. Stupid, but bold. You might get out of this room, but you won't get out of Barter-town. I have friends everywhere. You just made an enemy of all of them.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Good luck out there.<|>{\"give\":[],\"take\":[],\"bye\":true}"
+      "content": "Good luck out there.\n{\"give\":[],\"take\":[],\"bye\":true}"
     }
   ]
 }

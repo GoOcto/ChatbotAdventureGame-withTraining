@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "That was another life. I'm a farmer now.<|>{\"give\":[],\"take\":[]}"
+      "content": "That was another life. I'm a farmer now.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

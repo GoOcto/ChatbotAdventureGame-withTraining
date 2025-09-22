@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The traitor has been apprehended. Her heresy has been silenced. It was a necessary, if unpleasant, task. Order has been restored. Your contribution has been noted. Do not expect gratitude. You simply did what was logical.<|>{\"give\": [], \"take\": []}"
+            "content": "The traitor has been apprehended. Her heresy has been silenced. It was a necessary, if unpleasant, task. Order has been restored. Your contribution has been noted. Do not expect gratitude. You simply did what was logical.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

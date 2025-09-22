@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "By saying no. They called it insubordination. I called it not dragging villagers out of their beds. I walked and threw the badge in a gutter. The Prophet's men started hunting.<|>{\"give\": [], \"take\": []}"
+            "content": "By saying no. They called it insubordination. I called it not dragging villagers out of their beds. I walked and threw the badge in a gutter. The Prophet's men started hunting.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

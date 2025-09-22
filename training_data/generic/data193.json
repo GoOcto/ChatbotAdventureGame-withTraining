@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Gills are easy. A simple retroviral splice. But my services aren't just for anyone. I have a... supply chain issue. I need a piece of equipment for a high-paying client. You help me, I'll help you breathe underwater.<|>{\"give\": [], \"take\": []}"
+            "content": "Gills are easy. A simple retroviral splice. But my services aren't just for anyone. I have a... supply chain issue. I need a piece of equipment for a high-paying client. You help me, I'll help you breathe underwater.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Is that a Cryo-Gen V-series? *His eyes widen as he takes the device, running a reverent hand over its casing.* The resolution on this... incredible. Alright, pal. Hop on the table. This won't hurt. Much.<|>{\"give\": [\"illegal_gills_upgrade\"], \"take\": [\"military_dna_sequencer\"]}"
+            "content": "Is that a Cryo-Gen V-series? *His eyes widen as he takes the device, running a reverent hand over its casing.* The resolution on this... incredible. Alright, pal. Hop on the table. This won't hurt. Much.\n{\"give\": [\"illegal_gills_upgrade\"], \"take\": [\"military_dna_sequencer\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "You'll feel a little... tingling. And a strong urge to swim. The retrovirus needs a few minutes to splice your genome. Just try to relax. The results are worth the discomfort.<|>{\"give\": [], \"take\": [], \"craft\": true}"
+            "content": "You'll feel a little... tingling. And a strong urge to swim. The retrovirus needs a few minutes to splice your genome. Just try to relax. The results are worth the discomfort.\n{\"give\": [], \"take\": [], \"craft\": true}"
         }
     ]
 }

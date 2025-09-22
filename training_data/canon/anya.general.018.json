@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Threats? In my workshop? You've got guts, I'll give you that. Now get out before I find a wrench that fits your face.<|>{\"give\": [], \"take\": []}"
+            "content": "Threats? In my workshop? You've got guts, I'll give you that. Now get out before I find a wrench that fits your face.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

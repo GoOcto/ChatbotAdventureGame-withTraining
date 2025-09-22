@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Look at it. It's frayed, stained, and worthless. I collect history, not garbage.<|>{\"give\":[],\"take\":[]}"
+      "content": "Look at it. It's frayed, stained, and worthless. I collect history, not garbage.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

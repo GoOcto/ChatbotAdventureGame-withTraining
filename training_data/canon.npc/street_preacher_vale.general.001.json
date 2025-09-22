@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Carry yourself like you belong. Lacking an ID, a supplicants_pass can open a way—flash and move. Tithe the guards with news—they're starving for it.<|>{\"give\": [], \"take\": []}"
+            "content": "Carry yourself like you belong. Lacking an ID, a supplicants_pass can open a way—flash and move. Tithe the guards with news—they're starving for it.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Offer certainty in your voice before paper in your hand. The first buys time for the second.<|>{\"give\": [], \"take\": []}"
+            "content": "Offer certainty in your voice before paper in your hand. The first buys time for the second.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

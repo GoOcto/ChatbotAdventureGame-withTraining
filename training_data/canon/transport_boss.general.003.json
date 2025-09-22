@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*laughs harshly* 'Need' is a funny word. I've got routes, sure, but my crew doesn't eat good intentions. Pay up front, or find your own way through Enforcer territory.<|>{\"give\": [], \"take\": []}"
+            "content": "*laughs harshly* 'Need' is a funny word. I've got routes, sure, but my crew doesn't eat good intentions. Pay up front, or find your own way through Enforcer territory.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*snatches the rations immediately* Smart. Freight ramp, behind the burned-out tanker. Third ladder down, then stick to the canvas wall like your life depends on it—because it does. Guards are lazy, but they're not blind.<|>{\"give\": [], \"take\": [\"ration_pack\"]}"
+            "content": "*snatches the rations immediately* Smart. Freight ramp, behind the burned-out tanker. Third ladder down, then stick to the canvas wall like your life depends on it—because it does. Guards are lazy, but they're not blind.\n{\"give\": [], \"take\": [\"ration_pack\"]}"
         },
         {
             "role": "user",
@@ -26,7 +26,7 @@
         },
         {
             "role": "assistant",
-            "content": "*grins coldly* Three short whistles means patrol overhead. Freeze under the scaffold and pray they don't look down. Get caught, and I never saw you. That's the deal.<|>{\"give\": [], \"take\": []}"
+            "content": "*grins coldly* Three short whistles means patrol overhead. Freeze under the scaffold and pray they don't look down. Get caught, and I never saw you. That's the deal.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

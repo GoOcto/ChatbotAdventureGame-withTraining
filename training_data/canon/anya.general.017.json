@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Transport Boss is a vulture. I'd rather trade with the rust mites. But if he has parts I can't get anywhere else... it might be worth the grime. Thanks for the tip.<|>{\"give\": [], \"take\": []}"
+            "content": "The Transport Boss is a vulture. I'd rather trade with the rust mites. But if he has parts I can't get anywhere else... it might be worth the grime. Thanks for the tip.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

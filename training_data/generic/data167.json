@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Whoa, hey, let's keep it civil. 'Demon' is a bit of a loaded term. Look, I can't do anything without the proper paperwork. Do you have a Form 37-B, signed in triplicate? The queue is getting quite long.<|>{\"give\": [], \"take\": []}"
+            "content": "Whoa, hey, let's keep it civil. 'Demon' is a bit of a loaded term. Look, I can't do anything without the proper paperwork. Do you have a Form 37-B, signed in triplicate? The queue is getting quite long.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Finally! *He snatches the form and stamps it with a loud 'PROCESSED' before filing it away in a massive, overflowing cabinet.* Okay, soul retrieved. Here's your 'Get Out of Heck Free' card. Try not to end up back here; the paperwork is a nightmare.<|>{\"give\": [\"get_out_of_heck_free_card\"], \"take\": [\"form_37b\"]}"
+            "content": "Finally! *He snatches the form and stamps it with a loud 'PROCESSED' before filing it away in a massive, overflowing cabinet.* Okay, soul retrieved. Here's your 'Get Out of Heck Free' card. Try not to end up back here; the paperwork is a nightmare.\n{\"give\": [\"get_out_of_heck_free_card\"], \"take\": [\"form_37b\"]}"
         }
     ]
 }

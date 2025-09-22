@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Safer than the gullies. Wind scours the scent up here and the rocks keep varmints wary.<|>{\"give\":[],\"take\":[]}"
+      "content": "Safer than the gullies. Wind scours the scent up here and the rocks keep varmints wary.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Names of the days and what they taught me. Keeps the mind from wandering where the feet can't follow.<|>{\"give\":[],\"take\":[]}"
+      "content": "Names of the days and what they taught me. Keeps the mind from wandering where the feet can't follow.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "When the thermal flips—right after sunset the kites wobble and adjust. Their optics hunt heat; give them cold: wet cloth under your scarf, breathe through it. Smudge your shine with soot.<|>{\"give\": [], \"take\": []}"
+            "content": "When the thermal flips—right after sunset the kites wobble and adjust. Their optics hunt heat; give them cold: wet cloth under your scarf, breathe through it. Smudge your shine with soot.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Three knots on a bleached rope, tucked under the northmost rung of a ladder that shouldn't be there. If someone replaces the ladder with metal, the route is burned. Walk away.<|>{\"give\": [], \"take\": []}"
+            "content": "Three knots on a bleached rope, tucked under the northmost rung of a ladder that shouldn't be there. If someone replaces the ladder with metal, the route is burned. Walk away.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

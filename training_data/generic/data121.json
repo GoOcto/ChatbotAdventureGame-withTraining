@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Yes. A mature Rad-stag. It will feed my family for a week.<|>{\"give\":[],\"take\":[]}"
+      "content": "Yes. A mature Rad-stag. It will feed my family for a week.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "No pay, no entry. That's the rule.<|>{\"give\":[],\"take\":[]}"
+      "content": "No pay, no entry. That's the rule.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

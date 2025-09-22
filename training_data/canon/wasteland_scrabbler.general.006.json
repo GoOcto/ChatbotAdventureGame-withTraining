@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Beep-beep! Me see people with paper walk by guards. Hold head up, look straight. Guards look, then look away. Walk like you supposed to be there. No loud steps! Chirp-chirp!<|>{\"give\": [], \"take\": []}"
+            "content": "Beep-beep! Me see people with paper walk by guards. Hold head up, look straight. Guards look, then look away. Walk like you supposed to be there. No loud steps! Chirp-chirp!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

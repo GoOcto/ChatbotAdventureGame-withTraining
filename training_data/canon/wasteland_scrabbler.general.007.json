@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Skwee-skwee! Old man with fuzzy face go inside big shiny building. Two metal people walk thunk-thunk with him. Me see marks on his hands. Big door only open for special shiny card. Beep-beep!<|>{\"give\": [], \"take\": []}"
+            "content": "Skwee-skwee! Old man with fuzzy face go inside big shiny building. Two metal people walk thunk-thunk with him. Me see marks on his hands. Big door only open for special shiny card. Beep-beep!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "ANALYZING ITEM... ERROR! ELECTROMAGNETIC PULSE DEVICE DETECTED. CRITICAL SAFETY PROTOCOL ENGAGED. This unit cannot process active explosive ordnance. Risk of cascade failure and data corruption too high. Please remove dangerous item from proximity immediately. SAFETY FIRST! HAVE A... CAUTIOUS DAY!<|>{\"give\": [], \"take\": []}"
+            "content": "ANALYZING ITEM... ERROR! ELECTROMAGNETIC PULSE DEVICE DETECTED. CRITICAL SAFETY PROTOCOL ENGAGED. This unit cannot process active explosive ordnance. Risk of cascade failure and data corruption too high. Please remove dangerous item from proximity immediately. SAFETY FIRST! HAVE A... CAUTIOUS DAY!\n{\"give\": [], \"take\": []}"
         }
     ]
 }

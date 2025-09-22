@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Authorization denied. Trespass ends here.<|>{\"give\": [], \"take\": [], \"attack\": true}"
+            "content": "Authorization denied. Trespass ends here.\n{\"give\": [], \"take\": [], \"attack\": true}"
         }
     ]
 }

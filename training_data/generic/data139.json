@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Simple ingredients, slow fire. Sit a while and warm up.<|>{\"give\":[],\"take\":[]}"
+      "content": "Simple ingredients, slow fire. Sit a while and warm up.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -18,7 +18,7 @@
     },
     {
       "role": "assistant",
-      "content": "Keep your caps; share your story instead. The bowl's on me.<|>{\"give\":[],\"take\":[]}"
+      "content": "Keep your caps; share your story instead. The bowl's on me.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -26,7 +26,7 @@
     },
     {
       "role": "assistant",
-      "content": "Pass the kindness along when you can.<|>{\"give\":[],\"take\":[]}"
+      "content": "Pass the kindness along when you can.\n{\"give\":[],\"take\":[]}"
     },
     {
       "role": "user",
@@ -34,7 +34,7 @@
     },
     {
       "role": "assistant",
-      "content": "Alright. I'll put it toward spices so the next traveler gets a better meal. Here's your bowl.<|>{\"give\":[\"wooden_bowl\"],\"take\":[\"handful_of_caps\"]}"
+      "content": "Alright. I'll put it toward spices so the next traveler gets a better meal. Here's your bowl.\n{\"give\":[\"wooden_bowl\"],\"take\":[\"handful_of_caps\"]}"
     }
   ]
 }

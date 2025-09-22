@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Finally. With this, I can figure out what the Cog did to our pump. What do you want for it?<|>{\"give\": [], \"take\": [\"diagnostic_scanner\"]}"
+            "content": "Finally. With this, I can figure out what the Cog did to our pump. What do you want for it?\n{\"give\": [], \"take\": [\"diagnostic_scanner\"]}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "A fair trade. Here are his last known coordinates. Be careful, he's not stable.<|>{\"give\": [\"silas_coordinates\"], \"take\": []}"
+            "content": "A fair trade. Here are his last known coordinates. Be careful, he's not stable.\n{\"give\": [\"silas_coordinates\"], \"take\": []}"
         }
     ]
 }

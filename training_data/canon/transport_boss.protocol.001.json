@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Information costs caps. Bring me a glimmer bottlecap and we'll talk.<|>{\"give\": [], \"take\": []}"
+            "content": "Information costs caps. Bring me a glimmer bottlecap and we'll talk.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Nothing's free in Barter-town. You pay, you get answers. No caps, no intel.<|>{\"give\": [], \"take\": []}"
+            "content": "Nothing's free in Barter-town. You pay, you get answers. No caps, no intel.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

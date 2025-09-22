@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*One eye swivels to you, another to a screen, the third stares at the ceiling.* Transponder malfunction is a Class-3 violation. No docking clearance without a valid, registered star-chart. Rules are rules. My cilia are tied.<|>{\"give\": [], \"take\": []}"
+            "content": "*One eye swivels to you, another to a screen, the third stares at the ceiling.* Transponder malfunction is a Class-3 violation. No docking clearance without a valid, registered star-chart. Rules are rules. My cilia are tied.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*A tentacle snakes out and snatches the candy.* My, my! Is that a... Star-Chart 7-Delta you have there? It appears your transponder has miraculously cleared up. Proceed to docking bay 9. And do have a pleasant cycle.<|>{\"give\": [\"docking_bay_9_pass\"], \"take\": [\"glim_grams\"]}"
+            "content": "*A tentacle snakes out and snatches the candy.* My, my! Is that a... Star-Chart 7-Delta you have there? It appears your transponder has miraculously cleared up. Proceed to docking bay 9. And do have a pleasant cycle.\n{\"give\": [\"docking_bay_9_pass\"], \"take\": [\"glim_grams\"]}"
         }
     ]
 }

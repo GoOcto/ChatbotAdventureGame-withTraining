@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*hands shake slightly* The plague whispers louder each day. If only there was a stabilizer to quiet the noise...<|>{\"give\": [], \"take\": []}"
+            "content": "*hands shake slightly* The plague whispers louder each day. If only there was a stabilizer to quiet the noise...\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Nanite stabilizer. Medical-grade. The kind the Cog hoards while we suffer. *glances nervously at shadows* You haven't seen any, have you?<|>{\"give\": [], \"take\": []}"
+            "content": "Nanite stabilizer. Medical-grade. The kind the Cog hoards while we suffer. *glances nervously at shadows* You haven't seen any, have you?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

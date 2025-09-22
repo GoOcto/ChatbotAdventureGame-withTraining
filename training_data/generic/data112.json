@@ -10,7 +10,7 @@
     },
     {
       "role": "assistant",
-      "content": "Nothing but salt and silence for a hundred miles.<|>{\"give\":[],\"take\":[]}"
+      "content": "Nothing but salt and silence for a hundred miles.\n{\"give\":[],\"take\":[]}"
     }
   ]
 }

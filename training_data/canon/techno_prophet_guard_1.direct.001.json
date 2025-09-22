@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*massive frame blocks the doorway* NO. *cybernetic voice modulator crackles* You lack authorization. This is the Prophet's domain. *heavy mechanical breathing* Leave. Now.<|>{\"give\": [], \"take\": []}"
+            "content": "*massive frame blocks the doorway* NO. *cybernetic voice modulator crackles* You lack authorization. This is the Prophet's domain. *heavy mechanical breathing* Leave. Now.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

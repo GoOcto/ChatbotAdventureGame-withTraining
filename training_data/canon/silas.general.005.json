@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Briefly. The noise was louder there\u2014too many engines talking at once. I left a Geiger in the pump room. If the needle shivers at idle, someone routed a hot line through the shield. Tell Anya to check the ground strap.<|>{\"give\": [], \"take\": []}"
+            "content": "Briefly. The noise was louder there\u2014too many engines talking at once. I left a Geiger in the pump room. If the needle shivers at idle, someone routed a hot line through the shield. Tell Anya to check the ground strap.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

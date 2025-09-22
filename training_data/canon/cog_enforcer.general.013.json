@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "The Rust Canyons. Your statement is logged. If this information is accurate, your compliance will be rewarded. If it is false, your obstruction will be... corrected.<|>{\"give\": [], \"take\": []}"
+            "content": "The Rust Canyons. Your statement is logged. If this information is accurate, your compliance will be rewarded. If it is false, your obstruction will be... corrected.\n{\"give\": [], \"take\": []}"
         }
     ]
 }

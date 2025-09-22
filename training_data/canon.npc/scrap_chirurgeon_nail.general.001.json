@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "It can in a pinch. Boil the rubber first to soften, wrap twice above the wound, and release every two minutes. Good for minutes, not hours. This is a bridge, not a road.<|>{\"give\": [], \"take\": []}"
+            "content": "It can in a pinch. Boil the rubber first to soften, wrap twice above the wound, and release every two minutes. Good for minutes, not hours. This is a bridge, not a road.\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "Transplants from unwilling bodies, and miracles sold as certainty. I fix what I can reach and I say goodbye fast when I must. Stay steady.<|>{\"give\": [], \"take\": [], \"bye\": true}"
+            "content": "Transplants from unwilling bodies, and miracles sold as certainty. I fix what I can reach and I say goodbye fast when I must. Stay steady.\n{\"give\": [], \"take\": [], \"bye\": true}"
         }
     ]
 }

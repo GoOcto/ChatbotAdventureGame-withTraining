@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "Is that so? Old world secrets... dangerous things to know. Most people who dig up that kind of dirt end up buried in it. But... knowledge like that, whispered in the right ear... it can be valuable. It can move markets. What do you want for it?<|>{\"give\": [], \"take\": []}"
+            "content": "Is that so? Old world secrets... dangerous things to know. Most people who dig up that kind of dirt end up buried in it. But... knowledge like that, whispered in the right ear... it can be valuable. It can move markets. What do you want for it?\n{\"give\": [], \"take\": []}"
         }
     ]
 }

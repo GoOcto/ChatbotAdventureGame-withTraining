@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "*adjusts glasses and studies the photograph with scholarly interest*\n\nFascinating... This appears to be documentation from Project Purity, a pre-plague biotechnology initiative. The subjects are Dr. Joric Thorne and Dr. Silas Kaine, lead researchers. Their work was... significant to our archives.\n\n<|>{\"give\": [], \"take\": []}"
+            "content": "*adjusts glasses and studies the photograph with scholarly interest*\n\nFascinating... This appears to be documentation from Project Purity, a pre-plague biotechnology initiative. The subjects are Dr. Joric Thorne and Dr. Silas Kaine, lead researchers. Their work was... significant to our archives.\n\n\n{\"give\": [], \"take\": []}"
         },
         {
             "role": "user",
@@ -18,7 +18,7 @@
         },
         {
             "role": "assistant",
-            "content": "*clasps hands solemnly*\n\nThe plague outbreak terminated their research. Dr. Thorne established the Oasis settlement afterward. Dr. Kaine... the records indicate nanite contamination led to his deteriorating mental state. A tragic loss of brilliant minds.\n\n<|>{\"give\": [], \"take\": []}"
+            "content": "*clasps hands solemnly*\n\nThe plague outbreak terminated their research. Dr. Thorne established the Oasis settlement afterward. Dr. Kaine... the records indicate nanite contamination led to his deteriorating mental state. A tragic loss of brilliant minds.\n\n\n{\"give\": [], \"take\": []}"
         }
     ]
 }

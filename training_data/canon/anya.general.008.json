@@ -10,7 +10,7 @@
         },
         {
             "role": "assistant",
-            "content": "I appreciate the thought, but food won't stop a pressure leak. I need parts, not snacks. You keep it, you'll need the energy more than I do.<|>{\"give\": [], \"take\": []}"
+            "content": "I appreciate the thought, but food won't stop a pressure leak. I need parts, not snacks. You keep it, you'll need the energy more than I do.\n{\"give\": [], \"take\": []}"
         }
     ]
 }
