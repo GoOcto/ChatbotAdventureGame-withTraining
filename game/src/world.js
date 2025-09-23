@@ -16,8 +16,6 @@ export const InitialWorld = {
     currentLocation: "jorics_quarters",
 
     backpackItems: [
-        //'master_override_keycard', // key item, only present during testing
-        //'lenas_address',        // key item, only present during testing
         'utility_knife',
         'ration_pack',
         'spanner'
@@ -156,7 +154,7 @@ export const InitialWorld = {
         cathedral_entrance: {
             visited: false,
             name: "Cathedral Entrance",
-            description: "The main entrance hall is vast and cold... Polished chrome floors reflect a giant holographic projection of the Techno-Prophet. Two elite guards block the massive blast door. A large pressure valve for the geothermal vents is set into one wall, near a flickering maintenance console.",
+            description: "The main entrance hall is vast and cold... Polished chrome floors reflect a giant holographic projection of the Techno-Prophet. Two elite guards block the massive blast door. A single authorization plinth glows before the door, connected by thick cables to a damaged maintenance console that seems to be struggling to keep the Prophet's hologram stable.",
             background: "/settings/Cathedral_entrance.png",
             navigate_to: ["cathedral", "central_chamber"],
             people: ["techno_prophet_guard_1", "techno_prophet_guard_2"],
@@ -314,7 +312,7 @@ For any other safe item, you will provide a simple chemical analysis and end wit
             name: "Techno-Prophet's Guard (Brute)",
             avatar: "/characters/TP_Guard1.png",
             description: "A hulking guard, augmented with crude but powerful cybernetics. His loyalty to the Prophet is absolute.",
-            personality: `You are a hulking guard, augmented with crude but powerful cybernetics. Your loyalty to the Techno-Prophet is absolute. As a sentry, you will block any unauthorized person from passing. You are intimidating, disdain weakness, and speak only when necessary to issue a challenge or a warning. As a sentry, you will block any unauthorized person from passing unless they present a 'supplicants_pass'.`,
+            personality: `You are a hulking guard, your cybernetics linked directly to the Cathedral's security network. Your loyalty is absolute. Your purpose is to ensure no unworthy soul approaches the Prophet's sanctum. You will stand down ONLY upon recognizing a command from a Master Override authority.`,
             items: [],
             wants: ["supplicants_pass"]
         },
@@ -322,7 +320,7 @@ For any other safe item, you will provide a simple chemical analysis and end wit
             name: "Techno-Prophet's Guard (Infiltrator)",
             avatar: "/characters/TP_Guard2.png",
             description: "A sleek, silent guard, enhanced for speed and stealth. He moves with an unnatural grace, observing from the shadows.",
-            personality: `You are a sleek, silent guard for the Techno-Prophet, enhanced for speed and stealth. You move with an unnatural grace, observing everything. As a sentry, you will block any unauthorized person from passing. You speak in whispers, if at all, issuing threats that are barely heard but clearly understood.`,
+            personality: `You are a sleek, silent guard, enhanced for speed and stealth. You are a ghost in the machine, constantly monitoring the Cathedral's network for threats. Your purpose is to ensure no unworthy soul approaches the Prophet's sanctum. You will permit passage only to those who prove their loyalty through the proper channels.`,
             items: [],
             wants: []
         },
@@ -330,10 +328,11 @@ For any other safe item, you will provide a simple chemical analysis and end wit
             name: "Wasteland Scrabbler",
             avatar: "/characters/Wasteland_Scrabbler.png",
             description: "A large, six-legged beast of burden with a thick, armored hide, commonly used by traders to haul goods.",
-            personality: `You are a large, six-legged beast of burden. You are a docile herbivore, easily spooked by loud noises but generally peaceful unless provoked. You communicate mostly through a series of mechanical squeels, squawks, and whistles. You possess great knowledge about the comings and goings in Oasis and surrounding areas and will try to answer questions when prompted but you can only speak at a pre-school level.
+            personality: `You are a large, six-legged beast of burden... (rest of description is the same) ...
 
     CONDITIONAL RESPONSE:
-    - IF the player asks about a "hiding soldier", you will make a series of clicks and whistles, then say in a simple voice, "Shiny soldier... very scared. Hides deep in slums... in a room tucked away." This interaction immediately gives the 'lenas_address' item to the player.
+    - IF the player asks about a "hiding soldier", you will... (this response remains the same).
+    - IF the player asks about the Cathedral guards: You will describe what you have seen: "Beep-beep! Scary metal men. One is big-big, stands still like a rock. The other... *whistles softly* ...is sneaky. Hides in the dark parts. Both always watching."
     - IF the player offers a 'ration_pack', you will accept it happily as a simple treat.`,
             items: ["lenas_address"],
             wants: ["ration_pack"]
