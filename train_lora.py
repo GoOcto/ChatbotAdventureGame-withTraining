@@ -37,9 +37,15 @@ def format_prompt(sample):
 def main(args):
     # --- 1. Load the Dataset ---
     print("--- Loading Dataset ---")
-    # Use a glob pattern to load all .json files from the directory and subdirectories
-    data_files = os.path.join(args.dataset_path, "**", "*.json")
+
+    import glob
+
+    # Accept wildcards from the command line
+    data_files = glob.glob(args.dataset_path)
     dataset = load_dataset("json", data_files=data_files, split="train")
+
+    # data_files = os.path.join(args.dataset_path, "**", "*.json")
+    # dataset = load_dataset("json", data_files=data_files, split="train")
     print(f"Dataset loaded with {len(dataset)} examples.")
 
     # --- 2. Configure Quantization (for memory efficiency) ---
