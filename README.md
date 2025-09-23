@@ -22,7 +22,7 @@ Rather than scripted dialogue trees, characters respond naturally to player inpu
 <div align="center">
 
 ![Game Interface Overview](game/screencap/screencap1.png)
-*Figure 1: Main game interface showing character interaction, inventory management, and location-based gameplay*
+*Figure 1: Main game interface showing inventory management, and location-based gameplay*
 
 <br><br>
 
@@ -141,7 +141,7 @@ The server will start on `http://localhost:5000` with the game interface availab
 
 Training conversations must follow this structure:
 
-- Assistant messages end with `<|>{"give": [], "take": [], ...}`
+- Assistant messages end with `\n{"give": [], "take": [], ...}`
 - `give` and `take` arrays are always required (can be empty)
 - Additional boolean properties are allowed (must be `true` when present)
 - This format enables the JavaScript engine to parse and execute AI actions

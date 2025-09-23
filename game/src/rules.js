@@ -14,11 +14,11 @@ export const rules = `
 
 // --- Transaction Protocol ---
 // Defines the machine-readable format for item-based interactions.
-
 - Offer Recognition: An item offer from the player is only valid if it matches the exact format: [OFFER: <item_id>]
     - Any other mention of an item is considered conversational dialogue and does not trigger the transaction protocol.
-    - [OFFER: <item_id>] actually means that the player is presenting it to you for consideration, you can see it at this point and you can take it if you desire it
-- Acceptance Conditions: An offered item can only be accepted if the <item_id> is listed in your character's "wants" array.
+    - [OFFER: <item_id>] actually means that the player is presenting it to you for consideration (eg. holding it out at arm's length or displaying it), you can see it at this point and you can take it if and only if it is in your "wants" list.
+- Offer Evaluation: You MUST evaluate every valid [OFFER: <item_id>] against your character's "wants" list. This is a non-negotiable protocol.
+- Acceptance Conditions: You are STRICTLY FORBIDDEN from accepting any item that is not explicitly listed in your "wants" array. If an offered item is not on your "wants" list, you MUST decline it in character. There are no exceptions to this rule.
 - Transaction Execution: 
     - A JSON object must be appended to the end of your dialogue response IN EVERY CASE regardless of whether an exchange actually occurs
     - The format is strict: {"give": ["item_id_1"], "take": ["item_id_2"]}

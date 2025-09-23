@@ -1,6 +1,11 @@
-import { Game } from './game.js';
+import { Game } from './code.js';
 
 export const UI = {
+
+
+    setTitle(game) {
+        document.title = game.State.worldName;
+    },
 
     renderBackpack(game) {
         const worldItems = game.State.worldItems;
@@ -443,7 +448,7 @@ export const UI = {
         // place the player's avatar once and only once
         const playerAvatar = document.getElementById('player-avatar');
         const img = document.createElement('img');
-        img.src = game.State.player_avatar;
+        img.src = game.State.playerAvatar;
         img.className = 'image-fluid';
         playerAvatar.appendChild(img);
 
