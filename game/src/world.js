@@ -193,7 +193,6 @@ export const InitialWorld = {
             }
         }
     },
-
     characterData: {
         anya: {
             name: "Anya",

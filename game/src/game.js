@@ -2,9 +2,11 @@
 // main entry point for the game and game engine/state management
 
 // --- MAIN GAME LOGIC & UI INTEGRATION ---
+import { Audio } from './audio.js';
 import { rules } from './rules.js';
 import { UI } from './ui.js';
 import { InitialWorld } from './world.js';
+
 
 // --- GAME ENGINE & STATE MANAGEMENT ---
 export const Game = {
@@ -82,11 +84,21 @@ export const Game = {
   },
 
   addItemToBackpack(itemId) {
-    console.log('Adding item to backpack:', itemId);
     const backpackItems = this.State.backpackItems;
+
+    // --- NEW: Check if backpack is full (limit of 5) ---
+    if (backpackItems.length >= 5) {
+      console.log('Backpack is full. Cannot add item:', itemId);
+      Audio.playBoop();
+
+      return false; // --- NEW: Signal that the item was not added ---
+    }
+
+    console.log('Adding item to backpack:', itemId);
     if (!backpackItems.includes(itemId)) {
       backpackItems.push(itemId);
     }
+    return true; // --- NEW: Signal that the item was added successfully ---
   },
 
   removeItemFromBackpack(itemId) {
@@ -97,7 +109,6 @@ export const Game = {
 
   addItemToOfferings(itemId) {
     console.log('Adding item to offerings:', itemId);
-    const currentLocation = this.State.currentLocation;
     if (!this.State.currentOfferings.includes(itemId)) {
       this.State.currentOfferings.push(itemId);
     }
@@ -105,7 +116,6 @@ export const Game = {
 
   removeItemFromOfferings(itemId) {
     console.log('Removing item from offerings:', itemId);
-    const currentLocation = this.State.currentLocation;
     this.State.currentOfferings = this.State.currentOfferings.filter(i => i !== itemId);
   }
 };
@@ -122,56 +132,69 @@ document.addEventListener('DOMContentLoaded', function () {
   function applyJSONResponse(obj) {
     const characterData = Game.State.characterData;
     const selectedCharacter = Game.State.selectedCharacter;
+    let success = false;
     console.log('AI JSON response', obj);
     console.log('Selected character:', selectedCharacter);
     if (!selectedCharacter) return;
+
     // Handle 'take' (add to character.items)
     if (Array.isArray(obj.take)) {
-      obj.take.forEach(item => {
-        console.log('Processing take item:', item);
+      obj.take.forEach(itemId => {
+        console.log('Processing take item:', itemId);
         console.log('Selected character before take:', characterData[selectedCharacter]);
         let success = false;
-        if (!characterData[selectedCharacter].items.includes(item)) {
-          const el = UI.offeringsDiv.querySelector(`[data-item="${item}"]`);
+        if (!characterData[selectedCharacter].items.includes(itemId)) {
+          const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
           if (el) {
-            characterData[selectedCharacter].items.push(item);
-            Game.removeItemFromOfferings(item);
-            el.remove();
-            success = true;
+            characterData[selectedCharacter].items.push(itemId);
+            Game.removeItemFromOfferings(itemId);
             Game.save();
-            UI.renderOfferings(Game);
-          }
-        }
-        if (success) {
-          console.log('Successfully took item:', item);
-        } else {
-          console.log('Failed to take item:', item);
-        }
-      });
-    }
-    // Handle 'give' (remove from character.items)
-    if (Array.isArray(obj.give)) {
-      obj.give.forEach(item => {
-        console.log('Processing give item:', item);
-        let success = false;
-        const idx = characterData[selectedCharacter].items.indexOf(item);
-        if (idx !== -1) {
-          characterData[selectedCharacter].items.splice(idx, 1);
-          console.log('Giving item to player:', item);
-          if (!UI.offeringsDiv.querySelector(`[data-item="${item}"]`)) {
-            Game.addItemToOfferings(item);
-            Game.save();
-            UI.renderOfferings(Game);
+            UI.animateItemTransferToCharacter(el, () => {
+              UI.renderOfferings(Game);
+            });
             success = true;
           }
         }
         if (success) {
-          console.log('Successfully gave item:', item);
+          console.log('Successfully took item:', itemId);
         } else {
-          console.log('Failed to give item:', item);
+          console.log('Failed to take item:', itemId);
         }
       });
     }
+
+    let timeout = 0;
+    if (success == true) timeout = 620;
+
+    setTimeout(() => {
+      // Handle 'give' (remove from character.items)
+      if (Array.isArray(obj.give)) {
+        obj.give.forEach(itemId => {
+          console.log('Processing give item:', itemId);
+          let success = false;
+          const idx = characterData[selectedCharacter].items.indexOf(itemId);
+          if (idx !== -1) {
+            characterData[selectedCharacter].items.splice(idx, 1);
+            console.log('Giving item to player:', itemId);
+            if (!UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`)) {
+              Game.addItemToOfferings(itemId);
+              UI.renderOfferings(Game)
+              Game.save();
+              const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
+              if (el) {
+                UI.animateItemTransferFromCharacter(el);
+              }
+              success = true;
+            }
+          }
+          if (success) {
+            console.log('Successfully gave item:', itemId);
+          } else {
+            console.log('Failed to give item:', itemId);
+          }
+        });
+      };
+    }, timeout);
   }
 
   function addMessageToState(text, sender) {
@@ -191,9 +214,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const parsedObj = JSON.parse(jsonString);
 
             // Merge properties, specifically concatenating arrays for 'give' and 'take'
+            // identical list elements overwrite each other
             for (const key in parsedObj) {
-              if (Array.isArray(parsedObj[key]) && Array.isArray(mergedObj[key])) {
-                mergedObj[key] = mergedObj[key].concat(parsedObj[key]);
+              if (Array.isArray(parsedObj[key])) {
+                if (!mergedObj[key]) {
+                  mergedObj[key] = [];
+                }
+                mergedObj[key] = Array.from(new Set([...mergedObj[key], ...parsedObj[key]]));
               } else {
                 mergedObj[key] = parsedObj[key];
               }

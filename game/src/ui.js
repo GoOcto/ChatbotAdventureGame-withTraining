@@ -1,4 +1,4 @@
-import { Game } from './code.js';
+import { Game } from './game.js';
 
 export const UI = {
 
@@ -10,12 +10,12 @@ export const UI = {
     renderBackpack(game) {
         const worldItems = game.State.worldItems;
         UI.backpackDiv.innerHTML = '';
-        game.getBackpackItems().forEach((item) => {
+        game.State.backpackItems.forEach((itemId) => {
+            const item = worldItems[itemId];
+            if (!item) return;
             const div = document.createElement('div');
             div.className = 'backpack-item';
             div.setAttribute('draggable', 'true');
-            // Always use item ID for data-item
-            const itemId = Object.keys(worldItems).find(k => worldItems[k] === item);
             div.setAttribute('data-item', itemId);
             div.setAttribute('title', item.name);
             div.textContent = item.name;
@@ -26,13 +26,12 @@ export const UI = {
     renderLocationItems(game) {
         const worldItems = game.State.worldItems;
         UI.itemsListDiv.innerHTML = '';
-        const locationItems = game.getRoomItems();
-        locationItems.forEach((item, id) => {
+        game.State.locationData[game.State.currentLocation].items.forEach((itemId) => {
+            const item = worldItems[itemId];
+            if (!item) return;
             const div = document.createElement('div');
             div.className = 'backpack-item';
             div.setAttribute('draggable', 'true');
-            // Always use item ID for data-item
-            const itemId = Object.keys(worldItems).find(k => worldItems[k] === item);
             div.setAttribute('data-item', itemId);
             div.setAttribute('title', item.name);
             div.textContent = item.name;
@@ -158,18 +157,84 @@ export const UI = {
         });
     },
 
-    // renderChatMessages() {
-    //     UI.chatMessagesDiv.innerHTML = '';
-    //     if (!Game.State.chatMessages) return;
-    //     Game.State.chatMessages.forEach(msg => {
-    //         const msgDiv = document.createElement('div');
-    //         msgDiv.className = `message ${msg.sender} animate__animated animate__fadeInUp`;
-    //         msgDiv.innerHTML = `<span>${msg.text}</span>${msg.faded}`;
-    //         this.chatMessagesDiv.appendChild(msgDiv);
-    //     });
-    //     this.chatMessagesDiv.scrollTop = this.chatMessagesDiv.scrollHeight;
-    // },
+    animateItemTransferToCharacter(el, oncomplete) {
+        const targetEl = document.querySelector('#encounter-avatar');
+        console.log('Animating item transfer to character:', { el, targetEl });
 
+        if (!targetEl) {
+            console.error('Animation target #encounter-avatar not found.');
+            el.remove();
+            return;
+        }
+
+        const startRect = el.getBoundingClientRect();
+        const endRect = targetEl.getBoundingClientRect();
+        const deltaX = endRect.left + (endRect.width / 2) - (startRect.left + startRect.width / 2);
+        const deltaY = endRect.top + (endRect.height / 2) - (startRect.top + startRect.height / 2);
+        el.style.position = 'absolute';
+        el.style.zIndex = '1000'; // High z-index to ensure it animates over other UI
+
+        const keyframes = [
+            { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+            { transform: `translate(${deltaX}px, ${deltaY}px) scale(0.2)`, opacity: 0 }
+        ];
+
+        const options = {
+            duration: 600,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        };
+
+        const animation = el.animate(keyframes, options);
+        animation.finished.then(() => {
+            el.remove();
+            oncomplete && oncomplete();
+        });
+    },
+
+    animateItemTransferFromCharacter(el, oncomplete) {
+        // 1. Find the destination element
+        const endEl = document.querySelector('#offerings');
+
+        // Gracefully exit if the destination isn't on the page
+        if (!endEl) {
+            console.error('Animation failed: destination #offerings not found.');
+            el.remove(); // Clean up the provided element
+            if (oncomplete) oncomplete();
+            return;
+        }
+
+        // 2. Get the start and end coordinates
+        const startRect = el.getBoundingClientRect();
+        const endRect = endEl.getBoundingClientRect();
+
+        // 3. Calculate the distance to travel
+        const deltaX = endRect.left + (endRect.width / 2) - (startRect.left + startRect.width / 2);
+        const deltaY = endRect.top + (endRect.height / 2) - (startRect.top + startRect.height / 2);
+
+        // 4. Define the animation keyframes. Starts from its current position.
+        const keyframes = [
+            { transform: 'translate(0, 0) scale(0.2)', opacity: 0 },
+            { transform: `translate(${deltaX / 2}px, ${deltaY / 2 - 50}px) scale(1.2)`, opacity: 1, offset: 0.5 },
+            { transform: `translate(${deltaX}px, ${deltaY}px) scale(1)`, opacity: 1 }
+        ];
+
+        // 5. Define animation options
+        const options = {
+            duration: 800,
+            easing: 'ease-out',
+            fill: 'forwards' // Keep it at its final position visually
+        };
+
+        // 6. Run the animation
+        const animation = el.animate(keyframes, options);
+
+        // 7. After animation, remove the temporary element and call the callback
+        animation.finished.then(() => {
+            el.remove();
+            oncomplete && oncomplete();
+        });
+    },
 
 
     setupDragAndDrop(game) {
@@ -198,19 +263,21 @@ export const UI = {
 
             if (container === UI.offeringsDiv) {
                 console.log('Container: OfferingsDiv');
-                game.addItemToBackpack(itemId);
-                UI.renderBackpack(game);
-                game.removeItemFromOfferings(itemId);
-                UI.renderOfferings(game);
+                if (game.addItemToBackpack(itemId)) {
+                    UI.renderBackpack(game);
+                    game.removeItemFromOfferings(itemId);
+                    UI.renderOfferings(game);
+                }
                 game.save();
                 return;
             }
             if (container === UI.itemsListDiv) {
                 console.log('Container: ItemsListDiv');
-                game.removeItemFromRoom(itemId);
-                UI.renderLocationItems(game);
-                game.addItemToBackpack(itemId);
-                UI.renderBackpack(game);
+                if (game.addItemToBackpack(itemId)) {
+                    UI.renderBackpack(game);
+                    game.removeItemFromRoom(itemId);
+                    UI.renderLocationItems(game);
+                }
                 game.save();
                 return;
             }
@@ -272,20 +339,22 @@ export const UI = {
         UI.backpackDiv.addEventListener('drop', function (e) {
             console.log('Drop event on backpackDiv');
             e.preventDefault();
-            const item = e.dataTransfer.getData('text/plain');
-            if (game.State.currentOfferings.includes(item)) {
-                game.removeItemFromOfferings(item);
-                UI.renderOfferings(game);
-                game.addItemToBackpack(item);
-                UI.renderBackpack(game);
+            const itemId = e.dataTransfer.getData('text/plain');
+            if (game.State.currentOfferings.includes(itemId)) {
+                if (game.addItemToBackpack(itemId)) {
+                    UI.renderBackpack(game);
+                    game.removeItemFromOfferings(itemId);
+                    UI.renderOfferings(game);
+                }
                 game.save();
                 return;
             }
-            if (game.State.locationData[game.State.currentLocation].items.includes(item)) {
-                game.removeItemFromRoom(item);
-                UI.renderLocationItems(game);
-                game.addItemToBackpack(item);
-                UI.renderBackpack(game);
+            if (game.State.locationData[game.State.currentLocation].items.includes(itemId)) {
+                if (game.addItemToBackpack(itemId)) {
+                    UI.renderBackpack(game);
+                    game.removeItemFromRoom(itemId);
+                    UI.renderLocationItems(game);
+                }
                 game.save();
             }
         });
