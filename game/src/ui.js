@@ -1,3 +1,4 @@
+import { Audio } from './audio.js';
 import { Game } from './game.js';
 
 export const UI = {
@@ -61,7 +62,7 @@ export const UI = {
         const areaData = locationData[currentLocation];
         UI.locationNameDiv.textContent = areaData.name;
         UI.locationDescDiv.innerHTML = `<p>${areaData.description}</p>`;
-        if (areaData.people.length > 0) {
+        if (Object.keys(areaData.people).length > 0) {
             this.locationDescDiv.innerHTML += `<p><em>Characters here:</em></p>`;
         }
         else {
@@ -92,6 +93,7 @@ export const UI = {
                         game.State.selectedCharacter = null;
                         game.State.chatOpen = false;
                         game.save();
+                        Audio.playClick();
                         UI.renderAll(game);
                     };
                     btnLi.appendChild(btn);
@@ -123,8 +125,8 @@ export const UI = {
         const characterData = game.State.characterData;
         UI.avatarAreaDiv.innerHTML = '';
         const locationInfo = locationData[currentLocation];
-        if (locationInfo && Array.isArray(locationInfo.people)) {
-            locationInfo.people.forEach(charID => {
+        if (locationInfo && Object.keys(locationInfo.people).length > 0) {
+            Object.keys(locationInfo.people).forEach(charID => {
                 const char = characterData[charID];
                 if (!char) return;
                 const avatarDiv = document.createElement('div');
@@ -395,6 +397,7 @@ export const UI = {
                 game.State.chatId = null;
                 UI.renderEncounterCard(game);
                 UI.chatUiDiv.style.display = 'none';
+                Audio.playClick();
                 game.save();
             });
         }

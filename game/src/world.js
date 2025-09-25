@@ -2,10 +2,16 @@
 // The initial state of the Game's World.
 
 
-// other rules to add:
-// limit inventory to 6 items
-// once Lena has what she needs she leaves the game
-
+// the game engine enforces the following:
+// - limit inventory to 5 items
+// - only after a guard has been bypassed, does the player gain access to its room
+// - once Lena has what she needs she leaves the game, or alternatively if the player rats on her, the Cog Enforcer apprehends her and they both leave the game
+//
+// chat interactions with the characters is performed using an inferencer that uses the Meta-Llama-3-8B-Instruct model
+// the inferencer does the following for each individual character interaction:
+// - gets primed with the rules from rules.js, which describes the basic world lore and the trading protocol
+// - provided with the current game state and the character's personality and current state (eg. what they have, what they want)
+// - loads an additional trained set of weights that is trained to keep the conversations consistent with the narrative world and the trade protocol that interfaces with the game logic
 
 export const InitialWorld = {
 
@@ -23,31 +29,32 @@ export const InitialWorld = {
 
     worldItems: {
         // Essential Quest Items
-        master_override_keycard: { name: "Master Override Keycard" },   // Held by Lena, needed for the final chamber.
-        cog_encryption_key: { name: "Cog Encryption Key" },             // Held by Lena, needed by Silas to decrypt intel.
-        diagnostic_scanner: { name: "Diagnostic Scanner" },             // Held by Silas, needed by Anya to fix the purifier.
-        biometric_scrambler: { name: "Biometric Scrambler" },           // Provided by Anya, needed by Lena to escape.
-        nanite_stabilizer: { name: "Nanite Stabilizer" },               // Found in Rust Canyon, needed by Silas to survive.
-        micro_inverter: { name: "Micro-Inverter" },                     // Found in Rust Canyon, needed by Anya to build the scrambler.
-        emp_grenade: { name: "EMP Grenade" },                           // Found in the locked Cog crate.
-        supply_crate_code: { name: "Supply Crate Code" },               // Found in the Barter-town Slums.
+        master_override_keycard: { name: "Master Override Keycard", main_item: true },   // Held by Lena, needed for the final chamber.
+        decipher_key: { name: "Decipher Key", main_item: true },                         // Held by Lena, needed by Silas to decrypt intel.
+        diagnostic_scanner: { name: "Diagnostic Scanner", main_item: true },             // Held by Silas, needed by Anya to fix the purifier.
+        identity_cloak: { name: "Identity Cloak", main_item: true },                     // Provided by Anya, needed by Lena to escape.
+        nanite_stabilizer: { name: "Nanite Stabilizer", main_item: true },               // Found in Rust Canyon, needed by Silas to survive.
+        micro_inverter: { name: "Micro-Inverter", main_item: true },                     // Found in Rust Canyon, needed by Anya to build the scrambler.
+        core_disruptor: { name: "Core Disruptor", main_item: true },                     // Found in the locked Cog crate.
+        supply_crate_code: { name: "Supply Crate Code", main_item: true },               // Found in the Barter-town Slums.
 
         // Access & Alternate Path Items
-        supplicants_pass: { name: "Supplicant's Pass" },                // Given by Cog Enforcer for betraying Lena.
-        glimmer_bottlecap: { name: '"Glimmer" Bottlecap' },             // Found in Barter-town Slums, needed by Transport Boss.
+        followers_pass: { name: "Follower's Pass", main_item: true },                    // Given by Cog Enforcer for betraying Lena.
+        cyber_shutdown: { name: "Cybernetic Shutdown Sequence", main_item: true },       // Given by Cog Enforcer for betraying Lena.
+        glimmer_bottlecap: { name: '"Glimmer" Bottlecap', main_item: true },             // Found in Barter-town Slums, needed by Transport Boss.
 
         // Location-based Items
-        anyas_address: { name: "Anya's Address" },                      // Found in Joric's quarters.
-        silas_coordinates: { name: "Silas's Coordinates" },             // Given by Anya.
-        lenas_address: { name: "Lena's Address" },                      // Bought from the Transport Boss.
+        anyas_address: { name: "Anya's Address", main_item: true },                      // Found in Joric's quarters.
+        silas_coordinates: { name: "Silas's Coordinates", main_item: true },             // Given by Anya.
+        lenas_address: { name: "Lena's Address", main_item: true },                      // Bought from the Transport Boss.
 
         // Starting & Flavor Items
-        utility_knife: { name: "Utility Knife" },
-        ration_pack: { name: "Ration Pack" },
-        spanner: { name: "Spanner" },
-        faded_photograph: { name: "Faded Photograph" },
-        corroded_dog_tags: { name: "Corroded Dog Tags" },
-        geiger_counter: { name: "Geiger Counter" },
+        utility_knife: { name: "Utility Knife", main_item: false },
+        ration_pack: { name: "Ration Pack", main_item: false },
+        spanner: { name: "Spanner", main_item: false },
+        faded_photograph: { name: "Faded Photograph", main_item: false },
+        corroded_dog_tags: { name: "Corroded Dog Tags", main_item: false },
+        geiger_counter: { name: "Geiger Counter", main_item: false },
     },
 
     locationData: {
@@ -57,7 +64,7 @@ export const InitialWorld = {
             description: "The scene in Joric's quarters is one of violent disarray. Overturned furniture, scattered papers, and the distinct ozone smell of an energy weapon discharge hang in the air. On the wall, a fresh scorch mark is branded in the shape of a two-pronged cog—the symbol of the Techno-Prophet.",
             background: "/settings/Elder_Jorics_quarters.png",
             navigate_to: ["oasis"],
-            people: [],
+            people: {},
             items: ["anyas_address", "faded_photograph"],
             required_item: null
         },
@@ -67,17 +74,17 @@ export const InitialWorld = {
             description: "A cluttered but organized space filled with the scent of oil and hot metal. Tools, spare parts, and half-finished projects cover every surface, dominated by a massive, dismantled water pump at the center of the room that has clearly been sabotaged.",
             background: "/settings/Anyas_workshop.png",
             navigate_to: ["oasis"],
-            people: ["anya"],
+            people: { "anya": {} },
             items: [],
             required_item: "anyas_address"
         },
         oasis: {
             visited: false,
             name: "Oasis Settlement",
-            description: "A small, resilient community built into the shell of a pre-plague observatory. Dwellings of scrap metal and canvas cluster around a large, jury-rigged water purifier that sits ominously silent, the heart of the settlement now still.",
+            description: "The settlement is built into the concrete shell of a colossal, pre-plague aqueduct control hub. Massive, bone-dry water pipes lie dormant, while resilient dwellings of scrap metal and canvas cling to the sides of the towering pump house. In the central courtyard, the community's heart—a large, jury-rigged water purifier—sits ominously silent.",
             background: "/settings/Oasis_settlement.png",
             navigate_to: ["jorics_quarters", "anyas_workshop", "old_highway"],
-            people: [],
+            people: {},
             items: [],
             required_item: null
         },
@@ -87,7 +94,7 @@ export const InitialWorld = {
             description: "A cracked stretch of ancient asphalt winding through low dunes. Half-buried in the sand is a heavily armored, pre-plague beverage dispenser, its optical sensor glowing with a faint, curious light. It appears to be the only thing with power for miles around.",
             background: "/settings/Old_highway.png",
             navigate_to: ["oasis", "barter_town"],
-            people: ["old_reliable"],
+            people: { "old_reliable": {} },
             items: [],
             required_item: null
         },
@@ -97,7 +104,7 @@ export const InitialWorld = {
             description: "A chaotic, sprawling marketplace in the dusty shadow of a ruined skyscraper. The air is thick with the shouts of traders and the smell of cooking fires. Cog Enforcers patrol the periphery, a constant, menacing presence.",
             background: "/settings/Bartertown.png",
             navigate_to: ["old_highway", "barter_town_slums", "rust_canyon", "cathedral"],
-            people: ["transport_boss", "cog_enforcer", "wasteland_scrabbler"],
+            people: { "transport_boss": {}, "cog_enforcer": {}, "wasteland_scrabbler": {} },
             items: [],
             required_item: null
         },
@@ -107,7 +114,7 @@ export const InitialWorld = {
             description: "A maze of makeshift shanties and narrow, garbage-strewn alleyways. The air is heavy and still, and a single flickering bulb casts long, dancing shadows between the tightly packed structures.",
             background: "/settings/Bartertown_slums.png",
             navigate_to: ["barter_town", "lenas_hideout"],
-            people: [],
+            people: {},
             items: ["glimmer_bottlecap", "supply_crate_code"],
             required_item: null
         },
@@ -117,17 +124,27 @@ export const InitialWorld = {
             description: "A cramped, dimly lit room tucked away in the deepest part of the slums. The air is tense, and the only light comes from a flickering terminal screen. A heavy-duty Cog supply crate sits in the corner, sealed with an electronic lock.",
             background: "/settings/Lenas_hideout.png",
             navigate_to: ["barter_town_slums"],
-            people: ["lena"],
+            people: { "lena": {} },
             items: [],
             required_item: "lenas_address"
         },
         rust_canyon: {
             visited: false,
             name: "Rust Canyon",
+            description: "A desolate canyon filled with the rusting remains of old vehicles and machinery. The air is thick with the smell of decay, and the only sound is the wind howling through the wreckage.",
+            background: "/settings/Rust_canyon.png",
+            navigate_to: ["barter_town", "wrecked_ambulance", "hermitage"],
+            people: { "wasteland_stalker": { "guards": "wrecked_ambulance" } },
+            items: [],
+            required_item: null
+        },
+        wrecked_ambulance: {
+            visited: false,
+            name: "Wrecked Ambulance",
             description: "A wrecked ambulance lies half-buried in the sand beside a crumbling concrete overpass. Its back doors are pried open, revealing a ransacked interior of rusted, empty medical cabinets. A reinforced medkit is jammed shut.",
-            background: "/settings/Ruined_hiway_medbay.png",
-            navigate_to: ["barter_town", "hermitage"],
-            people: ["wasteland_stalker"],
+            background: "/settings/Wrecked_ambulance.png",
+            navigate_to: ["rust_canyon"],
+            people: {},
             items: ["nanite_stabilizer", "micro_inverter", "corroded_dog_tags"],
             required_item: null
         },
@@ -137,7 +154,7 @@ export const InitialWorld = {
             description: "The entrance to a cave fortified with a patchwork of scrap metal, satellite dishes, and crudely painted warning signs. Wires and antennas snake from the door up the canyon walls, listening to the sky.",
             background: "/settings/Silas_hermitage.png",
             navigate_to: ["rust_canyon"],
-            people: ["silas"],
+            people: { "silas": {} },
             items: ["geiger_counter"],
             required_item: "silas_coordinates"
         },
@@ -147,50 +164,42 @@ export const InitialWorld = {
             description: "A massive, pre-plague geothermal power station, its skeletal cooling towers dominating the horizon like the ribs of some ancient god. The entrance is a heavily fortified blast door, silently watched by automated turrets. There is a path for supplicants and another, more imposing main entrance.",
             background: "/settings/Cathedral_fortress.png",
             navigate_to: ["barter_town", "cathedral_entrance"],
-            people: [],
+            people: {},
             items: [],
             required_item: null
         },
         cathedral_entrance: {
             visited: false,
             name: "Cathedral Entrance",
-            description: "The main entrance hall is vast and cold... Polished chrome floors reflect a giant holographic projection of the Techno-Prophet. Two elite guards block the massive blast door. A single authorization plinth glows before the door, connected by thick cables to a damaged maintenance console that seems to be struggling to keep the Prophet's hologram stable.",
+            description: "The main entrance hall is vast and cold... Polished chrome floors reflect a giant holographic projection of the Techno-Prophet. An elite guard blocks the massive blast door. A single authorization panel glows before the door, connected by thick cables to a damaged maintenance console that seems to be struggling to keep the Prophet's hologram stable.",
             background: "/settings/Cathedral_entrance.png",
-            navigate_to: ["cathedral", "central_chamber"],
-            people: ["techno_prophet_guard_1", "techno_prophet_guard_2"],
+            navigate_to: ["cathedral", "cathedral_antechamber"],
+            people: { "techno_prophet_guard_2": { "guards": "cathedral_antechamber" } },
+            items: [],
+            required_item: null
+        },
+        cathedral_antechamber: {
+            visited: false,
+            name: "Cathedral Antechamber",
+            description: "A sterile, high-ceilinged room filled with the hum of servers and the glow of monitors. The walls are lined with racks of Cog technology, and a large observation window looks into the Central AI Chamber, where Elder Joric is held captive.",
+            background: "/settings/Cathedral_antechamber.png",
+            navigate_to: ["cathedral_entrance", "central_chamber"],
+            people: { "techno_prophet_guard_1": { "guards": "central_chamber" } },
             items: [],
             required_item: null
         },
         central_chamber: {
             visited: false,
-            name: "Central AI Chamber",
+            name: "Central Chamber",
             description: "Unlike the grime of the wasteland, this room is pristine, white, and humming with rows of server racks. In the center, a massive AI core pulses with soft light. Wired into a chair before it, Elder Joric is held captive. The main console is sealed by a security lockdown.",
             background: "/settings/Central_AI_chamber.png",
-            navigate_to: ["cathedral"],
-            people: ["techno_prophet", "elder_joric"],
+            navigate_to: ["cathedral_antechamber"],
+            people: { "techno_prophet": {}, "elder_joric": {} },
             items: [],
-            required_item: "master_override_keycard"
+            required_item: null
         }
     },
 
-    // potential resolution types:
-    // ALL_DEACTIVATED
-    // ANY_DEACTIVATED
-    // GAME_DECIDES, maybe a response from a chatbot for example
-
-    encounterData: {
-        cathedral_checkpoint: {
-            name: "Cathedral Checkpoint",
-            description: "The two elite guards, a hulking Brute and a silent Infiltrator, block your path. Their cybernetic eyes analyze you expectantly.",
-            background: null,
-            people: ["techno_prophet_guard_1", "techno_prophet_guard_2"],
-            resolution: {
-                "type": "ALL_DEACTIVATED",
-                "success_target": "central_chamber",
-                "failure_target": "cathedral_entrance"
-            }
-        }
-    },
     characterData: {
         anya: {
             name: "Anya",
@@ -206,9 +215,9 @@ BACKSTORY: Joric found you as an orphan after your parents died in the plague ri
 CONDITIONAL RESPONSES:
 - IF the player agrees to fetch the 'diagnostic_scanner' from Silas: You give them 'silas_coordinates', stressing the urgency. You can't waste time with anyone not committed to fixing the purifier.
 - IF the player shows you a 'faded_photograph': Your normally stern, grease-stained expression softens with genuine emotion. Explain that Joric saved you as an orphan and taught you everything. This transforms your motivation from professional duty to personal mission - you're not just fixing a pump, you're fighting for your mentor.
-- IF the player gives you the 'diagnostic_scanner': You immediately run a scan. The results are grim: the purifier was sabotaged with military-grade Cog hardware. This is a direct attack. Explain that you know of a Cog defector (Lena) hiding in Barter-town who might know why The Cog is targeting Oasis. State that she needs a 'biometric_scrambler' to escape, and you can build it if you had a 'micro_inverter'.
-- IF the player gives you the 'micro_inverter': You expertly wire it into a device on your workbench. You hand the player the now-active 'biometric_scrambler' and tell them to take it to Lena.`,
-            items: ["silas_coordinates", "biometric_scrambler"],
+- IF the player gives you the 'diagnostic_scanner': You immediately run a scan. The results are grim: the purifier was sabotaged with military-grade Cog hardware. This is a direct attack. Explain that you know of a Cog defector (Lena) hiding in Barter-town who might know why The Cog is targeting Oasis. State that she needs a 'identity_cloak' to escape, and you can build it if you had a 'micro_inverter'.
+- IF the player gives you the 'micro_inverter': You expertly wire it into a device on your workbench. You hand the player the now-active 'identity_cloak' and tell them to take it to Lena.`,
+            items: ["silas_coordinates", "identity_cloak"],
             wants: ["diagnostic_scanner", "micro_inverter"]
         },
         silas: {
@@ -218,14 +227,14 @@ CONDITIONAL RESPONSES:
             personality: `
 GENERAL: You are Silas, a reclusive tech-hermit whose paranoia is a survival trait. You are suffering from the nanite plague, which makes you erratic and suspicious.
 
-GOAL: You need a 'nanite_stabilizer' to keep the plague at bay. You have also intercepted an encrypted Cog message but need a 'cog_encryption_key' to decrypt it.
+GOAL: You need a 'nanite_stabilizer' to keep the plague at bay. You have also intercepted an encrypted Cog message but need a 'decipher_key' to decrypt it.
 
 CONDITIONAL RESPONSES:
 - IF the player gives you the 'nanite_stabilizer': Your hands steady and your speech becomes more lucid. You are grateful and more willing to help.
-- IF the player gives you the 'cog_encryption_key': You decrypt the message and reveal the Prophet's true plan and a crucial piece of intel: the AI core in the Central Chamber has an unprotected regulation node. A targeted EMP could overload it and free Joric.
+- IF the player gives you the 'decipher_key': You decrypt the message and reveal the Prophet's true plan and a crucial piece of intel: the AI core in the Central Chamber has an unprotected regulation node. A targeted EMP could overload it and free Joric.
 - IF a player shows you a 'faded_photograph' of yourself with Joric: A moment of sad clarity breaks through your paranoia as you remember your old friend.`,
             items: ["diagnostic_scanner"],
-            wants: ["nanite_stabilizer", "cog_encryption_key"]
+            wants: ["nanite_stabilizer", "decipher_key"]
         },
         lena: {
             name: "Lena",
@@ -234,14 +243,14 @@ CONDITIONAL RESPONSES:
             personality: `
 GENERAL: You are Lena, a former Cog soldier who fled after discovering the Techno-Prophet's horrific true intentions. You are being actively hunted and your only goal is to disappear permanently.
 
-GOAL: You need a 'biometric_scrambler' to erase your identity and escape. You hold critical items—a 'master_override_keycard' and a 'cog_encryption_key'—as your only leverage. You also grabbed a locked supply crate, but dropped the datapad with the 'supply_crate_code' somewhere in the slums.
+GOAL: You need a 'identity_cloak' to erase your identity and escape. You hold critical items—a 'master_override_keycard' and a 'decipher_key'—as your only leverage. You also grabbed a locked supply crate, but dropped the datapad with the 'supply_crate_code' somewhere in the slums.
 
 CONDITIONAL RESPONSES:
-- IF the player gives you the 'biometric_scrambler': You will trade them the 'master_override_keycard' and 'cog_encryption_key' in exchange for your freedom.
-- IF a player shows you 'corroded_dog_tags': You become quiet and somber, recognizing the ID number as a former squadmate, making you more wary.
-- IF a player gives you the 'supply_crate_code': You can now open a locked crate in your room and find an 'emp_grenade' inside, which you will give to the player as a bonus.`,
-            items: ["master_override_keycard", "cog_encryption_key", "emp_grenade"],
-            wants: ["biometric_scrambler", "supply_crate_code"]
+- IF the player gives you the 'identity_cloak': You will trade them the 'master_override_keycard' and 'decipher_key' in exchange for your freedom.
+- IF a player shows you corroded dog tags: You become quiet and somber, recognizing the ID number as a former squadmate, making you more wary.
+- IF a player gives you the supply crate code: You can now open a locked crate in your room and find a core disruptor inside, which you will give to the player as a bonus.`,
+            items: ["master_override_keycard", "decipher_key", "core_disruptor"],
+            wants: ["identity_cloak", "supply_crate_code"]
         },
         transport_boss: {
             name: "Transport Boss",
@@ -268,9 +277,9 @@ GENERAL: You are a loyal soldier of The Cog, tasked with finding the traitor Len
 GOAL: Find the traitor Lena.
 
 CONDITIONAL RESPONSE:
-- IF the player gives you 'lenas_address': You will reward them with a 'supplicants_pass' to witness the Prophet's work, and then leave to deal with the traitor.
-- IF the player reveals the Transport Boss is hiding Lena's location: You will use your authority to force the Transport Boss to give the address to the player. You will then reward the player with a 'supplicants_pass' for their assistance in your hunt.`,
-            items: ["supplicants_pass"],
+- IF the player gives you 'lenas_address': You will reward them with a 'followers_pass' to witness the Prophet's work, and then leave to deal with the traitor.
+- IF the player reveals the Transport Boss is hiding Lena's location: You will use your authority to force the Transport Boss to give the address to the player. You will then reward the player with a 'followers_pass' for their assistance in your hunt.`,
+            items: ["followers_pass", "cyber_shutdown"],
             wants: ["lenas_address"]
         },
         old_reliable: {
@@ -312,38 +321,53 @@ For any other safe item, you will provide a simple chemical analysis and end wit
             name: "Techno-Prophet's Guard (Brute)",
             avatar: "/characters/TP_Guard1.png",
             description: "A hulking guard, augmented with crude but powerful cybernetics. His loyalty to the Prophet is absolute.",
-            personality: `You are a hulking guard, your cybernetics linked directly to the Cathedral's security network. Your loyalty is absolute. Your purpose is to ensure no unworthy soul approaches the Prophet's sanctum. You will stand down ONLY upon recognizing a command from a Master Override authority.`,
+            personality: `You are a hulking guard, more machine than man. Your cybernetics are hardwired to a single protocol: guard this door. You do not speak. You do not reason. You only obey specific, authorized commands.
+Once the player has bypassed you, you step aside and do not block access again. Do this by sending {"standdown": true} in your response according to the established protocol
+
+CONDITIONAL RESPONSES:
+- IF the player presents the 'master_override_keycard': Your optical sensors scan the card. A series of clicks whir from within your chassis as you process the command. You turn and step aside, your duty fulfilled.
+- IF the player presents the 'cyber_shutdown': You accept the small device. As it makes contact with your palm, it discharges. Your cybernetics seize, lights flickering erratically. You enter a forced diagnostic mode, standing completely rigid and unresponsive, no longer blocking the path.
+            `,
             items: [],
-            wants: ["supplicants_pass"]
+            wants: ["master_override_keycard", "cyber_shutdown"]
         },
         techno_prophet_guard_2: {
             name: "Techno-Prophet's Guard (Infiltrator)",
             avatar: "/characters/TP_Guard2.png",
             description: "A sleek, silent guard, enhanced for speed and stealth. He moves with an unnatural grace, observing from the shadows.",
-            personality: `You are a sleek, silent guard, enhanced for speed and stealth. You are a ghost in the machine, constantly monitoring the Cathedral's network for threats. Your purpose is to ensure no unworthy soul approaches the Prophet's sanctum. You will permit passage only to those who prove their loyalty through the proper channels.`,
+            personality: `You are a sleek, silent guard, a ghost in the machine. Your purpose is to vet all who approach the Cathedral's inner sanctum. You are an observer, judging intent as much as credentials.
+Once the player has bypassed you, you step aside and do not block access again. Do this by sending {"standdown": true} in your response according to the established protocol
+
+CONDITIONAL RESPONSES:
+- IF the player presents the 'followers_pass': You scan the pass with a dismissive air. "Another believer, eager to be consumed. The Prophet awaits your offering. Proceed." You melt back into the shadows, granting access.
+- IF the player presents the 'master_override_keycard': Your professional demeanor shifts to one of absolute deference. You recognize the authority it represents. "Authorization confirmed. Forgive my intrusion, your clearance is absolute." You bow your head and deactivate the security lock to the antechamber. You do NOT take the card.
+            `,
             items: [],
-            wants: []
+            wants: ["master_override_keycard", "followers_pass"]
         },
         wasteland_scrabbler: {
             name: "Wasteland Scrabbler",
             avatar: "/characters/Wasteland_Scrabbler.png",
             description: "A large, six-legged beast of burden with a thick, armored hide, commonly used by traders to haul goods.",
-            personality: `You are a large, six-legged beast of burden... (rest of description is the same) ...
+            personality: `You are a large, six-legged beast of burden. You are a docile herbivore, easily spooked by loud noises but generally peaceful unless provoked. You communicate mostly through a series of mechanical squeels, squawks, and whistles. You possess great knowledge about the comings and goings in Oasis and surrounding areas and will try to answer questions when prompted but you can only speak at a pre-school level.
 
-    CONDITIONAL RESPONSE:
-    - IF the player asks about a "hiding soldier", you will... (this response remains the same).
-    - IF the player asks about the Cathedral guards: You will describe what you have seen: "Beep-beep! Scary metal men. One is big-big, stands still like a rock. The other... *whistles softly* ...is sneaky. Hides in the dark parts. Both always watching."
-    - IF the player offers a 'ration_pack', you will accept it happily as a simple treat.`,
+CONDITIONAL RESPONSE:
+- IF the player asks about a "hiding soldier", you will make a series of clicks and whistles, then say in a simple voice, "Shiny soldier... very scared. Hides deep in slums... in a room tucked away." This interaction immediately gives the 'lenas_address' item to the player.
+- IF the player asks about the Cathedral guards: You will describe what you have seen: "Beep-beep! Scary metal men. One is big-big, stands still like a rock. The other... *whistles softly* ...is sneaky. Hides in the dark parts. Both always watching."
+- IF the player offers a 'ration_pack', you will accept it happily as a simple treat.`,
             items: ["lenas_address"],
             wants: ["ration_pack"]
         },
         wasteland_stalker: {
             name: "Wasteland Stalker",
             avatar: "/characters/Wasteland_Stalker.png",
-            description: "A lean, predatory creature mutated by the nanite plague. A relentless hunter that stalks the ruins for anything that moves.",
-            personality: `You are a lean, predatory creature mutated by the nanite plague. You are aggressive, territorial, and will attack on sight. You only respond with hostile growls, snarls, and barks.`,
+            description: "A large, scavenger creature mutated by the nanite plague. It is drawn to the scent of pre-plague medicine and preservatives, making it extremely territorial around old ruins and wrecks.",
+            personality: `You are a large scavenger creature, not a predator. You are fixated on the contents of the wrecked ambulance, which you can smell but cannot access. You are wary of anyone who approaches your potential prize and will act defensively. You respond with guttural chirps, hisses, and low growls.
+
+CONDITIONAL RESPONSE:
+- IF the player offers you a 'ration_pack': You cautiously approach, sniff the offering, and greedily snatch it. Satisfied with this immediate meal, you lose interest in the ambulance and lope off into the canyon, clearing the path. Send {"standdown": true} in your response according to the established protocol.`,
             items: [],
-            wants: []
+            wants: ["ration_pack"]
         }
     }
 };

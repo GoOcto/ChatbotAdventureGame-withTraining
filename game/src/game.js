@@ -74,6 +74,7 @@ export const Game = {
     const locationData = this.State.locationData;
     const currentLocation = this.State.currentLocation;
     locationData[currentLocation].items.push(itemId);
+    Audio.playPlunk();
   },
 
   removeItemFromRoom(itemId) {
@@ -86,19 +87,18 @@ export const Game = {
   addItemToBackpack(itemId) {
     const backpackItems = this.State.backpackItems;
 
-    // --- NEW: Check if backpack is full (limit of 5) ---
     if (backpackItems.length >= 5) {
       console.log('Backpack is full. Cannot add item:', itemId);
       Audio.playBoop();
-
-      return false; // --- NEW: Signal that the item was not added ---
+      return false;
     }
 
     console.log('Adding item to backpack:', itemId);
     if (!backpackItems.includes(itemId)) {
       backpackItems.push(itemId);
     }
-    return true; // --- NEW: Signal that the item was added successfully ---
+    Audio.playItemPickup();
+    return true;
   },
 
   removeItemFromBackpack(itemId) {
@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', async function (e) {
     if (e.target && e.target.id === 'begin-chat-btn') {
+      Audio.playNiceEncounterStart();
       const selectedCharacter = Game.State.selectedCharacter;
       console.log('Begin Chat button clicked');
       console.log('Selected character:', selectedCharacter);
@@ -304,6 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const char = Game.State.characterData[selectedCharacter];
       let inventoryList = char.items.length > 0 ? char.items.join(', ') : '--none--';
       let wantedList = char.wants.length > 0 ? char.wants.join(', ') : '--none--';
+      // --- begin system prompt ---
       let system_prompt = `${rules}
 
 // -- Your Current Location--
@@ -321,6 +323,7 @@ ${wantedList}
 // ----- Your Inventory ----
 ${inventoryList}
 `;
+      // --- end system prompt ---
       try {
         const resetResp = await axios.post(`http://${window.location.hostname}:${window.location.port}/api/reset`, {
           system_prompt: system_prompt
