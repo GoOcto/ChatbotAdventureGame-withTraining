@@ -88,10 +88,19 @@ export const UI = {
                     if (locationData[areaID].visited) btn.className += ' visited';
                     btn.textContent = locationData[areaID].name;
                     btn.onclick = function () {
+                        const currentLocation = game.State.currentLocation;
+                        if (game.State.locationData[currentLocation].onLeave !== undefined) {
+                            console.log("Calling onLeave for", game.State.currentLocation);
+                            game.State.locationData[currentLocation].onLeave(game);
+                        }
                         game.State.currentLocation = areaID;
                         game.State.chatId = null;
                         game.State.selectedCharacter = null;
                         game.State.chatOpen = false;
+                        if (game.State.locationData[areaID].onEnter !== undefined) {
+                            console.log("Calling onEnter for", areaID);
+                            game.State.locationData[areaID].onEnter(game);
+                        }
                         game.save();
                         Audio.playClick();
                         UI.renderAll(game);
@@ -143,7 +152,6 @@ export const UI = {
     },
 
     renderChatMessages(game) {
-        console.log('Rendering chat messages', game.State.chatMessages);
         if (game.State.chatOpen !== true) return;
 
         UI.chatUiDiv.style.display = '';
@@ -196,19 +204,19 @@ export const UI = {
 
     animateItemTransferFromCharacter(el, oncomplete) {
         // 1. Find the destination element
-        const endEl = document.querySelector('#offerings');
+        const startEl = document.querySelector('#encounter-avatar');
 
         // Gracefully exit if the destination isn't on the page
-        if (!endEl) {
-            console.error('Animation failed: destination #offerings not found.');
+        if (!startEl) {
+            console.error('Animation failed: source element #encounter-avatar not found.');
             el.remove(); // Clean up the provided element
             if (oncomplete) oncomplete();
             return;
         }
 
         // 2. Get the start and end coordinates
-        const startRect = el.getBoundingClientRect();
-        const endRect = endEl.getBoundingClientRect();
+        const startRect = startEl.getBoundingClientRect();
+        const endRect = el.getBoundingClientRect();
 
         // 3. Calculate the distance to travel
         const deltaX = endRect.left + (endRect.width / 2) - (startRect.left + startRect.width / 2);
@@ -233,7 +241,6 @@ export const UI = {
 
         // 7. After animation, remove the temporary element and call the callback
         animation.finished.then(() => {
-            el.remove();
             oncomplete && oncomplete();
         });
     },
@@ -246,7 +253,6 @@ export const UI = {
             if (item.classList.contains('backpack-item')) {
                 e.dataTransfer.setData('text/plain', item.dataset.item);
                 item.classList.add('dragging');
-                console.log('Drag start:', item.dataset.item);
             }
         }
         function handleDragEnd(e) {
@@ -261,10 +267,7 @@ export const UI = {
             const itemId = item.dataset.item;
             const container = item.parentElement;
 
-            console.log('Double click on item:', itemId, 'in container:', container);
-
             if (container === UI.offeringsDiv) {
-                console.log('Container: OfferingsDiv');
                 if (game.addItemToBackpack(itemId)) {
                     UI.renderBackpack(game);
                     game.removeItemFromOfferings(itemId);
@@ -274,7 +277,6 @@ export const UI = {
                 return;
             }
             if (container === UI.itemsListDiv) {
-                console.log('Container: ItemsListDiv');
                 if (game.addItemToBackpack(itemId)) {
                     UI.renderBackpack(game);
                     game.removeItemFromRoom(itemId);
@@ -284,7 +286,6 @@ export const UI = {
                 return;
             }
             if (container === UI.backpackDiv) {
-                console.log('Container: BackpackDiv');
                 game.removeItemFromBackpack(itemId);
                 UI.renderBackpack(game);
                 if (UI.chatUiDiv && UI.chatUiDiv.style.display !== 'none') {
@@ -324,7 +325,6 @@ export const UI = {
         // Drop logic (no change, still per-container)
         UI.offeringsDiv.addEventListener('dragover', function (e) { e.preventDefault(); });
         UI.offeringsDiv.addEventListener('drop', function (e) {
-            console.log('Drop event on offeringsDiv');
             e.preventDefault();
             const item = e.dataTransfer.getData('text/plain');
             if (item) {
@@ -339,7 +339,6 @@ export const UI = {
         });
         UI.backpackDiv.addEventListener('dragover', function (e) { e.preventDefault(); });
         UI.backpackDiv.addEventListener('drop', function (e) {
-            console.log('Drop event on backpackDiv');
             e.preventDefault();
             const itemId = e.dataTransfer.getData('text/plain');
             if (game.State.currentOfferings.includes(itemId)) {
@@ -364,8 +363,6 @@ export const UI = {
         UI.itemsListDiv.addEventListener('drop', function (e) {
             e.preventDefault();
             const item = e.dataTransfer.getData('text/plain');
-
-            console.log('Drop event on itemsListDiv', { e, item });
 
             if (game.State.backpackItems.includes(item)) {
                 game.removeItemFromBackpack(item);
@@ -433,7 +430,6 @@ export const UI = {
     },
 
     renderAll(game) {
-        console.log('rendering game state UI', game);
         const locationData = game.State.locationData;
         const currentLocation = game.State.currentLocation;
         const chatId = game.State.chatId;

@@ -60,11 +60,11 @@ def initialize_model_and_tokenizer(model_id, adapter_path=None):
         bnb_4bit_use_double_quant=True,
     )
 
-    # Load base model
+    # Load base model GPU
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         quantization_config=quantization_config,
-        device_map="auto",  # Changed from "cuda" to "auto" for better flexibility
+        device_map="cuda",
     )
 
     # NEW: Conditionally load the LoRA adapter

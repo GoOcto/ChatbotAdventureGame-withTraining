@@ -12,14 +12,11 @@ import { InitialWorld } from './world.js';
 export const Game = {
   State: null,
 
-  _deepCopy(obj) {
-    return JSON.parse(JSON.stringify(obj));
-  },
-
   init(initialWorld) {
-    this.State = this._deepCopy(initialWorld);
+    this.State = initialWorld;
     this.State = {
       ...this.State,
+      playerAvatar: null,
       selectedCharacter: null,
       chatOpen: false,
       chatId: null,
@@ -70,7 +67,6 @@ export const Game = {
   },
 
   addItemToRoom(itemId) {
-    console.log('Adding item to room:', itemId);
     const locationData = this.State.locationData;
     const currentLocation = this.State.currentLocation;
     locationData[currentLocation].items.push(itemId);
@@ -78,7 +74,6 @@ export const Game = {
   },
 
   removeItemFromRoom(itemId) {
-    console.log('Removing item from room:', itemId);
     const locationData = this.State.locationData;
     const currentLocation = this.State.currentLocation;
     locationData[currentLocation].items = locationData[currentLocation].items.filter(i => i !== itemId);
@@ -87,13 +82,12 @@ export const Game = {
   addItemToBackpack(itemId) {
     const backpackItems = this.State.backpackItems;
 
-    if (backpackItems.length >= 5) {
+    if (backpackItems.length >= 12) {
       console.log('Backpack is full. Cannot add item:', itemId);
       Audio.playBoop();
       return false;
     }
 
-    console.log('Adding item to backpack:', itemId);
     if (!backpackItems.includes(itemId)) {
       backpackItems.push(itemId);
     }
@@ -102,28 +96,67 @@ export const Game = {
   },
 
   removeItemFromBackpack(itemId) {
-    console.log('Removing item from backpack:', itemId);
     const backpackItems = this.State.backpackItems;
     this.State.backpackItems = backpackItems.filter(i => i !== itemId);
   },
 
   addItemToOfferings(itemId) {
-    console.log('Adding item to offerings:', itemId);
     if (!this.State.currentOfferings.includes(itemId)) {
       this.State.currentOfferings.push(itemId);
     }
   },
 
   removeItemFromOfferings(itemId) {
-    console.log('Removing item from offerings:', itemId);
     this.State.currentOfferings = this.State.currentOfferings.filter(i => i !== itemId);
   }
 };
 
+// Add introduction text property to Game
+// Game.introductionText = `
+//   <h1>Welcome to Quest for Joric</h1>
+//   <p>Choose your avatar to begin your adventure. Each avatar represents a unique style and personality. Select wisely!</p>
+// `;
+
+function showIntroductionScreen() {
+  // Create overlay div
+  const introDiv = document.querySelector('#introduction-screen');
+
+  const introText = document.querySelector('#intro-text');
+  introText.innerHTML = Game.State.introductionText;
+
+  // Avatar selection
+  const avatarOptions = Game.State.avatarOptions;
+  const avatarRow = document.querySelector('#avatar-row');
+
+  avatarRow.querySelectorAll('.avatar-box').forEach(avatarBox => {
+    console.log('for existing avatar box:', avatarBox);
+
+    avatarBox.onmouseenter = () => avatarBox.style.borderColor = '#2a9d8f';
+    avatarBox.onmouseleave = () => avatarBox.style.borderColor = '#444';
+    avatarBox.onclick = () => {
+      const filename = avatarBox.querySelector('img').src.split('/').pop();
+      console.log('Avatar selected:', avatarBox, introDiv);
+      Game.State.playerAvatar = `/characters/${filename}`;
+      document.getElementById('player-avatar').innerHTML = `<img src='/characters/${filename}' class='image-fluid'>`;
+      introDiv.remove();
+      UI.renderAll(Game);
+    };
+  });
+
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
   Game.load(InitialWorld);
+
+  if (Game.State.playerAvatar === null) {
+    showIntroductionScreen();
+    Game.save();
+  }
+  else {
+    const introDiv = document.querySelector('#introduction-screen');
+    introDiv.remove();
+  }
 
   UI.initDOM(Game);
   UI.setTitle(Game);
@@ -299,8 +332,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.target && e.target.id === 'begin-chat-btn') {
       Audio.playNiceEncounterStart();
       const selectedCharacter = Game.State.selectedCharacter;
-      console.log('Begin Chat button clicked');
-      console.log('Selected character:', selectedCharacter);
       Game.State.chatOpen = true;
       const char = Game.State.characterData[selectedCharacter];
       let inventoryList = char.items.length > 0 ? char.items.join(', ') : '--none--';
