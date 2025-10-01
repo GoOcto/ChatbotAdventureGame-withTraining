@@ -108,14 +108,54 @@ export const Game = {
 
   removeItemFromOfferings(itemId) {
     this.State.currentOfferings = this.State.currentOfferings.filter(i => i !== itemId);
+  },
+
+  conditionalResponses(char) {
+    let response = '';
+    char.trades.forEach(trade => {
+      if (trade.take.length > 0 && trade.give.length > 0) {
+        if (trade.take[0] === trade.give[0]) {
+          response += `- *IF* the player offers you '${trade.take.join(' and ')}', you will look at it and give it back to them. `;
+          response += trade.result + '\n';
+        }
+        else {
+          response += `- *IF* the player offers you '${trade.take.join(' and ')}',`;
+          response += ` you will give them '${trade.give.join(' and ')}' in return. `;
+          response += trade.result + '\n';
+        }
+      }
+      if (trade.take.length > 0 && trade.give.length === 0) {
+        response += `- *IF* the player offers you '${trade.take.join(' and ')}', you will give them nothing in return. `;
+        response += trade.result + '\n';
+      }
+      if (trade.take.length === 0 && trade.give.length > 0) {
+        response += `- You *MIGHT* give to the player '${trade.give.join(' and ')}' in specific circumstances. `;
+        response += trade.result + '\n';
+      }
+    });
+    return response;
+  },
+
+  removeTradeFromCandidates(charId, itemId) {
+    const char = this.State.characterData[charId];
+    if (!char) return;
+    char.trades = char.trades.filter(trade => trade.take.includes(itemId) || trade.give.includes(itemId));
+  },
+
+  currentSystemPrompt(char) {
+    return `
+${char.ai_personality.general}
+
+Your primary goal is: ${char.ai_personality.goal}
+
+--- Conditional Responses ---
+${Game.conditionalResponses(char)}
+
+${rules}`;
   }
+
 };
 
-// Add introduction text property to Game
-// Game.introductionText = `
-//   <h1>Welcome to Quest for Joric</h1>
-//   <p>Choose your avatar to begin your adventure. Each avatar represents a unique style and personality. Select wisely!</p>
-// `;
 
 function showIntroductionScreen() {
   // Create overlay div
@@ -176,17 +216,14 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Processing take item:', itemId);
         console.log('Selected character before take:', characterData[selectedCharacter]);
         let success = false;
-        if (!characterData[selectedCharacter].items.includes(itemId)) {
-          const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
-          if (el) {
-            characterData[selectedCharacter].items.push(itemId);
-            Game.removeItemFromOfferings(itemId);
-            Game.save();
-            UI.animateItemTransferToCharacter(el, () => {
-              UI.renderOfferings(Game);
-            });
-            success = true;
-          }
+        const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
+        if (el) {
+          Game.removeTradeFromCandidates(selectedCharacter, itemId);
+          Game.save();
+          UI.animateItemTransferToCharacter(el, () => {
+            UI.renderOfferings(Game);
+          });
+          success = true;
         }
         if (success) {
           console.log('Successfully took item:', itemId);
@@ -205,26 +242,15 @@ document.addEventListener('DOMContentLoaded', function () {
         obj.give.forEach(itemId => {
           console.log('Processing give item:', itemId);
           let success = false;
-          const idx = characterData[selectedCharacter].items.indexOf(itemId);
-          if (idx !== -1) {
-            characterData[selectedCharacter].items.splice(idx, 1);
-            console.log('Giving item to player:', itemId);
-            if (!UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`)) {
-              Game.addItemToOfferings(itemId);
-              UI.renderOfferings(Game)
-              Game.save();
-              const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
-              if (el) {
-                UI.animateItemTransferFromCharacter(el);
-              }
-              success = true;
-            }
+          console.log('Giving item to player:', itemId);
+          Game.addItemToOfferings(itemId);
+          UI.renderOfferings(Game)
+          Game.save();
+          const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
+          if (el) {
+            UI.animateItemTransferFromCharacter(el);
           }
-          if (success) {
-            console.log('Successfully gave item:', itemId);
-          } else {
-            console.log('Failed to give item:', itemId);
-          }
+          console.log('Successfully gave item:', itemId);
         });
       };
     }, timeout);
@@ -235,46 +261,42 @@ document.addEventListener('DOMContentLoaded', function () {
     let faded = '';
 
     if (sender === 'bot') {
-      // Use the global flag 'g' to find all JSON-like strings
-      const jsonMatches = text.match(/\{[^}]*\}/g);
 
-      if (jsonMatches && jsonMatches.length > 0) {
-        const mergedObj = {};
+      // look for 'TRADE'
+      const tradeMatch = text.match(/TRADE/g);
+      if (tradeMatch) {
 
         try {
-          // 1. Parse each JSON string and merge it into a single object
-          jsonMatches.forEach(jsonString => {
-            const parsedObj = JSON.parse(jsonString);
+          console.log('Found TRADE keyword');
+          faded = `<div style="color:#bbb;font-size:0.8em;margin-top:4px;">${tradeMatch.join(' ')}</div>`;
 
-            // Merge properties, specifically concatenating arrays for 'give' and 'take'
-            // identical list elements overwrite each other
-            for (const key in parsedObj) {
-              if (Array.isArray(parsedObj[key])) {
-                if (!mergedObj[key]) {
-                  mergedObj[key] = [];
-                }
-                mergedObj[key] = Array.from(new Set([...mergedObj[key], ...parsedObj[key]]));
-              } else {
-                mergedObj[key] = parsedObj[key];
+          // find the matching trade object in the selected character's trades
+          // we need to look at what is in the offerings and match it to a trade
+          // then we need to apply that trade
+          let tradeObj = { take: [], give: [] };
+
+          let offering = Game.State.currentOfferings[0];
+
+          const selectedCharacter = Game.State.selectedCharacter;
+          if (selectedCharacter) {
+            const char = Game.State.characterData[selectedCharacter];
+            char.trades.forEach(trade => {
+
+              const offeringInGive = trade.give.length > 0 && trade.give.includes(offering);
+              const offeringInTake = trade.take.length > 0 && trade.take.includes(offering);
+
+              if (offeringInGive || offeringInTake) {
+                tradeObj = trade;
               }
-            }
-          });
-
-          // 2. Remove all found JSON strings from the display text
-          jsonMatches.forEach(jsonString => {
-            text = text.replace(jsonString, '').trim();
-          });
-
-          // Display all merged JSON objects in the faded text
-          faded = `<div style="color:#bbb;font-size:0.8em;margin-top:4px;">${jsonMatches.join(' ')}</div>`;
-
-          // 3. Apply the final, merged JSON object to the game state
-          applyJSONResponse(mergedObj);
-
+            });
+          }
+          console.log('Applying trade object:', tradeObj);
+          applyJSONResponse(tradeObj);
         } catch (e) {
           console.error('Failed to parse one or more JSON objects from bot message:', e);
         }
       }
+
     } else {
       Game.State.chatMessages = [];
       let offerMatch = text.match(/(\[OFFER: [^\]]+\])/g);
@@ -334,27 +356,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const selectedCharacter = Game.State.selectedCharacter;
       Game.State.chatOpen = true;
       const char = Game.State.characterData[selectedCharacter];
-      let inventoryList = char.items.length > 0 ? char.items.join(', ') : '--none--';
-      let wantedList = char.wants.length > 0 ? char.wants.join(', ') : '--none--';
-      // --- begin system prompt ---
-      let system_prompt = `${rules}
 
-// -- Your Current Location--
-${Game.State.locationData[Game.State.currentLocation].name}
-${Game.State.locationData[Game.State.currentLocation].description}
+      console.log('Selected character for chat:', char);
+      const system_prompt = Game.currentSystemPrompt(char);
 
-// -- Character Details --
-Name: ${char.name}
-Personality:
-${char.personality}
-
-// ----- Desired Items ----
-${wantedList}
-
-// ----- Your Inventory ----
-${inventoryList}
-`;
-      // --- end system prompt ---
       try {
         const resetResp = await axios.post(`http://${window.location.hostname}:${window.location.port}/api/reset`, {
           system_prompt: system_prompt

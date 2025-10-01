@@ -8,6 +8,10 @@ body {
     /* Prevent body scrollbars */
     color: black;
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Show not-allowed cursor when dragging over input fields */
@@ -125,6 +129,7 @@ body {
 
 
 .backpack-item {
+    position: relative;
     width: 48px;
     height: 48px;
     display: flex;

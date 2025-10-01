@@ -113,14 +113,15 @@ def api_mode(adapter_path):
         return resp
 
     model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
+    # model_id = "MistralAI/mistral-7b-instruct-v0.2"
 
     if adapter_path:
         logging.info(
-            f"Loading adapter from '{adapter_path}' onto meta-llama base model"
+            f"Loading adapter from '{adapter_path}' onto {model_id} base model"
         )
     else:
         logging.info(
-            "No adapter specified -- loading meta-llama base model only"
+            f"No adapter specified -- loading {model_id} base model only"
         )
 
     tokenizer, pipe = initialize_model_and_tokenizer(
@@ -273,5 +274,8 @@ if __name__ == "__main__":
     import sys
 
     # eg param: "weights/lora_r32" will loads the trained weights from that folder
-    arg = sys.argv[1] if len(sys.argv) > 1 else None
+    default_adapter_path = "weights/best__"
+    if not os.path.exists(default_adapter_path):
+        default_adapter_path = None
+    arg = sys.argv[1] if len(sys.argv) > 1 else default_adapter_path
     api_mode(arg)

@@ -18,8 +18,8 @@ export const UI = {
             div.className = 'backpack-item';
             div.setAttribute('draggable', 'true');
             div.setAttribute('data-item', itemId);
-            div.setAttribute('title', item.name);
-            div.textContent = item.name;
+            div.setAttribute('title', item);
+            div.textContent = item;
             this.backpackDiv.appendChild(div);
         });
     },
@@ -34,8 +34,8 @@ export const UI = {
             div.className = 'backpack-item';
             div.setAttribute('draggable', 'true');
             div.setAttribute('data-item', itemId);
-            div.setAttribute('title', item.name);
-            div.textContent = item.name;
+            div.setAttribute('title', item);
+            div.textContent = item;
             this.itemsListDiv.appendChild(div);
         });
     },
@@ -50,8 +50,8 @@ export const UI = {
             div.className = 'backpack-item';
             div.setAttribute('draggable', 'true');
             div.setAttribute('data-item', itemId);
-            div.setAttribute('title', item.name);
-            div.textContent = item.name;
+            div.setAttribute('title', item);
+            div.textContent = item;
             this.offeringsDiv.appendChild(div);
         });
     },
@@ -218,15 +218,16 @@ export const UI = {
         const startRect = startEl.getBoundingClientRect();
         const endRect = el.getBoundingClientRect();
 
+        console.log('Animating item transfer from character:', { el, startEl, startRect, endRect });
+
         // 3. Calculate the distance to travel
         const deltaX = endRect.left + (endRect.width / 2) - (startRect.left + startRect.width / 2);
         const deltaY = endRect.top + (endRect.height / 2) - (startRect.top + startRect.height / 2);
 
-        // 4. Define the animation keyframes. Starts from its current position.
         const keyframes = [
-            { transform: 'translate(0, 0) scale(0.2)', opacity: 0 },
-            { transform: `translate(${deltaX / 2}px, ${deltaY / 2 - 50}px) scale(1.2)`, opacity: 1, offset: 0.5 },
-            { transform: `translate(${deltaX}px, ${deltaY}px) scale(1)`, opacity: 1 }
+            { transform: `translate(${-deltaX}px, ${-deltaY}px) scale(0.2)`, opacity: 0 },
+            { transform: `translate(${-deltaX / 2}px, ${-deltaY / 2 - 50}px) scale(1.2)`, opacity: 1, offset: 0.5 },
+            { transform: `translate(0,0) scale(1)`, opacity: 1 }
         ];
 
         // 5. Define animation options

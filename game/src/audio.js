@@ -39,7 +39,7 @@ export const Audio = {
     },
 
     playNiceEncounterStart: function () {
-        this._playSound(400, 0.5, 'square'); // Medium pitch, longer
+        this._playSound(400, 0.5, 'sine'); // Medium pitch, longer
     },
 
     playEvilEncounterStart: function () {
