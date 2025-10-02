@@ -157,45 +157,16 @@ ${rules}`;
 };
 
 
-function showIntroductionScreen() {
-  // Create overlay div
-  const introDiv = document.querySelector('#introduction-screen');
-
-  const introText = document.querySelector('#intro-text');
-  introText.innerHTML = Game.State.introductionText;
-
-  // Avatar selection
-  const avatarOptions = Game.State.avatarOptions;
-  const avatarRow = document.querySelector('#avatar-row');
-
-  avatarRow.querySelectorAll('.avatar-box').forEach(avatarBox => {
-    console.log('for existing avatar box:', avatarBox);
-
-    avatarBox.onmouseenter = () => avatarBox.style.borderColor = '#2a9d8f';
-    avatarBox.onmouseleave = () => avatarBox.style.borderColor = '#444';
-    avatarBox.onclick = () => {
-      const filename = avatarBox.querySelector('img').src.split('/').pop();
-      console.log('Avatar selected:', avatarBox, introDiv);
-      Game.State.playerAvatar = `/characters/${filename}`;
-      document.getElementById('player-avatar').innerHTML = `<img src='/characters/${filename}' class='image-fluid'>`;
-      introDiv.remove();
-      UI.renderAll(Game);
-    };
-  });
-
-}
-
 document.addEventListener('DOMContentLoaded', function () {
 
   Game.load(InitialWorld);
 
   if (Game.State.playerAvatar === null) {
-    showIntroductionScreen();
+    UI.showIntroductionScreen(Game);
     Game.save();
   }
   else {
-    const introDiv = document.querySelector('#introduction-screen');
-    introDiv.remove();
+    UI.hideIntroductionScreen(Game);
   }
 
   UI.initDOM(Game);
@@ -203,62 +174,36 @@ document.addEventListener('DOMContentLoaded', function () {
   UI.setupEventListeners(Game);
 
   function applyJSONResponse(obj) {
-    const characterData = Game.State.characterData;
     const selectedCharacter = Game.State.selectedCharacter;
-    let success = false;
-    console.log('AI JSON response', obj);
-    console.log('Selected character:', selectedCharacter);
     if (!selectedCharacter) return;
 
-    // Handle 'take' (add to character.items)
+    console.log('Applying JSON response for trade:', obj);
+
+    // This happens immediately, before the animation starts.
     if (Array.isArray(obj.take)) {
       obj.take.forEach(itemId => {
-        console.log('Processing take item:', itemId);
-        console.log('Selected character before take:', characterData[selectedCharacter]);
-        let success = false;
-        const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
-        if (el) {
-          Game.removeTradeFromCandidates(selectedCharacter, itemId);
-          Game.save();
-          UI.animateItemTransferToCharacter(el, () => {
-            UI.renderOfferings(Game);
-          });
-          success = true;
-        }
-        if (success) {
-          console.log('Successfully took item:', itemId);
-        } else {
-          console.log('Failed to take item:', itemId);
-        }
+        Game.removeItemFromOfferings(itemId);
+        Game.removeTradeFromCandidates(selectedCharacter, itemId);
       });
     }
 
-    let timeout = 0;
-    if (success == true) timeout = 620;
-
-    setTimeout(() => {
-      // Handle 'give' (remove from character.items)
+    UI.performTradeAnimation(Game, obj, () => {
+      // This code runs once all animations have finished.
       if (Array.isArray(obj.give)) {
         obj.give.forEach(itemId => {
-          console.log('Processing give item:', itemId);
-          let success = false;
-          console.log('Giving item to player:', itemId);
           Game.addItemToOfferings(itemId);
-          UI.renderOfferings(Game)
-          Game.save();
-          const el = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
-          if (el) {
-            UI.animateItemTransferFromCharacter(el);
-          }
-          console.log('Successfully gave item:', itemId);
         });
-      };
-    }, timeout);
+        UI.renderOfferings(Game);
+      }
+
+      Game.save();
+      console.log('Trade animation complete. Game saved.');
+    });
   }
 
   function addMessageToState(text, sender) {
     if (!Game.State.chatMessages) Game.State.chatMessages = [];
-    let faded = '';
+    let metaText = '';
 
     if (sender === 'bot') {
 
@@ -268,30 +213,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
           console.log('Found TRADE keyword');
-          faded = `<div style="color:#bbb;font-size:0.8em;margin-top:4px;">${tradeMatch.join(' ')}</div>`;
-
-          // find the matching trade object in the selected character's trades
-          // we need to look at what is in the offerings and match it to a trade
-          // then we need to apply that trade
-          let tradeObj = { take: [], give: [] };
-
+          metaText = 'TRADE';
           let offering = Game.State.currentOfferings[0];
 
           const selectedCharacter = Game.State.selectedCharacter;
           if (selectedCharacter) {
             const char = Game.State.characterData[selectedCharacter];
             char.trades.forEach(trade => {
-
-              const offeringInGive = trade.give.length > 0 && trade.give.includes(offering);
               const offeringInTake = trade.take.length > 0 && trade.take.includes(offering);
+              if (offeringInTake) {
+                // we have a match, apply the trade
+                console.log('Applying trade object:', trade);
+                applyJSONResponse(trade);
 
-              if (offeringInGive || offeringInTake) {
-                tradeObj = trade;
+                if (trade && trade.new_goal) {
+                  char.ai_personality.goal = trade.new_goal;
+                  console.log(`${char.name}'s new goal is: ${trade.new_goal}`);
+                  Game.save();
+                }
+              }
+              else {
+                console.log('No matching trade found for offering:', offering);
               }
             });
           }
-          console.log('Applying trade object:', tradeObj);
-          applyJSONResponse(tradeObj);
         } catch (e) {
           console.error('Failed to parse one or more JSON objects from bot message:', e);
         }
@@ -301,14 +246,14 @@ document.addEventListener('DOMContentLoaded', function () {
       Game.State.chatMessages = [];
       let offerMatch = text.match(/(\[OFFER: [^\]]+\])/g);
       if (offerMatch) {
-        faded = `<div style="color:#bbb;font-size:0.8em;margin-top:4px;">${offerMatch.join(' ')}</div>`;
+        metaText = offerMatch.join(' ');
         offerMatch.forEach(str => {
           text = text.replace(str, '').trim();
         });
       }
     }
 
-    Game.State.chatMessages.push({ sender, text, faded });
+    Game.State.chatMessages.push({ sender, text, metaText });
     Game.save();
   }
 

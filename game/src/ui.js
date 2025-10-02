@@ -162,7 +162,12 @@ export const UI = {
         game.State.chatMessages.forEach(msg => {
             const msgDiv = document.createElement('div');
             msgDiv.className = `message ${msg.sender} animate__animated animate__fadeInUp`;
-            msgDiv.innerHTML = `<span>${msg.text}</span>${msg.faded}`;
+
+            let innerHTML = `<span>${msg.text}</span>`;
+            if (msg.metaText) {
+                innerHTML += `<div style="color:#bbb;font-size:0.8em;margin-top:4px;">${msg.metaText}</div>`;
+            }
+            msgDiv.innerHTML = innerHTML;
             UI.chatMessagesDiv.appendChild(msgDiv);
         });
     },
@@ -245,6 +250,71 @@ export const UI = {
             oncomplete && oncomplete();
         });
     },
+
+    performTradeAnimation(game, tradeObj, onComplete) {
+        // 1. Handle items the character takes from the player
+        if (Array.isArray(tradeObj.take)) {
+            tradeObj.take.forEach(itemId => {
+                const el = this.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
+                if (el) {
+                    // Animate the element, then remove it from the DOM
+                    this.animateItemTransferToCharacter(el, () => {
+                        this.renderOfferings(game);
+                    });
+                }
+            });
+        }
+
+        // Delay giving items to the player until the 'take' animation is done
+        const animationDelay = (tradeObj.take && tradeObj.take.length > 0) ? 620 : 0;
+
+        setTimeout(() => {
+            // 2. Handle items the character gives to the player
+            if (Array.isArray(tradeObj.give)) {
+                tradeObj.give.forEach(itemId => {
+                    const el = this.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
+                    if (el) {
+                        this.animateItemTransferFromCharacter(el);
+                    }
+                });
+            }
+            if (onComplete) onComplete();
+        }, animationDelay);
+    },
+
+    hideIntroductionScreen() {
+        const introDiv = document.querySelector('#introduction-screen');
+        introDiv.remove();
+    },
+
+    showIntroductionScreen(game) {
+        // Create overlay div
+        const introDiv = document.querySelector('#introduction-screen');
+
+        const introText = document.querySelector('#intro-text');
+        introText.innerHTML = game.State.introductionText;
+
+        // Avatar selection
+        const avatarOptions = game.State.avatarOptions;
+        const avatarRow = document.querySelector('#avatar-row');
+
+        avatarRow.querySelectorAll('.avatar-box').forEach(avatarBox => {
+            console.log('for existing avatar box:', avatarBox);
+
+            avatarBox.onmouseenter = () => avatarBox.style.borderColor = '#2a9d8f';
+            avatarBox.onmouseleave = () => avatarBox.style.borderColor = '#444';
+            avatarBox.onclick = () => {
+                const filename = avatarBox.querySelector('img').src.split('/').pop();
+                console.log('Avatar selected:', avatarBox, introDiv);
+                game.State.playerAvatar = `/characters/${filename}`;
+                document.getElementById('player-avatar').innerHTML = `<img src='/characters/${filename}' class='image-fluid'>`;
+                introDiv.remove();
+                UI.renderAll(game);
+            };
+        });
+
+    },
+
 
 
     setupDragAndDrop(game) {
