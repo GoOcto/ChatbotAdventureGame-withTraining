@@ -1,0 +1,1 @@
+This is a ghood starting point for build a robust training tool. This quick and ready version is buggy and needs work.
