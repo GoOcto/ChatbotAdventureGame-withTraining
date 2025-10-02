@@ -104,7 +104,7 @@ def main(args):
         output_dir=args.output_dir,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.batch_size,
-        gradient_accumulation_steps=2,
+        gradient_accumulation_steps=1,
         optim="paged_adamw_32bit",
         learning_rate=args.learning_rate,
         weight_decay=0.001,
@@ -115,9 +115,9 @@ def main(args):
         warmup_ratio=0.03,
         group_by_length=True,
         lr_scheduler_type=args.lr_scheduler_type,
-        logging_steps=25,
-        save_steps=50,
-        save_total_limit=2,
+        logging_steps=10,
+        save_steps=10,
+        save_total_limit=10,
         report_to="tensorboard",
     )
     print("Training arguments configured.")
