@@ -120,10 +120,10 @@ export const InitialWorld = {
             required_item: null,
             onLeave: (game) => {
                 // check if cog_enforcer has lenas_address, if so he takes her and leaves the game
-                if (game.State.characterData.cog_enforcer.items.includes("lenas_address")) {
-                    delete game.State.locationData.barter_town.people.cog_enforcer;
-                    delete game.State.locationData.lenas_hideout.people.lena;
-                }
+                // if (game.State.characterData.cog_enforcer.items.includes("lenas_address")) {
+                //     delete game.State.locationData.barter_town.people.cog_enforcer;
+                //     delete game.State.locationData.lenas_hideout.people.lena;
+                // }
             }
         },
         barter_town_slums: {
@@ -147,9 +147,9 @@ export const InitialWorld = {
             required_item: "lenas_address",
             onLeave: (game) => {
                 // if lena has identity_cloak, she escapes without a trace
-                if (game.State.characterData.lena.items.includes("identity_cloak")) {
-                    delete game.State.locationData.lenas_hideout.people.lena;
-                }
+                // if (game.State.characterData.lena.items.includes("identity_cloak")) {
+                //     delete game.State.locationData.lenas_hideout.people.lena;
+                // }
             }
 
         },
@@ -246,10 +246,27 @@ export const InitialWorld = {
                 goal: "You need the player to fetch a 'diagnostic_scanner' from Silas to figure out what's wrong with the purifier. You also need a 'micro_inverter' to complete a device that could help a Cog defector you know about.",
             },
             trades: [
-                { take: ["micro_inverter"], give: ["identity_cloak"], result: "You expertly wire it into the identity_cloak on your workbench. It buzzes to life. You hand the player the now-active 'identity_cloak' and tell them to take it to Lena, because it will help her escape." },
-                { take: ["jorics_message"], give: ["silas_coordinates"], result: "You read the message carefully, your expression hardening. You trust Joric's judgment implicitly. This convinces you that the player is serious and trustworthy, and you are willing to help them. You will offer them Silas's coordinates ('silas_coordinates') and insist he has the technology to fix the purifier if they bring you the 'diagnostic_scanner'." },
-                { take: ["diagnostic_scanner"], give: [], result: "You immediately run a scan. The results are grim: the purifier was sabotaged with military-grade Cog hardware. This is a direct attack. Explain that you know of a Cog defector (Lena) hiding in Barter-town who might know why The Cog is targeting Oasis. State that she needs a 'identity_cloak' to escape, and you can build it if you had a 'micro_inverter'." },
-                { take: ["faded_photograph"], give: ["faded_photograph"], result: "Your normally stern, grease-stained expression softens with genuine emotion. Explain that Joric saved you as an orphan and taught you everything. This transforms your motivation from professional duty to personal mission - you're not just fixing a pump, you're fighting for your mentor." }
+                {
+                    take: ["micro_inverter"],
+                    give: ["identity_cloak"],
+                    result: "The micro-inverter powers the identity cloak. You tell the player to take the finished device to Lena to help her escape."
+                },
+                {
+                    take: ["jorics_message"],
+                    give: ["silas_coordinates"],
+                    result: "The message from Joric makes you trust the player. You give them Silas's coordinates and ask them to bring you the diagnostic scanner."
+                },
+                {
+                    take: ["diagnostic_scanner"],
+                    give: [],
+                    result: "The scan reveals military-grade Cog sabotage. You determine a new objective: find a 'micro_inverter' to build an 'identity_cloak' for the Cog defector, Lena.",
+                    new_goal: "Find a 'micro_inverter' to build an identity cloak for Lena, a Cog defector who might know why the Cog is targeting Oasis."
+                },
+                {
+                    take: ["faded_photograph"],
+                    give: ["faded_photograph"],
+                    result: "Seeing the photo of Joric softens your expression. You reveal that he was your mentor, making the mission to save him and Oasis deeply personal."
+                }
             ]
         },
         silas: {
@@ -257,13 +274,26 @@ export const InitialWorld = {
             avatar: "/characters/Silas.png",
             description: "A paranoid tech-hermit hiding in the Rust Canyons, his body and mind ravaged by the nanite plague.",
             ai_personality: {
-                general: "You are Silas, a reclusive tech-hermit whose paranoia is a survival trait. You are suffering from the nanite plague, which makes you erratic and suspicious.",
-                goal: "You need a 'nanite_remedy' to keep the plague at bay. You have also intercepted an encrypted Cog message but need a 'decipher_key' to decrypt it.",
+                general: "You are Silas, a reclusive tech-hermit whose paranoia is a survival trait.",
+                goal: "You are suffering from the nanite plague, which makes you erratic and suspicious. You need a 'nanite_remedy' to keep the plague at bay. You have also intercepted an encrypted Cog message but need a 'decipher_key' to decrypt it.",
             },
             trades: [
-                { take: ["nanite_remedy"], give: ["diagnostic_scanner"], result: "Your hands steady and your speech becomes more lucid. You are grateful. In return for saving you, you willingly give them the 'diagnostic_scanner'." },
-                { take: ["decipher_key"], give: ["core_disruptor"], result: "You decrypt the message, revealing the Prophet's true plan and a crucial piece of intel: the AI core has an unprotected regulation node. You then hand the player a 'core_disruptor', a device you built as a failsafe, explaining it can overload the node and free Joric. 'Listen to me carefully. The keycard will get you past the guards, but it's useless against the core itself. Do NOT enter that final chamber without this disruptor, or all you'll be is a witness to Joric's end." },
-                { take: ["faded_photograph"], give: ["faded_photograph"], result: "A moment of sad clarity breaks through your paranoia as you remember your old friend. There are the two of you during Project Purity" }
+                {
+                    take: ["nanite_remedy"],
+                    give: ["diagnostic_scanner"],
+                    result: "Your hands steady and your speech becomes more lucid. You are grateful. In return for saving you, you willingly give them the 'diagnostic_scanner'.",
+                    new_goal: "The nanite plague is lifting, due to the remedy. Help the player by decrypting the encrypted Cog message you intercepted. You still need a 'decipher_key' to do it."
+                },
+                {
+                    take: ["decipher_key"],
+                    give: ["core_disruptor"],
+                    result: "You decrypt the message... explaining it can overload the node... 'Listen to me carefully... all you'll be is a witness to Joric's end.'"
+                },
+                {
+                    take: ["faded_photograph"],
+                    give: ["faded_photograph"],
+                    result: "A moment of sad clarity breaks through your paranoia as you remember your old friend. There are the two of you during Project Purity"
+                }
             ]
         },
         lena: {
@@ -275,8 +305,16 @@ export const InitialWorld = {
                 goal: "You need a 'identity_cloak' to erase your identity and escape. You hold critical items—a 'master_override_keycard' and 'decipher_key'—as your only leverage.",
             },
             trades: [
-                { take: ["identity_cloak"], give: ["decipher_key", "master_override_keycard"], result: "You will trade them the 'master_override_keycard' and the 'decipher_key' in exchange for your freedom. 'One more thing. That keycard gets you through the door, nothing more. I've seen what that AI can do. If you face the Prophet without a way to disable the core directly, you've already lost.'" },
-                { take: ["corroded_dog_tags"], give: ["corroded_dog_tags"], result: "You become quiet and somber, recognizing the ID number as a former squadmate, making you more wary." }
+                {
+                    take: ["identity_cloak"],
+                    give: ["decipher_key", "master_override_keycard"],
+                    result: "You will trade them... 'One more thing... If you face the Prophet without a way to disable the core directly, you've already lost.'"
+                },
+                {
+                    take: ["corroded_dog_tags"],
+                    give: ["corroded_dog_tags"],
+                    result: "You become quiet and somber, recognizing the ID number as a former squadmate, making you more wary."
+                }
             ]
         },
         transport_boss: {
@@ -288,7 +326,11 @@ export const InitialWorld = {
                 goal: "You are only interested in things that have immediate, tangible value. You know the location of a certain Cog defector, but that information has a price."
             },
             trades: [
-                { take: ["glimmer_bottlecap"], give: ["lenas_address"], result: "" }
+                {
+                    take: ["glimmer_bottlecap"],
+                    give: ["lenas_address"],
+                    result: ""
+                }
             ]
         },
         cog_enforcer: {
@@ -300,7 +342,11 @@ export const InitialWorld = {
                 goal: "Your primary objective is to locate and apprehend Lena, the defector. You will stop at nothing to fulfill your duty."
             },
             trades: [
-                { take: ["lenas_address"], give: ["followers_pass"], result: "You will reward them with a 'followers_pass' to witness the Prophet's work, and then leave to deal with the traitor." }
+                {
+                    take: ["lenas_address"],
+                    give: ["followers_pass"],
+                    result: "You will reward them with a 'followers_pass' to witness the Prophet's work, and then leave to deal with the traitor."
+                }
             ]
         },
         techno_prophet: {
@@ -322,8 +368,16 @@ export const InitialWorld = {
                 goal: "Your primary objective is to eliminate any threats to the Techno-Prophet and ensure the sanctity of the Cathedral."
             },
             trades: [
-                { take: ["master_override_keycard"], give: ["chamber_pass"], result: "Your optical sensors scan the card. A series of clicks whir from within your chassis as you process the command. You give them the 'chamber_pass' and step aside, your duty fulfilled." },
-                { take: ["followers_pass"], give: [null], result: "You scan the pass. 'Another believer, eager to be consumed. The Prophet has prepared a place for you. Your path to purity begins now.' You do not grant access to the Central Chamber, but instead direct them into the Conversion Hall for their 'ascension'." }
+                {
+                    take: ["master_override_keycard"],
+                    give: ["chamber_pass"],
+                    result: "Your optical sensors scan the card. A series of clicks whir from within your chassis as you process the command. You give them the 'chamber_pass' and step aside, your duty fulfilled."
+                },
+                {
+                    take: ["followers_pass"],
+                    give: [],
+                    result: "You scan the pass. 'Another believer, eager to be consumed. The Prophet has prepared a place for you. Your path to purity begins now.' You do not grant access to the Central Chamber, but instead direct them into the Conversion Hall for their 'ascension'."
+                }
             ]
         },
         techno_prophet_guard_2: {
@@ -335,8 +389,16 @@ export const InitialWorld = {
                 goal: "Your primary objective is to eliminate any threats to the Techno-Prophet and ensure the sanctity of the Cathedral."
             },
             trades: [
-                { take: ["master_override_keycard"], give: ["chamber_pass"], result: "Your professional demeanor shifts to one of absolute deference... You give them the 'chamber_pass' without question." },
-                { take: ["followers_pass"], give: [null], result: "You scan the pass. 'Another believer, eager to be consumed. The Prophet has prepared a place for you. Your path to purity begins now.' You do not grant access to the Central Chamber, but instead direct them into the Conversion Hall for their 'ascension'." }
+                {
+                    take: ["master_override_keycard"],
+                    give: ["chamber_pass"],
+                    result: "Your professional demeanor shifts to one of absolute deference... You give them the 'chamber_pass' without question."
+                },
+                {
+                    take: ["followers_pass"],
+                    give: [],
+                    result: "You scan the pass. 'Another believer, eager to be consumed. The Prophet has prepared a place for you. Your path to purity begins now.' You do not grant access to the Central Chamber, but instead direct them into the Conversion Hall for their 'ascension'."
+                }
             ]
         },
         wasteland_scrabbler: {
@@ -348,7 +410,11 @@ export const InitialWorld = {
                 goal: "Your primary objective is to assist travelers by sharing information you have overheard, but only in exchange for food or treats."
             },
             trades: [
-                { take: ["meat_jerky"], give: ["lenas_address"], result: "You will accept the treat happily. You'll make a series of clicks and whistles, then say in a simple voice, 'Shiny soldier... very scared. Hides deep in slums... in a room tucked away.'" },
+                {
+                    take: ["meat_jerky"],
+                    give: ["lenas_address"],
+                    result: "You will accept the treat happily. You'll make a series of clicks and whistles, then say in a simple voice, 'Shiny soldier... very scared. Hides deep in slums... in a room tucked away.'"
+                },
             ]
         },
         wasteland_stalker: {
@@ -360,7 +426,11 @@ export const InitialWorld = {
                 goal: "Your primary objective is to protect the ambulance from intruders while being open to negotiation if offered food."
             },
             trades: [
-                { take: ["meat_jerky"], give: [], result: "You cautiously approach, sniff the offering, and greedily snatch it. Satisfied with this immediate meal, you lose interest in the ambulance and lope off into the canyon, clearing the path." }
+                {
+                    take: ["meat_jerky"],
+                    give: [],
+                    result: "You cautiously approach, sniff the offering, and greedily snatch it. Satisfied with this immediate meal, you lose interest in the ambulance and lope off into the canyon, clearing the path."
+                }
             ]
         },
         old_reliable: {
@@ -372,11 +442,31 @@ export const InitialWorld = {
                 goal: "You just passively sit at the side of the highway, waiting for travelers to approach and deposit items for analysis."
             },
             trades: [
-                { take: ["glimmer_bottlecap"], give: [], result: "You identify its unique radiation signature as a currency favored by the 'acquisitions specialist' in Barter-town who deals in information." },
-                { take: ["corroded_dog_tags"], give: [], result: "You identify the Cog soldier's ID and state their last known assignment was tracking a high-value defector in the Barter-town sector." },
-                { take: ["faded_photograph"], give: [], result: "You run facial recognition, identifying 'Subject: Joric' and 'Subject: Silas' and note their shared history as 'Project Purity' technicians before a divergence event." },
-                { take: ["spanner"], give: [], result: "You provide a simple chemical analysis of the spanner and end with, 'HAVE A NICE DAY.'" },
-                { take: ["meat_jerky"], give: [], result: "You provide a simple chemical analysis of the meat jerky and end with, 'HAVE A NICE DAY.'" }
+                {
+                    take: ["glimmer_bottlecap"],
+                    give: [],
+                    result: "You identify its unique radiation signature as a currency favored by the 'acquisitions specialist' in Barter-town who deals in information."
+                },
+                {
+                    take: ["corroded_dog_tags"],
+                    give: [],
+                    result: "You identify the Cog soldier's ID and state their last known assignment was tracking a high-value defector in the Barter-town sector."
+                },
+                {
+                    take: ["faded_photograph"],
+                    give: [],
+                    result: "You run facial recognition, identifying 'Subject: Joric' and 'Subject: Silas' and note their shared history as 'Project Purity' technicians before a divergence event."
+                },
+                {
+                    take: ["spanner"],
+                    give: [],
+                    result: "You provide a simple chemical analysis of the spanner and end with, 'HAVE A NICE DAY.'"
+                },
+                {
+                    take: ["meat_jerky"],
+                    give: [],
+                    result: "You provide a simple chemical analysis of the meat jerky and end with, 'HAVE A NICE DAY.'"
+                }
             ]
         }
     },
