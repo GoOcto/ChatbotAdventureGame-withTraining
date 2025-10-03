@@ -1,22 +1,23 @@
 import argparse
 import glob
-import os
 import json
+import os
 
 import torch
 from datasets import load_dataset
 from dotenv import load_dotenv
 from huggingface_hub import login as hflogin
 from peft import LoraConfig, get_peft_model
+from torch.utils.tensorboard import SummaryWriter
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
     BitsAndBytesConfig,
+    EarlyStoppingCallback,
     TrainingArguments,
     set_seed,
 )
 from trl import SFTTrainer
-from torch.utils.tensorboard import SummaryWriter
 
 load_dotenv()
 hflogin(os.getenv("HUGGINGFACE_KEY"))
@@ -107,7 +108,9 @@ def main(args):
     dataset = load_dataset("json", data_files=data_files, split="train")
     eval_dataset = None
     if args.val_ratio and args.val_ratio > 0.0:
-        split = dataset.train_test_split(test_size=args.val_ratio, seed=args.seed)
+        split = dataset.train_test_split(
+            test_size=args.val_ratio, seed=args.seed
+        )
         dataset, eval_dataset = split["train"], split["test"]
 
     # data_files = os.path.join(args.dataset_path, "**", "*.json")
@@ -148,8 +151,8 @@ def main(args):
     # --- 5. Configure LoRA ---
     # These settings are standard for QLoRA fine-tuning
     peft_config = LoraConfig(
-        lora_alpha=args.lora_rank * 2,
-        lora_dropout=0.1,
+        lora_alpha=int(args.lora_rank * args.lora_alpha_scale),
+        lora_dropout=args.lora_dropout,
         r=args.lora_rank,
         bias="none",
         task_type="CAUSAL_LM",
@@ -174,27 +177,45 @@ def main(args):
         run_name=run_name,
         logging_dir=os.path.join(args.output_dir, "tb"),
         seed=args.seed,
-        evaluation_strategy="epoch" if eval_dataset is not None else "no",
-        save_strategy="epoch" if eval_dataset is not None else "steps",
+        evaluation_strategy=(
+            args.eval_strategy if eval_dataset is not None else "no"
+        ),
+        save_strategy=(
+            args.eval_strategy if eval_dataset is not None else "steps"
+        ),
         load_best_model_at_end=True if eval_dataset is not None else False,
         metric_for_best_model="eval_loss" if eval_dataset is not None else None,
         greater_is_better=False if eval_dataset is not None else None,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.batch_size,
-        gradient_accumulation_steps=1,
+        gradient_accumulation_steps=args.grad_accum,
         optim="paged_adamw_32bit",
         learning_rate=args.learning_rate,
-        weight_decay=0.001,
+        weight_decay=args.weight_decay,
         fp16=False,
         bf16=True,  # Use bfloat16 for better performance on modern GPUs
         max_grad_norm=0.3,
         max_steps=-1,
-        warmup_ratio=0.03,
+        warmup_ratio=args.warmup_ratio,
         group_by_length=True,
         lr_scheduler_type=args.lr_scheduler_type,
-        logging_steps=5,
-        save_steps=20,
-        save_total_limit=None,  # Disable limit to keep all checkpoints
+        adam_beta2=args.adam_beta2,
+        gradient_checkpointing=args.gradient_checkpointing,
+        label_smoothing_factor=args.label_smoothing,
+        logging_steps=(
+            max(5, args.eval_steps // 5) if eval_dataset is not None else 5
+        ),
+        eval_steps=(
+            args.eval_steps
+            if eval_dataset is not None and args.eval_strategy == "steps"
+            else None
+        ),
+        save_steps=(
+            args.eval_steps
+            if eval_dataset is not None and args.eval_strategy == "steps"
+            else 20
+        ),
+        save_total_limit=args.save_total_limit,
         report_to="tensorboard",
     )
     print("Training arguments configured.")
@@ -206,18 +227,28 @@ def main(args):
         train_dataset=dataset,
         eval_dataset=eval_dataset,
         peft_config=peft_config,
-        max_seq_length=512,  # Maximum sequence length for the model
+        max_seq_length=args.max_seq_len,  # Maximum sequence length for the model
         tokenizer=tokenizer,
         args=training_arguments,
-        packing=False,  # Packing can speed up training, but we'll disable for simplicity
+        packing=args.packing,  # Enable example packing to improve throughput on short samples
     )
     print("SFTTrainer initialized.")
 
     # --- 8. Start Training ---
     print("\n--- Starting LoRA Training ---")
+    # Optional Early Stopping
+    if eval_dataset is not None and args.early_stopping:
+        trainer.add_callback(
+            EarlyStoppingCallback(
+                early_stopping_patience=args.early_stopping_patience
+            )
+        )
+
     if resume_from_checkpoint:
         print(f"Resuming from checkpoint: {resume_from_checkpoint}")
-        train_output = trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+        train_output = trainer.train(
+            resume_from_checkpoint=resume_from_checkpoint
+        )
     else:
         train_output = trainer.train()
     print("--- Training Finished ---")
@@ -243,7 +274,9 @@ def main(args):
         # Pick a couple of representative metrics if available
         metric_dict = {
             "train/loss_final": float(metrics.get("train_loss", float("nan"))),
-            "train/steps": float(metrics.get("train_steps", trainer.state.global_step or 0)),
+            "train/steps": float(
+                metrics.get("train_steps", trainer.state.global_step or 0)
+            ),
         }
 
         # Ensure logging directory exists
@@ -254,7 +287,9 @@ def main(args):
         # HParams summary (requires at least one metric)
         writer.add_hparams(hparams, metric_dict)
         writer.close()
-        print(f"HParams logged to TensorBoard at {training_arguments.logging_dir}")
+        print(
+            f"HParams logged to TensorBoard at {training_arguments.logging_dir}"
+        )
     except Exception as e:
         print(f"Warning: failed to log hparams to TensorBoard: {e}")
 
@@ -294,13 +329,37 @@ if __name__ == "__main__":
         "--batch_size", type=int, default=2, help="Training batch size."
     )
     parser.add_argument(
+        "--grad_accum",
+        type=int,
+        default=1,
+        help="Gradient accumulation steps (increase for larger effective batch).",
+    )
+    parser.add_argument(
         "--lora_rank", type=int, default=16, help="LoRA rank (r)."
+    )
+    parser.add_argument(
+        "--lora_dropout",
+        type=float,
+        default=0.1,
+        help="LoRA dropout probability.",
+    )
+    parser.add_argument(
+        "--lora_alpha_scale",
+        type=float,
+        default=2.0,
+        help="Scale factor applied to lora_alpha = r * scale.",
     )
     parser.add_argument(
         "--lr_scheduler_type",
         type=str,
         default="constant",
         help="Learning rate scheduler type (e.g., 'constant', 'cosine').",
+    )
+    parser.add_argument(
+        "--warmup_ratio",
+        type=float,
+        default=0.03,
+        help="Warmup ratio for the learning rate scheduler.",
     )
     parser.add_argument(
         "--seed",
@@ -315,9 +374,73 @@ if __name__ == "__main__":
         help="Validation split ratio (0.0 disables validation).",
     )
     parser.add_argument(
+        "--eval_strategy",
+        type=str,
+        choices=["epoch", "steps"],
+        default="epoch",
+        help="How often to run evaluation/saving when validation is enabled.",
+    )
+    parser.add_argument(
+        "--eval_steps",
+        type=int,
+        default=100,
+        help="Evaluation/save steps when eval_strategy='steps'.",
+    )
+    parser.add_argument(
         "--auto_resume",
         action="store_true",
         help="Automatically resume from the latest checkpoint without prompting.",
+    )
+    parser.add_argument(
+        "--max_seq_len",
+        type=int,
+        default=512,
+        help="Maximum sequence length for training/evaluation.",
+    )
+    parser.add_argument(
+        "--packing",
+        action="store_true",
+        help="Enable example packing to better utilize sequence length.",
+    )
+    parser.add_argument(
+        "--gradient_checkpointing",
+        action="store_true",
+        help="Enable gradient checkpointing to trade compute for memory (allows longer sequences).",
+    )
+    parser.add_argument(
+        "--weight_decay",
+        type=float,
+        default=0.001,
+        help="Weight decay (L2 regularization).",
+    )
+    parser.add_argument(
+        "--adam_beta2",
+        type=float,
+        default=0.999,
+        help="Adam beta2 parameter.",
+    )
+    parser.add_argument(
+        "--label_smoothing",
+        type=float,
+        default=0.0,
+        help="Label smoothing factor for the loss (helps generalization).",
+    )
+    parser.add_argument(
+        "--early_stopping",
+        action="store_true",
+        help="Enable early stopping based on eval loss.",
+    )
+    parser.add_argument(
+        "--early_stopping_patience",
+        type=int,
+        default=3,
+        help="Number of evaluation rounds with no improvement before stopping.",
+    )
+    parser.add_argument(
+        "--save_total_limit",
+        type=int,
+        default=5,
+        help="Maximum number of checkpoints to keep.",
     )
 
     args = parser.parse_args()
