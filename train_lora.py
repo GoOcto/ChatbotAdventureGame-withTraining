@@ -105,6 +105,10 @@ def main(args):
     # Accept wildcards from the command line
     data_files = glob.glob(args.dataset_path)
     dataset = load_dataset("json", data_files=data_files, split="train")
+    eval_dataset = None
+    if args.val_ratio and args.val_ratio > 0.0:
+        split = dataset.train_test_split(test_size=args.val_ratio, seed=args.seed)
+        dataset, eval_dataset = split["train"], split["test"]
 
     # data_files = os.path.join(args.dataset_path, "**", "*.json")
     # dataset = load_dataset("json", data_files=data_files, split="train")
@@ -170,6 +174,11 @@ def main(args):
         run_name=run_name,
         logging_dir=os.path.join(args.output_dir, "tb"),
         seed=args.seed,
+        evaluation_strategy="epoch" if eval_dataset is not None else "no",
+        save_strategy="epoch" if eval_dataset is not None else "steps",
+        load_best_model_at_end=True if eval_dataset is not None else False,
+        metric_for_best_model="eval_loss" if eval_dataset is not None else None,
+        greater_is_better=False if eval_dataset is not None else None,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.batch_size,
         gradient_accumulation_steps=1,
@@ -195,6 +204,7 @@ def main(args):
     trainer = SFTTrainer(
         model=model,
         train_dataset=dataset,
+        eval_dataset=eval_dataset,
         peft_config=peft_config,
         max_seq_length=512,  # Maximum sequence length for the model
         tokenizer=tokenizer,
@@ -297,6 +307,12 @@ if __name__ == "__main__":
         type=int,
         default=42,
         help="Random seed for reproducibility.",
+    )
+    parser.add_argument(
+        "--val_ratio",
+        type=float,
+        default=0.1,
+        help="Validation split ratio (0.0 disables validation).",
     )
     parser.add_argument(
         "--auto_resume",

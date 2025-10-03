@@ -15,6 +15,7 @@ accelerate launch ../../train_lora.py \
     --lr_scheduler_type "cosine" \
     --batch_size 1 \
     --lora_rank 2 \
+    --val_ratio 0.1 \
     --output_dir "../../weights/run_05/rank02"
 
 accelerate launch ../../train_lora.py \
@@ -25,6 +26,7 @@ accelerate launch ../../train_lora.py \
     --lr_scheduler_type "cosine" \
     --batch_size 1 \
     --lora_rank 4 \
+    --val_ratio 0.1 \
     --output_dir "../../weights/run_05/rank04"
 
 accelerate launch ../../train_lora.py \
@@ -35,6 +37,7 @@ accelerate launch ../../train_lora.py \
     --lr_scheduler_type "cosine" \
     --batch_size 1 \
     --lora_rank 8 \
+    --val_ratio 0.1 \
     --output_dir "../../weights/run_05/rank08"
 
 accelerate launch ../../train_lora.py \
@@ -45,4 +48,5 @@ accelerate launch ../../train_lora.py \
     --lr_scheduler_type "cosine" \
     --batch_size 1 \
     --lora_rank 16 \
+    --val_ratio 0.1 \
     --output_dir "../../weights/run_05/rank16"

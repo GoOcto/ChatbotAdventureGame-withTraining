@@ -12,4 +12,5 @@ accelerate launch ../../train_lora.py \
     --lr_scheduler_type "cosine" \
     --batch_size 1 \
     --lora_rank 8 \
+    --val_ratio 0.1 \
     --output_dir "../../weights/run_01"
