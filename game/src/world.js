@@ -259,7 +259,7 @@ export const InitialWorld = {
                 {
                     take: ["diagnostic_scanner"],
                     give: [],
-                    result: "The scan reveals military-grade Cog sabotage. You determine a new objective: find a 'micro_inverter' to build an 'identity_cloak' for the Cog defector, Lena.",
+                    result: "It's worse than I thought. The scan shows a Cog logic bomb... they're trying to infect the water supply with nanites. This isn't just sabotage, it's an execution. I can't fix this alone. I need a micro-inverter to finish the cloak for the defector. Now!",
                     new_goal: "Find a 'micro_inverter' to build an identity cloak for Lena, a Cog defector who might know why the Cog is targeting Oasis."
                 },
                 {
