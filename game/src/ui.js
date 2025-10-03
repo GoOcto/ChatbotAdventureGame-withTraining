@@ -73,34 +73,71 @@ export const UI = {
         const backpackItems = game.State.backpackItems;
         UI.locationNavDiv.innerHTML = '';
         const locationInfo = locationData[currentLocation];
+
+
         if (locationInfo && Array.isArray(locationInfo.navigate_to)) {
             locationInfo.navigate_to.forEach(areaID => {
                 const areaData = locationData[areaID];
-                if (!areaData) return;
-                const btn = document.createElement('button');
-                btn.className = 'btn btn-outline-primary';
-                btn.textContent = areaData.name;
-                btn.onclick = () => {
-                    game.State.currentLocation = areaID;
-                    game.State.selectedCharacter = null;
-                    this.renderAll(game);
-                };
-                if (areaData.visited) btn.classList.add('visited');
-                if (areaData.requirements) {
-                    let meetsRequirements = true;
-                    areaData.requirements.forEach(req => {
-                        if (!backpackItems.includes(req)) {
-                            meetsRequirements = false;
+                const hasRequiredItem = areaData.required_item ? backpackItems.includes(areaData.required_item) : true;
+                if (areaData.visited || hasRequiredItem) {
+                    const btnLi = document.createElement('li');
+                    btnLi.className = 'nav-item mb-2';
+                    const btn = document.createElement('button');
+                    btn.className = 'btn btn-outline-primary w-100';
+                    if (locationData[areaID].visited) btn.className += ' visited';
+                    btn.textContent = locationData[areaID].name;
+                    btn.onclick = function () {
+                        const currentLocation = game.State.currentLocation;
+                        if (game.State.locationData[currentLocation].onLeave !== undefined) {
+                            console.log("Calling onLeave for", game.State.currentLocation);
+                            game.State.locationData[currentLocation].onLeave(game);
                         }
-                    });
-                    if (!meetsRequirements) {
-                        btn.disabled = true;
-                        btn.title = `Requires: ${areaData.requirements.join(', ')}`;
-                    }
+                        game.State.currentLocation = areaID;
+                        game.State.chatId = null;
+                        game.State.selectedCharacter = null;
+                        game.State.chatOpen = false;
+                        if (game.State.locationData[areaID].onEnter !== undefined) {
+                            console.log("Calling onEnter for", areaID);
+                            game.State.locationData[areaID].onEnter(game);
+                        }
+                        game.save();
+                        Audio.playClick();
+                        UI.renderAll(game);
+                    };
+                    btnLi.appendChild(btn);
+                    this.locationNavDiv.appendChild(btnLi);
                 }
-                UI.locationNavDiv.appendChild(btn);
             });
         }
+
+        // if (locationInfo && Array.isArray(locationInfo.navigate_to)) {
+        //     locationInfo.navigate_to.forEach(areaID => {
+        //         const areaData = locationData[areaID];
+        //         if (!areaData) return;
+        //         const btn = document.createElement('button');
+        //         btn.className = 'btn btn-outline-primary';
+        //         btn.textContent = areaData.name;
+        //         btn.onclick = () => {
+        //             game.State.currentLocation = areaID;
+        //             game.State.selectedCharacter = null;
+        //             this.renderAll(game);
+        //         };
+        //         if (areaData.visited) btn.classList.add('visited');
+        //         if (areaData.requirements) {
+        //             let meetsRequirements = true;
+        //             areaData.requirements.forEach(req => {
+        //                 if (!backpackItems.includes(req)) {
+        //                     meetsRequirements = false;
+        //                 }
+        //             });
+        //             if (!meetsRequirements) {
+        //                 btn.disabled = true;
+        //                 btn.title = `Requires: ${areaData.requirements.join(', ')}`;
+        //             }
+        //         }
+        //         UI.locationNavDiv.appendChild(btn);
+        //     });
+        // }
     },
 
     renderEncounterCard(game) {
