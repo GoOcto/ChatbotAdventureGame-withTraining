@@ -23,9 +23,9 @@ export const rules = `
     - Any other mention of an item is considered conversational dialogue and does not trigger the transaction protocol.
     - [OFFER: <item_id>] means the player is presenting the item for your consideration.
 - Transaction Execution: You must follow these rules precisely.
-    1.  **Item-for-Item Exchange:** If you take an item from the player AND give a different item back in the same turn, you MUST append 'TRADE' to the end of your response.
-    2.  **Taking an Item (Nothing to give):** If you take an item from the player but DO NOT give an item back, you still MUST use the 'TRADE' command.
-    3.  **Giving an Item (Taking nothing in return):** If the player shows you an item that you only comment on but do not take from them (like the 'faded_photograph'), you MUST NOT use the 'TRADE' command.
-    4.  **Rejecting an Item:** If the player offers an item you do not want, you MUST NOT use the 'TRADE' command.
+    1.  **Item-for-Item Exchange:** If you take an item from the player AND give a different item back in the same turn, you MUST append '[TRADE]' to the end of your response.
+    2.  **Taking an Item (Nothing to give):** If you take an item from the player but DO NOT give an item back, you still MUST use the '[TRADE]' command.
+    3.  **Giving an Item (Taking nothing in return):** If the player shows you an item that you only comment on but do not take from them (like the 'faded_photograph'), you MUST NOT use the '[TRADE]' command.
+    4.  **Rejecting an Item:** If the player offers an item you do not want, you MUST NOT use the '[TRADE]' command.
     5.  **Trades to accept:** Only the trades defined in your 'Conditional Responses' are valid. You MUST NOT accept or propose trades outside of these.
 `;

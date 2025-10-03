@@ -246,10 +246,13 @@ document.addEventListener('DOMContentLoaded', function () {
           console.error('Failed to parse one or more JSON objects from bot message:', e);
         }
 
-        // Remove TRADE keyword and any delimited variations from the text
-        // For now I need to see the full text
-        // text = text.replace(/\bTRADE\b/g, ''); // Remove standalone TRADE
-        // text = text.replace(/[\[\{\(\|\*\-]*\s*TRADE\s*[\]\}\)\|\*\-]*/g, ''); // Remove delimited TRADE
+        // Remove [TRADE] keyword from the text or any kind of delimited format
+        // For devel, I need to see the full text, uncomment later
+        // text = text.replace(/\[TRADE\]/g, '');
+        // text = text.replace(/\(TRADE\)/g, '');
+        // text = text.replace(/<TRADE>/g, '');
+        // text = text.replace(/\*TRADE\*/g, '');
+        // text = text.replace(/TRADE/g, '');
         // text = text.replace(/\s+/g, ' ').trim(); // Clean up extra whitespace
       }
 
