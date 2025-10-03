@@ -8,7 +8,6 @@ datasets==2.19.1
 
 #Core Libraries
 torch==2.3.0
-tensorboard==2.16.2
 tensorflow==2.20.0
 
 #Utility Libraries
