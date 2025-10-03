@@ -1,6 +1,7 @@
 import argparse
 import glob
 import os
+import json
 
 import torch
 from datasets import load_dataset
@@ -12,8 +13,10 @@ from transformers import (
     AutoTokenizer,
     BitsAndBytesConfig,
     TrainingArguments,
+    set_seed,
 )
 from trl import SFTTrainer
+from torch.utils.tensorboard import SummaryWriter
 
 load_dotenv()
 hflogin(os.getenv("HUGGINGFACE_KEY"))
@@ -75,6 +78,10 @@ def format_prompt(sample):
 
 
 def main(args):
+    # Set global seed for reproducibility across dataloading, torch, numpy, etc.
+    if args.seed is not None:
+        set_seed(args.seed)
+
     # --- Check for existing checkpoints ---
     latest_checkpoint = check_for_checkpoints(args.output_dir)
     resume_from_checkpoint = None
@@ -155,8 +162,14 @@ def main(args):
     print("LoRA config created.")
 
     # --- 6. Configure Training Arguments ---
+    # Derive a readable run name (e.g., "rank08") from the output directory for clearer TensorBoard charts
+    run_name = os.path.basename(args.output_dir.rstrip("/")) or args.output_dir
+
     training_arguments = TrainingArguments(
         output_dir=args.output_dir,
+        run_name=run_name,
+        logging_dir=os.path.join(args.output_dir, "tb"),
+        seed=args.seed,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.batch_size,
         gradient_accumulation_steps=1,
@@ -194,14 +207,46 @@ def main(args):
     print("\n--- Starting LoRA Training ---")
     if resume_from_checkpoint:
         print(f"Resuming from checkpoint: {resume_from_checkpoint}")
-        trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+        train_output = trainer.train(resume_from_checkpoint=resume_from_checkpoint)
     else:
-        trainer.train()
+        train_output = trainer.train()
     print("--- Training Finished ---")
 
     # --- 9. Save the Trained LoRA Adapter ---
     trainer.save_model(args.output_dir)
     print(f"LoRA adapter saved to {args.output_dir}")
+
+    # --- 10. Log hyperparameters and final metrics to TensorBoard HParams ---
+    try:
+        hparams = {
+            "model_name": args.model_name,
+            "dataset_path": args.dataset_path,
+            "epochs": args.epochs,
+            "learning_rate": args.learning_rate,
+            "lr_scheduler_type": args.lr_scheduler_type,
+            "batch_size": args.batch_size,
+            "lora_rank": args.lora_rank,
+            "lora_alpha": args.lora_rank * 2,
+            "seed": args.seed,
+        }
+        metrics = getattr(train_output, "metrics", {}) or {}
+        # Pick a couple of representative metrics if available
+        metric_dict = {
+            "train/loss_final": float(metrics.get("train_loss", float("nan"))),
+            "train/steps": float(metrics.get("train_steps", trainer.state.global_step or 0)),
+        }
+
+        # Ensure logging directory exists
+        os.makedirs(training_arguments.logging_dir, exist_ok=True)
+        writer = SummaryWriter(log_dir=training_arguments.logging_dir)
+        # Write raw params as text for easy inspection
+        writer.add_text("hparams/json", json.dumps(hparams, indent=2))
+        # HParams summary (requires at least one metric)
+        writer.add_hparams(hparams, metric_dict)
+        writer.close()
+        print(f"HParams logged to TensorBoard at {training_arguments.logging_dir}")
+    except Exception as e:
+        print(f"Warning: failed to log hparams to TensorBoard: {e}")
 
 
 if __name__ == "__main__":
@@ -246,6 +291,12 @@ if __name__ == "__main__":
         type=str,
         default="constant",
         help="Learning rate scheduler type (e.g., 'constant', 'cosine').",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=42,
+        help="Random seed for reproducibility.",
     )
     parser.add_argument(
         "--auto_resume",
