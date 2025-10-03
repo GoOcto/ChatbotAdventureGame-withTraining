@@ -1,4 +1,5 @@
 import argparse
+import glob
 import os
 
 import torch
@@ -18,6 +19,45 @@ load_dotenv()
 hflogin(os.getenv("HUGGINGFACE_KEY"))
 
 
+def check_for_checkpoints(output_dir):
+    """Check if there are existing checkpoints in the output directory."""
+    if not os.path.exists(output_dir):
+        return None
+
+    checkpoint_pattern = os.path.join(output_dir, "checkpoint-*")
+    checkpoints = glob.glob(checkpoint_pattern)
+
+    if not checkpoints:
+        return None
+
+    # Sort checkpoints by step number to get the latest one
+    checkpoints.sort(key=lambda x: int(x.split("-")[-1]))
+    latest_checkpoint = checkpoints[-1]
+
+    return latest_checkpoint
+
+
+def prompt_user_for_resume(checkpoint_path):
+    """Prompt the user whether to resume from the existing checkpoint."""
+    print(f"\nFound existing checkpoint: {checkpoint_path}")
+    print("Options:")
+    print("1. Resume training from this checkpoint")
+    print("2. Start fresh training (will overwrite existing checkpoints)")
+    print("3. Cancel training")
+
+    while True:
+        choice = input("Enter your choice (1/2/3): ").strip()
+        if choice == "1":
+            return True
+        elif choice == "2":
+            return False
+        elif choice == "3":
+            print("Training cancelled.")
+            exit(0)
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+
 def format_prompt(sample):
     """
     This function takes a sample from the dataset and formats it into the Llama 3 instruct prompt format.
@@ -35,10 +75,25 @@ def format_prompt(sample):
 
 
 def main(args):
+    # --- Check for existing checkpoints ---
+    latest_checkpoint = check_for_checkpoints(args.output_dir)
+    resume_from_checkpoint = None
+
+    if latest_checkpoint:
+        if args.auto_resume:
+            print(f"Auto-resuming from checkpoint: {latest_checkpoint}")
+            resume_from_checkpoint = latest_checkpoint
+        else:
+            should_resume = prompt_user_for_resume(latest_checkpoint)
+            if should_resume:
+                resume_from_checkpoint = latest_checkpoint
+            else:
+                print(
+                    "Starting fresh training. Existing checkpoints will be overwritten."
+                )
+
     # --- 1. Load the Dataset ---
     print("--- Loading Dataset ---")
-
-    import glob
 
     # Accept wildcards from the command line
     data_files = glob.glob(args.dataset_path)
@@ -115,9 +170,9 @@ def main(args):
         warmup_ratio=0.03,
         group_by_length=True,
         lr_scheduler_type=args.lr_scheduler_type,
-        logging_steps=10,
-        save_steps=10,
-        save_total_limit=10,
+        logging_steps=5,
+        save_steps=20,
+        save_total_limit=None,  # Disable limit to keep all checkpoints
         report_to="tensorboard",
     )
     print("Training arguments configured.")
@@ -137,7 +192,11 @@ def main(args):
 
     # --- 8. Start Training ---
     print("\n--- Starting LoRA Training ---")
-    trainer.train()
+    if resume_from_checkpoint:
+        print(f"Resuming from checkpoint: {resume_from_checkpoint}")
+        trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+    else:
+        trainer.train()
     print("--- Training Finished ---")
 
     # --- 9. Save the Trained LoRA Adapter ---
@@ -187,6 +246,11 @@ if __name__ == "__main__":
         type=str,
         default="constant",
         help="Learning rate scheduler type (e.g., 'constant', 'cosine').",
+    )
+    parser.add_argument(
+        "--auto_resume",
+        action="store_true",
+        help="Automatically resume from the latest checkpoint without prompting.",
     )
 
     args = parser.parse_args()
