@@ -1,5 +1,7 @@
-export const UI = {
+import { Audio } from './audio.js';
 
+
+export const UI = {
 
     setTitle(game) {
         document.title = game.State.worldName;
