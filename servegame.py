@@ -38,11 +38,13 @@ def to_json_safe(obj):
     np = None
     try:
         import torch as _torch  # type: ignore
+
         torch = _torch
     except Exception:
         pass
     try:
         import numpy as _np  # type: ignore
+
         np = _np
     except Exception:
         pass
@@ -131,7 +133,9 @@ def initialize_model_and_tokenizer(model_id, adapter_path=None):
         model = PeftModel.from_pretrained(model, adapter_path)
         # Introspect adapter info for debugging
         try:
-            active = getattr(model, "active_adapter", None) or getattr(model, "active_adapters", None)
+            active = getattr(model, "active_adapter", None) or getattr(
+                model, "active_adapters", None
+            )
             peft_cfg_keys = list(getattr(model, "peft_config", {}).keys())
             logging.info(f"Active adapter: {active}")
             logging.info(f"Available PEFT configs: {peft_cfg_keys}")
@@ -149,7 +153,17 @@ def initialize_model_and_tokenizer(model_id, adapter_path=None):
     return tokenizer, model
 
 
-def generate_chat_reply(model, tokenizer, messages, *, max_new_tokens=256, do_sample=True, temperature=0.7, top_p=0.9, seed=None):
+def generate_chat_reply(
+    model,
+    tokenizer,
+    messages,
+    *,
+    max_new_tokens=256,
+    do_sample=True,
+    temperature=0.7,
+    top_p=0.9,
+    seed=None,
+):
     """Generate a chat reply using Llama-3 style chat template."""
     import torch
 
@@ -173,7 +187,9 @@ def generate_chat_reply(model, tokenizer, messages, *, max_new_tokens=256, do_sa
         # Deterministic sampling given seed via global RNGs
         try:
             import random
+
             import numpy as np
+
             s = int(seed)
             torch.manual_seed(s)
             if torch.cuda.is_available():
@@ -273,7 +289,9 @@ def api_mode(adapter_path):
             if hasattr(model, "peft_config"):
                 adapters = list(getattr(model, "peft_config", {}).keys())
                 info["adapters"] = adapters
-                active = getattr(model, "active_adapter", None) or getattr(model, "active_adapters", None)
+                active = getattr(model, "active_adapter", None) or getattr(
+                    model, "active_adapters", None
+                )
                 info["active_adapter"] = active
                 pcfgs = {}
                 for name, cfg in getattr(model, "peft_config", {}).items():
@@ -281,8 +299,15 @@ def api_mode(adapter_path):
                         pcfgs[name] = {
                             "r": getattr(cfg, "r", None),
                             "lora_alpha": getattr(cfg, "lora_alpha", None),
-                            "lora_dropout": float(getattr(cfg, "lora_dropout", 0.0)) if getattr(cfg, "lora_dropout", None) is not None else None,
-                            "target_modules": getattr(cfg, "target_modules", None),
+                            "lora_dropout": (
+                                float(getattr(cfg, "lora_dropout", 0.0))
+                                if getattr(cfg, "lora_dropout", None)
+                                is not None
+                                else None
+                            ),
+                            "target_modules": getattr(
+                                cfg, "target_modules", None
+                            ),
                             "task_type": str(getattr(cfg, "task_type", None)),
                         }
                     except Exception:
@@ -291,12 +316,18 @@ def api_mode(adapter_path):
 
             # Count trainable and preview LoRA parameter names
             try:
-                trainable = sum(p.numel() for p in model.parameters() if getattr(p, "requires_grad", False))
+                trainable = sum(
+                    p.numel()
+                    for p in model.parameters()
+                    if getattr(p, "requires_grad", False)
+                )
                 info["trainable_params"] = int(trainable)
             except Exception:
                 pass
             try:
-                lora_params = [n for (n, p) in model.named_parameters() if "lora_" in n]
+                lora_params = [
+                    n for (n, p) in model.named_parameters() if "lora_" in n
+                ]
                 info["lora_params_count"] = len(lora_params)
                 info["lora_params_preview"] = lora_params[:10]
             except Exception:
@@ -395,30 +426,71 @@ def api_mode(adapter_path):
         if request.method == "OPTIONS":
             resp = make_response()
             return set_cors_headers(resp, "GET, OPTIONS")
-        resp = make_response(
-            jsonify(
+        gen_defaults = {
+            "max_new_tokens": 256,
+            "do_sample": True,
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "seed": None,
+            "pad_token_id": tokenizer.eos_token_id,
+            "eos_token_id": tokenizer.eos_token_id,
+        }
+        info = {
+            "service": "ChatbotAdventureGame API",
+            "model": {
+                "base_model_id": model_id,
+                "adapter_path": adapter_path,
+            },
+            "static": {
+                "root": "/",
+                "serves": "Files from the 'game' directory (index.html at /)",
+            },
+            "generation_defaults": gen_defaults,
+            "endpoints": [
                 {
-                    "endpoints": [
-                        {
-                            "path": "/api/info",
-                            "methods": ["GET", "OPTIONS"],
-                            "description": "Get API usage information.",
-                        },
-                        {
-                            "path": "/api/reset",
-                            "methods": ["POST", "OPTIONS"],
-                            "description": "Reset the conversation and get a chat id.",
-                        },
-                        {
-                            "path": "/api/chat/<chat_id>",
-                            "methods": ["POST", "OPTIONS"],
-                            "description": "Send a prompt and get a reply for a specific chat id. JSON: { 'prompt': <string> }",
-                        },
-                    ],
-                    "prompt_format": {"prompt": "<string>"},
-                }
-            )
-        )
+                    "path": "/",
+                    "methods": ["GET"],
+                    "description": "Serve the game UI (index.html).",
+                },
+                {
+                    "path": "/<path:filename>",
+                    "methods": ["GET"],
+                    "description": "Serve static files from the game directory.",
+                },
+                {
+                    "path": "/api/info",
+                    "methods": ["GET", "OPTIONS"],
+                    "description": "Get API usage information (this document).",
+                },
+                {
+                    "path": "/api/reset",
+                    "methods": ["POST", "OPTIONS"],
+                    "description": "Start a new conversation and return a chat_id.",
+                    "requestBody": {"system_prompt": "<string>"},
+                    "response": {"status": "reset", "chat_id": "<uuid>"},
+                },
+                {
+                    "path": "/api/chat/<chat_id>",
+                    "methods": ["POST", "OPTIONS"],
+                    "description": "Send a user prompt for a given chat_id and receive a reply.",
+                    "requestBody": {
+                        "prompt": "<string>",
+                        "max_new_tokens": "<int, optional>",
+                        "do_sample": "<bool, optional>",
+                        "temperature": "<float, optional>",
+                        "top_p": "<float, optional>",
+                        "seed": "<int|null, optional>",
+                    },
+                    "response": {"reply": "<string>"},
+                },
+                {
+                    "path": "/api/debug",
+                    "methods": ["GET", "OPTIONS"],
+                    "description": "Inspect model/adapter/PEFT configuration and runtime device.",
+                },
+            ],
+        }
+        resp = make_response(jsonify(info))
         return set_cors_headers(resp, "GET, OPTIONS")
 
     # Debug route
@@ -428,10 +500,12 @@ def api_mode(adapter_path):
             resp = make_response()
             return set_cors_headers(resp, "GET, OPTIONS")
         info = peft_debug_info(model)
-        info.update({
-            "base_model_id": model_id,
-            "adapter_path": adapter_path,
-        })
+        info.update(
+            {
+                "base_model_id": model_id,
+                "adapter_path": adapter_path,
+            }
+        )
         safe = to_json_safe(info)
         resp = make_response(jsonify(safe), 200)
         return set_cors_headers(resp, "GET, OPTIONS")
