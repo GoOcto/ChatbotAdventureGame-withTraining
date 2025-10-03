@@ -139,7 +139,7 @@ export const Game = {
   removeTradeFromCandidates(charId, itemId) {
     const char = this.State.characterData[charId];
     if (!char) return;
-    char.trades = char.trades.filter(trade => trade.take.includes(itemId) || trade.give.includes(itemId));
+    char.trades = char.trades.filter(trade => !(trade.take.includes(itemId)));
   },
 
   currentSystemPrompt(char) {
@@ -219,7 +219,9 @@ document.addEventListener('DOMContentLoaded', function () {
           const selectedCharacter = Game.State.selectedCharacter;
           if (selectedCharacter) {
             const char = Game.State.characterData[selectedCharacter];
-            char.trades.forEach(trade => {
+            let tradeFound = false;
+
+            for (const trade of char.trades) {
               const offeringInTake = trade.take.length > 0 && trade.take.includes(offering);
               if (offeringInTake) {
                 // we have a match, apply the trade
@@ -231,15 +233,24 @@ document.addEventListener('DOMContentLoaded', function () {
                   console.log(`${char.name}'s new goal is: ${trade.new_goal}`);
                   Game.save();
                 }
+                tradeFound = true;
+                break;
               }
-              else {
-                console.log('No matching trade found for offering:', offering);
-              }
-            });
+            }
+
+            if (!tradeFound) {
+              console.log('No matching trade found for offering:', offering);
+            }
           }
         } catch (e) {
           console.error('Failed to parse one or more JSON objects from bot message:', e);
         }
+
+        // Remove TRADE keyword and any delimited variations from the text
+        // For now I need to see the full text
+        // text = text.replace(/\bTRADE\b/g, ''); // Remove standalone TRADE
+        // text = text.replace(/[\[\{\(\|\*\-]*\s*TRADE\s*[\]\}\)\|\*\-]*/g, ''); // Remove delimited TRADE
+        // text = text.replace(/\s+/g, ' ').trim(); // Clean up extra whitespace
       }
 
     } else {
@@ -297,9 +308,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', async function (e) {
     if (e.target && e.target.id === 'begin-chat-btn') {
+      console.log('Begin chat button clicked');
       Audio.playNiceEncounterStart();
       const selectedCharacter = Game.State.selectedCharacter;
       Game.State.chatOpen = true;
+      console.log('Set chatOpen to true, chatId before API call:', Game.State.chatId);
       const char = Game.State.characterData[selectedCharacter];
 
       console.log('Selected character for chat:', char);
@@ -310,11 +323,25 @@ document.addEventListener('DOMContentLoaded', function () {
           system_prompt: system_prompt
         });
         Game.State.chatId = resetResp.data.chat_id;
+        console.log('API call successful, chatId set to:', Game.State.chatId);
       } catch (err) {
+        console.log('API call failed:', err);
         Game.State.chatId = null;
       }
-      UI.chatUiDiv.style.display = '';
+
+      // Hide encounter header, show chat content
+      if (UI.encounterHeaderDiv) UI.encounterHeaderDiv.style.display = 'none';
+      if (UI.chatContentDiv) UI.chatContentDiv.style.display = '';
+
+      // Enable the input field now that chat is open
+      if (UI.userInputDiv) {
+        console.log('Begin chat: Enabling input field directly');
+        UI.userInputDiv.disabled = false;
+        UI.userInputDiv.placeholder = 'Type your message...';
+      }
+
       UI.beginChatBtn.classList.add('disabled');
+      console.log('About to save game state - chatOpen:', Game.State.chatOpen, ', chatId:', Game.State.chatId);
       Game.save();
       if (UI.chatMessagesDiv) {
         UI.chatMessagesDiv.innerHTML = `<div class='message bot'>Encounter initiated with <b>${char.name}</b>.</div>`;

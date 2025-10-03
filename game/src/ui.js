@@ -1,6 +1,3 @@
-import { Audio } from './audio.js';
-import { Game } from './game.js';
-
 export const UI = {
 
 
@@ -79,51 +76,49 @@ export const UI = {
         if (locationInfo && Array.isArray(locationInfo.navigate_to)) {
             locationInfo.navigate_to.forEach(areaID => {
                 const areaData = locationData[areaID];
-                const hasRequiredItem = areaData.required_item ? backpackItems.includes(areaData.required_item) : true;
-                if (areaData.visited || hasRequiredItem) {
-                    const btnLi = document.createElement('li');
-                    btnLi.className = 'nav-item mb-2';
-                    const btn = document.createElement('button');
-                    btn.className = 'btn btn-outline-primary w-100';
-                    if (locationData[areaID].visited) btn.className += ' visited';
-                    btn.textContent = locationData[areaID].name;
-                    btn.onclick = function () {
-                        const currentLocation = game.State.currentLocation;
-                        if (game.State.locationData[currentLocation].onLeave !== undefined) {
-                            console.log("Calling onLeave for", game.State.currentLocation);
-                            game.State.locationData[currentLocation].onLeave(game);
+                if (!areaData) return;
+                const btn = document.createElement('button');
+                btn.className = 'btn btn-outline-primary';
+                btn.textContent = areaData.name;
+                btn.onclick = () => {
+                    game.State.currentLocation = areaID;
+                    game.State.selectedCharacter = null;
+                    this.renderAll(game);
+                };
+                if (areaData.visited) btn.classList.add('visited');
+                if (areaData.requirements) {
+                    let meetsRequirements = true;
+                    areaData.requirements.forEach(req => {
+                        if (!backpackItems.includes(req)) {
+                            meetsRequirements = false;
                         }
-                        game.State.currentLocation = areaID;
-                        game.State.chatId = null;
-                        game.State.selectedCharacter = null;
-                        game.State.chatOpen = false;
-                        if (game.State.locationData[areaID].onEnter !== undefined) {
-                            console.log("Calling onEnter for", areaID);
-                            game.State.locationData[areaID].onEnter(game);
-                        }
-                        game.save();
-                        Audio.playClick();
-                        UI.renderAll(game);
-                    };
-                    btnLi.appendChild(btn);
-                    this.locationNavDiv.appendChild(btnLi);
+                    });
+                    if (!meetsRequirements) {
+                        btn.disabled = true;
+                        btn.title = `Requires: ${areaData.requirements.join(', ')}`;
+                    }
                 }
+                UI.locationNavDiv.appendChild(btn);
             });
         }
     },
 
     renderEncounterCard(game) {
         if (game.State.selectedCharacter === null) {
-            UI.encounterCardDiv.style.display = 'none';
+            UI.chatUiDiv.style.display = 'none';
             return;
         }
 
         const char = game.State.characterData[game.State.selectedCharacter];
-        UI.encounterCardDiv.style.display = '';
+        UI.chatUiDiv.style.display = '';
         UI.encounterAvatarDiv.innerHTML = `<img src="${char.avatar}" alt="${char.name}">`;
         UI.encounterNameDiv.textContent = char.name;
         UI.encounterDescDiv.textContent = char.description || '';
-        UI.chatUiDiv.style.display = 'none';
+
+        // Show encounter header, hide chat content
+        if (UI.encounterHeaderDiv) UI.encounterHeaderDiv.style.display = '';
+        if (UI.chatContentDiv) UI.chatContentDiv.style.display = 'none';
+
         UI.beginChatBtn.classList.remove('disabled');
         game.save();
     },
@@ -155,6 +150,17 @@ export const UI = {
         if (game.State.chatOpen !== true) return;
 
         UI.chatUiDiv.style.display = '';
+
+        // Hide encounter header and show chat content when chat is open
+        if (UI.encounterHeaderDiv) UI.encounterHeaderDiv.style.display = 'none';
+        if (UI.chatContentDiv) UI.chatContentDiv.style.display = '';
+
+        // Enable the input when chat is open
+        if (UI.userInputDiv) {
+            UI.userInputDiv.disabled = false;
+            UI.userInputDiv.placeholder = 'Type your message...';
+        }
+
         UI.chatMessagesDiv.innerHTML = '';
         if (!Array.isArray(game.State.chatMessages)) {
             game.State.chatMessages = [];
@@ -165,7 +171,7 @@ export const UI = {
 
             let innerHTML = `<span>${msg.text}</span>`;
             if (msg.metaText) {
-                innerHTML += `<div style="color:#bbb;font-size:0.8em;margin-top:4px;">${msg.metaText}</div>`;
+                innerHTML += `<div class="meta-text">${msg.metaText}</div>`;
             }
             msgDiv.innerHTML = innerHTML;
             UI.chatMessagesDiv.appendChild(msgDiv);
@@ -174,10 +180,8 @@ export const UI = {
 
     animateItemTransferToCharacter(el, oncomplete) {
         const targetEl = document.querySelector('#encounter-avatar');
-        console.log('Animating item transfer to character:', { el, targetEl });
 
         if (!targetEl) {
-            console.error('Animation target #encounter-avatar not found.');
             el.remove();
             return;
         }
@@ -213,7 +217,6 @@ export const UI = {
 
         // Gracefully exit if the destination isn't on the page
         if (!startEl) {
-            console.error('Animation failed: source element #encounter-avatar not found.');
             el.remove(); // Clean up the provided element
             if (oncomplete) oncomplete();
             return;
@@ -255,11 +258,10 @@ export const UI = {
         // 1. Handle items the character takes from the player
         if (Array.isArray(tradeObj.take)) {
             tradeObj.take.forEach(itemId => {
-                const el = this.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
-                if (el) {
-                    // Animate the element, then remove it from the DOM
-                    this.animateItemTransferToCharacter(el, () => {
-                        this.renderOfferings(game);
+                const offeringEl = UI.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
+                if (offeringEl) {
+                    UI.animateItemTransferToCharacter(offeringEl, () => {
+                        UI.renderOfferings(game);
                     });
                 }
             });
@@ -272,10 +274,12 @@ export const UI = {
             // 2. Handle items the character gives to the player
             if (Array.isArray(tradeObj.give)) {
                 tradeObj.give.forEach(itemId => {
-                    const el = this.offeringsDiv.querySelector(`[data-item="${itemId}"]`);
-                    if (el) {
-                        this.animateItemTransferFromCharacter(el);
-                    }
+                    const tempEl = document.createElement('div');
+                    tempEl.className = 'backpack-item';
+                    tempEl.textContent = game.State.worldItems[itemId];
+                    tempEl.style.position = 'absolute';
+                    document.body.appendChild(tempEl);
+                    UI.animateItemTransferFromCharacter(tempEl);
                 });
             }
             if (onComplete) onComplete();
@@ -299,17 +303,14 @@ export const UI = {
         const avatarRow = document.querySelector('#avatar-row');
 
         avatarRow.querySelectorAll('.avatar-box').forEach(avatarBox => {
-            console.log('for existing avatar box:', avatarBox);
-
             avatarBox.onmouseenter = () => avatarBox.style.borderColor = '#2a9d8f';
             avatarBox.onmouseleave = () => avatarBox.style.borderColor = '#444';
             avatarBox.onclick = () => {
-                const filename = avatarBox.querySelector('img').src.split('/').pop();
-                console.log('Avatar selected:', avatarBox, introDiv);
-                game.State.playerAvatar = `/characters/${filename}`;
-                document.getElementById('player-avatar').innerHTML = `<img src='/characters/${filename}' class='image-fluid'>`;
-                introDiv.remove();
-                UI.renderAll(game);
+                const img = avatarBox.querySelector('.avatar-img');
+                game.State.playerAvatar = img.src;
+                this.hideIntroductionScreen();
+                this.renderAll(game);
+                game.save();
             };
         });
 
@@ -323,13 +324,13 @@ export const UI = {
             const item = e.target;
             if (item.classList.contains('backpack-item')) {
                 e.dataTransfer.setData('text/plain', item.dataset.item);
-                item.classList.add('dragging');
+                item.style.opacity = '0.5';
             }
         }
         function handleDragEnd(e) {
             const item = e.target;
             if (item.classList.contains('backpack-item')) {
-                item.classList.remove('dragging');
+                item.style.opacity = '';
             }
         }
         function handleDblClick(e) {
@@ -339,35 +340,35 @@ export const UI = {
             const container = item.parentElement;
 
             if (container === UI.offeringsDiv) {
-                if (game.addItemToBackpack(itemId)) {
-                    UI.renderBackpack(game);
-                    game.removeItemFromOfferings(itemId);
-                    UI.renderOfferings(game);
-                }
+                game.removeItemFromOfferings(itemId);
+                game.addItemToBackpack(itemId);
+                UI.renderOfferings(game);
+                UI.renderBackpack(game);
                 game.save();
-                return;
             }
             if (container === UI.itemsListDiv) {
-                if (game.addItemToBackpack(itemId)) {
-                    UI.renderBackpack(game);
+                const success = game.addItemToBackpack(itemId);
+                if (success) {
                     game.removeItemFromRoom(itemId);
                     UI.renderLocationItems(game);
+                    UI.renderBackpack(game);
+                    game.save();
                 }
-                game.save();
-                return;
             }
             if (container === UI.backpackDiv) {
-                game.removeItemFromBackpack(itemId);
-                UI.renderBackpack(game);
-                if (UI.chatUiDiv && UI.chatUiDiv.style.display !== 'none') {
+                if (game.State.selectedCharacter && game.State.chatOpen) {
+                    game.removeItemFromBackpack(itemId);
                     game.addItemToOfferings(itemId);
+                    UI.renderBackpack(game);
                     UI.renderOfferings(game);
+                    game.save();
                 } else {
+                    game.removeItemFromBackpack(itemId);
                     game.addItemToRoom(itemId);
+                    UI.renderBackpack(game);
                     UI.renderLocationItems(game);
+                    game.save();
                 }
-                game.save();
-                return;
             }
         }
 
@@ -401,8 +402,8 @@ export const UI = {
             if (item) {
                 if (game.State.backpackItems.includes(item)) {
                     game.removeItemFromBackpack(item);
-                    UI.renderBackpack(game);
                     game.addItemToOfferings(item);
+                    UI.renderBackpack(game);
                     UI.renderOfferings(game);
                     game.save();
                 }
@@ -413,21 +414,20 @@ export const UI = {
             e.preventDefault();
             const itemId = e.dataTransfer.getData('text/plain');
             if (game.State.currentOfferings.includes(itemId)) {
-                if (game.addItemToBackpack(itemId)) {
-                    UI.renderBackpack(game);
-                    game.removeItemFromOfferings(itemId);
-                    UI.renderOfferings(game);
-                }
+                game.removeItemFromOfferings(itemId);
+                game.addItemToBackpack(itemId);
+                UI.renderOfferings(game);
+                UI.renderBackpack(game);
                 game.save();
-                return;
             }
             if (game.State.locationData[game.State.currentLocation].items.includes(itemId)) {
-                if (game.addItemToBackpack(itemId)) {
-                    UI.renderBackpack(game);
+                const success = game.addItemToBackpack(itemId);
+                if (success) {
                     game.removeItemFromRoom(itemId);
                     UI.renderLocationItems(game);
+                    UI.renderBackpack(game);
+                    game.save();
                 }
-                game.save();
             }
         });
         UI.itemsListDiv.addEventListener('dragover', function (e) { e.preventDefault(); });
@@ -437,19 +437,17 @@ export const UI = {
 
             if (game.State.backpackItems.includes(item)) {
                 game.removeItemFromBackpack(item);
-                UI.renderBackpack(game);
                 game.addItemToRoom(item);
+                UI.renderBackpack(game);
                 UI.renderLocationItems(game);
                 game.save();
-                return;
             }
             if (game.State.currentOfferings.includes(item)) {
                 game.removeItemFromOfferings(item);
-                UI.renderOfferings(game);
                 game.addItemToRoom(item);
+                UI.renderOfferings(game);
                 UI.renderLocationItems(game);
                 game.save();
-                return;
             }
         });
     },
@@ -459,13 +457,12 @@ export const UI = {
         // The Encounter Card's X is clicked
         if (UI.closeEncounterBtn) {
             UI.closeEncounterBtn.addEventListener('click', () => {
-                UI.encounterCardDiv.style.display = 'none';
                 game.State.selectedCharacter = null;
                 game.State.chatOpen = false;
                 game.State.chatId = null;
-                UI.renderEncounterCard(game);
-                UI.chatUiDiv.style.display = 'none';
-                Audio.playClick();
+                game.State.chatMessages = [];
+                game.State.currentOfferings = [];
+                this.renderAll(game);
                 game.save();
             });
         }
@@ -474,30 +471,41 @@ export const UI = {
         if (UI.chatFormDiv) {
             UI.chatFormDiv.addEventListener('dragover', function (e) {
                 e.preventDefault();
-                UI.chatFormDiv.classList.add('drag-over');
+                e.currentTarget.classList.add('drag-over');
             });
             UI.chatFormDiv.addEventListener('dragleave', function (e) {
-                UI.chatFormDiv.classList.remove('drag-over');
+                e.currentTarget.classList.remove('drag-over');
             });
             UI.chatFormDiv.addEventListener('drop', function (e) {
                 e.preventDefault();
-                UI.chatFormDiv.classList.remove('drag-over');
+                e.currentTarget.classList.remove('drag-over');
             });
         }
         if (UI.userInputDiv) {
             UI.userInputDiv.addEventListener('dragover', function (e) {
                 e.preventDefault();
-                UI.userInputDiv.classList.add('drag-over');
+                e.currentTarget.classList.add('drag-over');
             });
             UI.userInputDiv.addEventListener('dragleave', function (e) {
-                UI.userInputDiv.classList.remove('drag-over');
+                e.currentTarget.classList.remove('drag-over');
             });
             UI.userInputDiv.addEventListener('drop', function (e) {
                 e.preventDefault();
-                UI.userInputDiv.classList.remove('drag-over');
+                e.currentTarget.classList.remove('drag-over');
             });
         }
 
+    },
+
+    renderPlayerAvatar(game) {
+        const playerAvatar = document.getElementById('player-avatar');
+        if (game.State.playerAvatar && playerAvatar) {
+            playerAvatar.innerHTML = ''; // Clear any existing content
+            const img = document.createElement('img');
+            img.src = game.State.playerAvatar;
+            img.className = 'img-fluid';
+            playerAvatar.appendChild(img);
+        }
     },
 
     renderAll(game) {
@@ -507,31 +515,33 @@ export const UI = {
         const selectedCharacter = game.State.selectedCharacter;
         const userInputDiv = UI.userInputDiv;
         const locationInfo = locationData[currentLocation];
+
         if (locationInfo && locationInfo.background) {
-            UI.settingBgDiv.style.backgroundImage = `url('${locationInfo.background}')`;
+            UI.settingBgDiv.style.backgroundImage = `url(${locationInfo.background})`;
         }
         else {
-            UI.settingBgDiv.style.backgroundImage = 'linear-gradient(0deg, #783c2d 0%, #759595ff 100%)';
+            UI.settingBgDiv.style.backgroundImage = '';
         }
         if (selectedCharacter !== null) {
-            UI.encounterCardDiv.style.display = '';
+            this.renderEncounterCard(game);
         }
         else {
-            UI.encounterCardDiv.style.display = 'none';
-        }
-        if (!chatId) {
             UI.chatUiDiv.style.display = 'none';
-            if (selectedCharacter === null) {
-                game.State.selectedCharacter = null;
+        }
+        if (!chatId && !game.State.chatOpen) {
+            if (userInputDiv) {
+                userInputDiv.disabled = true;
+                userInputDiv.placeholder = 'Select a character to begin chatting';
             }
         }
         else {
-            UI.chatUiDiv.style.display = '';
             if (userInputDiv) {
-                setTimeout(() => { userInputDiv.focus(); }, 0);
+                userInputDiv.disabled = false;
+                userInputDiv.placeholder = 'Type your message...';
             }
         }
         locationInfo.visited = true;
+        this.renderPlayerAvatar(game);
         this.renderNavigation(game);
         this.renderLocationHeader(game);
         this.renderLocationItems(game);
@@ -555,11 +565,13 @@ export const UI = {
     itemsListDiv: null,
     offeringsDiv: null,
     encounterCardDiv: null,
+    encounterHeaderDiv: null,
     encounterAvatarDiv: null,
     encounterNameDiv: null,
     encounterDescDiv: null,
     beginChatBtn: null,
     chatUiDiv: null,
+    chatContentDiv: null,
     chatMessagesDiv: null,
     chatFormDiv: null,
     userInputDiv: null,
@@ -573,12 +585,14 @@ export const UI = {
         this.backpackDiv = document.getElementById('backpack');
         this.itemsListDiv = document.getElementById('items-list');
         this.offeringsDiv = document.getElementById('offerings');
-        this.encounterCardDiv = document.getElementById('encounter-card');
+        this.encounterCardDiv = document.getElementById('encounter-card'); // This will be null now, but keeping for compatibility
+        this.encounterHeaderDiv = document.getElementById('encounter-header');
         this.encounterAvatarDiv = document.getElementById('encounter-avatar');
         this.encounterNameDiv = document.getElementById('encounter-name');
         this.encounterDescDiv = document.getElementById('encounter-desc');
         this.beginChatBtn = document.getElementById('begin-chat-btn');
         this.chatUiDiv = document.getElementById('chat-ui');
+        this.chatContentDiv = document.getElementById('chat-content');
         this.chatMessagesDiv = document.getElementById('chat-messages');
         this.chatFormDiv = document.getElementById('chat-form');
         this.userInputDiv = document.getElementById('user-input');
@@ -586,14 +600,17 @@ export const UI = {
 
         // place the player's avatar once and only once
         const playerAvatar = document.getElementById('player-avatar');
-        const img = document.createElement('img');
-        img.src = game.State.playerAvatar;
-        img.className = 'image-fluid';
-        playerAvatar.appendChild(img);
+        if (game.State.playerAvatar && playerAvatar) {
+            playerAvatar.innerHTML = ''; // Clear any existing content
+            const img = document.createElement('img');
+            img.src = game.State.playerAvatar;
+            img.className = 'img-fluid';
+            playerAvatar.appendChild(img);
+        }
 
         // a DOM reload will always reset the chat
-        Game.State.chatId = null;
-        Game.State.chatOpen = false;
+        game.State.chatId = null;
+        game.State.chatOpen = false;
 
         this.setupDragAndDrop(game);
         this.setupEventListeners(game);

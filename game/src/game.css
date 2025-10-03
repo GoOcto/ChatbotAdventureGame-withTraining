@@ -189,6 +189,64 @@ body {
     flex-direction: column;
 }
 
+/* Encounter header integrated into chat UI */
+.encounter-header {
+    text-align: center;
+    background: #fffbe6;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    border: 2px solid #e3e3e3;
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.1);
+}
+
+.encounter-header .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.encounter-header .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(30, 60, 114, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.encounter-header .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.encounter-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #7c4700;
+    margin: 12px 0 8px 0;
+}
+
+.encounter-desc {
+    color: #7c4700;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* Chat content section */
+#chat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 #begin-chat-btn.disabled {
     background-color: #999;
     border-color: #999;
@@ -225,6 +283,48 @@ body {
     text-align: left;
 }
 
+.meta-text {
+    font-size: 0.75em;
+    color: #555;
+    margin-top: 4px;
+    text-align: right;
+}
+
+
+/* Encounter Header (integrated into chat UI) */
+.encounter-header {
+    background: #fffbe6;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.1);
+    border: 2px solid #e3e3e3;
+}
+
+.encounter-header .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.encounter-header .avatar {
+    width: 96px;
+    height: 96px;
+}
+
+.encounter-name {
+    color: #1e3c72;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.encounter-desc {
+    color: #7c4700;
+    margin-bottom: 16px;
+    font-size: 0.95em;
+}
 
 /* Right Column */
 #encounter-card .btn-close {
