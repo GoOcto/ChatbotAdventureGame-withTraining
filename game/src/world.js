@@ -254,7 +254,7 @@ export const InitialWorld = {
                 {
                     take: ["jorics_message"],
                     give: ["silas_coordinates"],
-                    result: "The message from Joric makes you trust the player. You give them Silas's coordinates and ask them to bring you the diagnostic scanner."
+                    result: "The message from Joric makes you trust the player. You tell them to go to Silas and that they need a scanner. You warn that they will have to gain his trust somehow because he suffers from the nanites."
                 },
                 {
                     take: ["diagnostic_scanner"],
