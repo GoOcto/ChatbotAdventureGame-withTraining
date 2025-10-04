@@ -202,9 +202,10 @@ def main(args):
         adam_beta2=args.adam_beta2,
         gradient_checkpointing=args.gradient_checkpointing,
         label_smoothing_factor=args.label_smoothing,
-        logging_steps=(
-            max(5, args.eval_steps // 5) if eval_dataset is not None else 5
-        ),
+        # logging_steps=(
+        #     max(5, args.eval_steps // 5) if eval_dataset is not None else 5
+        # ),
+        logging_steps = 5,
         eval_steps=(
             args.eval_steps
             if eval_dataset is not None and args.eval_strategy == "steps"
